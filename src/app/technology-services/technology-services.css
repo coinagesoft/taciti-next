@@ -1,0 +1,308 @@
+/* =============================================
+   TECHNOLOGY SERVICES
+   technology-services.css
+   ============================================= */
+
+.ts-page {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* ── HERO ─────────────────────────────────── */
+.ts-intro-section {
+  background: url("/Taciti assets/technology services-92.png") no-repeat;
+  height: 50vw;
+  width: 100vw;
+  background-size: cover;
+  background-position: top;
+}
+.ts-intro-box {
+  margin-left: 150px;
+  padding-top: 100px;
+}
+.ts-main-title {
+  color: #fff;
+  font-size: 55px;
+  font-family: "futuraptMedium";
+}
+
+/* ── OVERVIEW ─────────────────────────────── */
+.ts-overview {
+  text-align: center;
+  padding: 70px 140px;
+}
+
+.ts-overview h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1f4e79;
+  margin-bottom: 24px;
+}
+
+.ts-overview p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.85;
+  margin-bottom: 20px;
+  max-width: 1020px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── SERVICES INCLUDE ─────────────────────── */
+.ts-services {
+  padding: 60px 100px;
+  background: #f8fbff;
+}
+
+.ts-services h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1f4e79;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.ts-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.ts-card {
+  border: 1px solid #dde4f0;
+  padding: 28px 24px;
+  background: #fff;
+  border-radius: 4px;
+  transition: background 0.3s ease, border-color 0.3s ease;
+  cursor: default;
+}
+
+.ts-card:hover {
+  background: #1f4e79;
+  border-color: #1f4e79;
+}
+
+.ts-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #1f4e79;
+  margin-bottom: 14px;
+  line-height: 1.35;
+  transition: color 0.3s ease;
+}
+
+.ts-card:hover h3 {
+  color: #fff;
+}
+
+.ts-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ts-card ul li {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 6px;
+  padding-left: 18px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.ts-card:hover ul li {
+  color: #e8eef8;
+}
+
+.ts-card ul li::before {
+  content: "•";
+  position: absolute;
+  left: 4px;
+  color: #1f4e79;
+  transition: color 0.3s ease;
+}
+
+.ts-card:hover ul li::before {
+  color: #fff;
+}
+
+/* ── OUR EXPERTISE ────────────────────────── */
+.ts-expertise {
+  padding: 70px 100px;
+}
+
+.ts-expertise h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1f4e79;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.ts-expertise-intro {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.8;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+.ts-expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.ts-expertise-item h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f4e79;
+  margin-bottom: 16px;
+}
+
+.ts-expertise-item ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ts-expertise-item ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.ts-arrow-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #1f4e79;
+  border-radius: 50%;
+  margin-top: 1px;
+  position: relative;
+}
+
+.ts-arrow-icon::after {
+  content: "›";
+  color: #1f4e79;
+  font-size: 14px;
+  line-height: 1;
+  margin-left: 1px;
+}
+
+/* ── EXPERTISE QUALITIES ─────────────────── */
+.ts-qualities {
+  padding: 60px 100px;
+  background: #f0f5fc;
+}
+
+.ts-qualities h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1f4e79;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.ts-qualities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.ts-quality-card {
+  border: 1px solid #dde4f0;
+  padding: 28px 24px;
+  background: #fff;
+  border-radius: 4px;
+  transition: background 0.3s ease, border-color 0.3s ease;
+  cursor: default;
+}
+
+.ts-quality-card:hover {
+  background: #1f4e79;
+  border-color: #1f4e79;
+}
+
+.ts-quality-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #1f4e79;
+  margin-bottom: 14px;
+  line-height: 1.35;
+  transition: color 0.3s ease;
+}
+
+.ts-quality-card:hover h3 {
+  color: #fff;
+}
+
+.ts-quality-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.7;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.ts-quality-card:hover p {
+  color: #e8eef8;
+}
+
+/* ════════════════════════════════════════════
+   RESPONSIVE
+   ════════════════════════════════════════════ */
+
+@media (max-width: 1100px) {
+  .ts-overview,
+  .ts-services,
+  .ts-expertise,
+  .ts-qualities {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .ts-cards-grid,
+  .ts-qualities-grid,
+  .ts-expertise-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .ts-intro-section {
+    height: 60vw;
+  }
+  .ts-intro-box {
+    margin-left: 30px;
+    padding-top: 60px;
+  }
+  .ts-main-title {
+    font-size: 30px;
+  }
+  .ts-overview {
+    padding: 40px 20px;
+  }
+  .ts-overview h2 {
+    font-size: 26px;
+  }
+  .ts-services,
+  .ts-expertise,
+  .ts-qualities {
+    padding: 40px 20px;
+  }
+  .ts-cards-grid,
+  .ts-qualities-grid,
+  .ts-expertise-grid {
+    grid-template-columns: 1fr;
+  }
+}

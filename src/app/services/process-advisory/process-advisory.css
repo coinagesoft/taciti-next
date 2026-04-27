@@ -1,0 +1,243 @@
+/* =============================================
+   ERP LED TRANSFORMATION  ·  process-advisory.css
+   Matches taciti.com/process-advisory
+   ============================================= */
+
+.pa-page {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* ── HERO ─────────────────────────────────── */
+ .intro-section {
+          background: url("/images/next-horizon.png") no-repeat;
+          height: 40vw;
+          width: 100vw;
+          background-size: cover;
+          background-position: top;
+        }
+        .intro-box {
+          margin-left: 150px;
+          padding-top: 100px;
+        }
+        .main-title {
+          color: #fff;
+          font-size: 55px;
+          font-family: "futuraptMedium";
+        }
+
+/* ── OVERVIEW ─────────────────────────────── */
+.pa-overview {
+  padding: 70px 100px;
+}
+
+.pa-overview h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1f4e79;
+  margin-bottom: 24px;
+}
+
+.pa-overview p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.85;
+  margin: 0;
+}
+
+/* ── FEATURE CARDS (3-column grid) ─────────── */
+.pa-features {
+  padding: 0 80px 70px;
+}
+
+.pa-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.pa-feature-card {
+  border: 1px solid #dde4f0;
+  padding: 28px 24px;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.pa-feature-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #1f4e79;
+  margin-bottom: 14px;
+  line-height: 1.35;
+}
+
+.pa-feature-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.pa-feature-card--active {
+  background: #3c5f99;
+  border-color: #3c5f99;
+}
+
+.pa-feature-card--active h3,
+.pa-feature-card--active p {
+  color: #fff;
+}
+
+/* ── OUR EXPERTISE ────────────────────────── */
+.pa-expertise {
+  background: #eef4fb;
+  padding: 70px 80px;
+}
+
+.pa-expertise h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1f4e79;
+  margin-bottom: 40px;
+}
+
+.pa-exp-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.pa-exp-col {
+  flex: 1;
+  text-align: left;
+}
+
+.pa-exp-col p {
+  margin: 16px 0;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.pa-exp-col--right {
+  text-align: right;
+}
+
+.pa-exp-center {
+  flex: 0 0 260px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Brain circle — same as on the live site */
+.pa-brain-circle {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: #d6e8f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.pa-brain-circle::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #1f4e79;
+  top: 14%;
+  right: 9%;
+}
+
+.pa-brain-circle::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #1f4e79;
+  bottom: 13%;
+  right: 9%;
+}
+
+.pa-brain-circle img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+}
+
+/* ════════════════════════════════════════════
+   RESPONSIVE
+   ════════════════════════════════════════════ */
+
+@media (max-width: 1100px) {
+  .pa-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .pa-overview {
+    padding: 60px 60px;
+  }
+  .pa-features {
+    padding: 0 60px 60px;
+  }
+  .pa-expertise {
+    padding: 60px 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pa-hero {
+    min-height: 220px;
+  }
+  .pa-hero-content {
+    padding-left: 24px;
+  }
+  .pa-hero h1 {
+    font-size: 28px;
+  }
+
+  .pa-overview {
+    padding: 40px 20px;
+  }
+  .pa-overview h2 {
+    font-size: 26px;
+  }
+
+  .pa-features {
+    padding: 0 20px 40px;
+  }
+  .pa-features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pa-expertise {
+    padding: 40px 20px;
+  }
+  .pa-expertise h2 {
+    font-size: 26px;
+  }
+  .pa-exp-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .pa-exp-col,
+  .pa-exp-col--right {
+    text-align: center;
+    width: 100%;
+  }
+  .pa-exp-center {
+    flex: 0 0 auto;
+  }
+  .pa-brain-circle {
+    width: 180px;
+    height: 180px;
+  }
+  .pa-brain-circle img {
+    width: 100px;
+    height: 100px;
+  }
+}
