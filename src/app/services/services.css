@@ -1,0 +1,252 @@
+/* =============================================
+   OUR SERVICES PAGE
+   our-services.css
+   ============================================= */
+
+.os-page {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* ── HERO ─────────────────────────────────── */
+.os-hero {
+  background: url("/Taciti assets/assets-02.png") no-repeat;
+  height: 50vw;
+  min-height: 380px;
+  width: 100%;
+  background-size: cover;
+  background-position: center top;
+  position: relative;
+}
+
+.os-hero-content {
+  margin-left: 150px;
+  padding-top: 70px;
+}
+
+.os-hero h1 {
+  color: #fff;
+  font-size: 50px;
+  font-family: "futuraptMedium", sans-serif;
+  max-width: 600px;
+  line-height: 1.2;
+}
+
+/* ── INTRO (white curved section) ─────────── */
+.os-intro {
+  background: #fff;
+  margin-top: -130px;
+  border-top-left-radius: 60% 100px;
+  border-top-right-radius: 60% 100px;
+  padding: 70px 140px 50px;
+  text-align: center;
+}
+
+.os-intro h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #013470;
+  margin-bottom: 24px;
+  line-height: 1.35;
+}
+
+.os-intro p {
+  font-size: 15.5px;
+  color: #555;
+  line-height: 1.85;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ── SERVICE TABS ─────────────────────────── */
+.os-tabs-section {
+  background: #fff;
+  padding: 0;
+}
+
+/* White background pill-button tab bar — matches live site */
+/* ── TABS BAR ─────────────────────────── */
+.os-tabs-bar {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  padding: 20px 140px 0;
+  border-bottom: 1px solid #e5eaf3;
+}
+
+/* TAB */
+.os-tab {
+  position: relative;
+  padding: 10px 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: all 0.25s ease;
+}
+
+/* 🔵 underline (hidden by default) */
+.os-tab::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  width: 0;
+  height: 3px;
+  background: #013470;
+  transition: width 0.3s ease;
+}
+
+/* 🔥 hover */
+.os-tab:hover {
+  color: #013470;
+}
+
+.os-tab:hover::after {
+  width: 100%;
+}
+
+/* ✅ ACTIVE TAB */
+.os-tab.active {
+  color: #013470;
+  font-weight: 600;
+}
+
+.os-tab.active::after {
+  width: 100%;
+}
+
+/* ── TAB CONTENT PANEL ────────────────────── */
+.os-panel {
+  display: none;
+  padding: 50px 140px 70px;
+  background: #fff;
+}
+
+.os-panel.active {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.os-panel-left {
+  flex: 1;
+}
+
+.os-panel-left h3 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #013470;
+  margin-bottom: 28px;
+}
+
+.os-panel-left ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+}
+
+.os-panel-left ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 9px 0;
+  font-size: 15.5px;
+  color: #333;
+  line-height: 1.55;
+}
+
+/* Filled blue circle bullet — matches live site */
+.os-panel-left ul li::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  min-width: 9px;
+  background: #013470;
+  border-radius: 50%;
+  margin-top: 6px;
+}
+
+.os-panel-learn {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #013470;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.os-panel-learn:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+/* Right illustration — no box background, just the image floating */
+.os-panel-right {
+  flex-shrink: 0;
+  width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.os-panel-right img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ════════════════════════════════════════════
+   RESPONSIVE
+   ════════════════════════════════════════════ */
+
+@media (max-width: 1100px) {
+  .os-intro,
+  .os-tabs-bar,
+  .os-panel {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .os-hero {
+    height: 60vw;
+    min-height: 260px;
+  }
+  .os-hero-content {
+    margin-left: 20px;
+    padding-top: 50px;
+  }
+  .os-hero h1 {
+    font-size: 32px;
+  }
+  .os-intro {
+    padding: 40px 20px;
+    margin-top: -80px;
+  }
+  .os-intro h2 {
+    font-size: 22px;
+  }
+  .os-tabs-bar {
+    padding: 20px 20px 0;
+    gap: 8px;
+  }
+  .os-tab {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+  .os-panel.active {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 32px;
+  }
+  .os-panel-right {
+    width: 100%;
+  }
+}

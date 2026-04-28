@@ -80,7 +80,7 @@ export default function Header() {
           {/* Our Services */}
           <div className="pb-4 dropdown pt-4">
             <div className="dropdown">
-              <Link href="/our-services/">
+              <Link href="/services/">
                 Our Services <RiArrowDropDownLine />
               </Link>
               <div className="dropdown-content">
