@@ -1,111 +1,166 @@
 /* =============================================
    ERP LED TRANSFORMATION  ·  process-advisory.css
    Matches taciti.com/process-advisory
+   Colors: #1D448A, #2D55AD, #EDEFF3, #505865
    ============================================= */
 
 .pa-page {
   font-family: "Poppins", sans-serif;
-  color: #333;
+  color: #505865;
 }
 
-/* ── HERO ─────────────────────────────────── */
- .intro-section {
-          background: url("/images/next-horizon.png") no-repeat;
-          height: 40vw;
-          width: 100vw;
-          background-size: cover;
-          background-position: top;
-        }
-        .intro-box {
-          margin-left: 150px;
-          padding-top: 100px;
-        }
-        .main-title {
-          color: #fff;
-          font-size: 55px;
-          font-family: "futuraptMedium";
-        }
+/* ══════════════════════════════════════════════
+   HERO
+   ══════════════════════════════════════════════ */
+.pa-hero {
+  position: relative;
+  background: linear-gradient(135deg, #1D448A 0%, #2D55AD 55%, #3a6bc4 100%);
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 60px 80px 60px 120px;
+}
 
-/* ── OVERVIEW ─────────────────────────────── */
+/* white arc at bottom */
+.pa-hero::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: #fff;
+  clip-path: ellipse(55% 100% at 50% 100%);
+}
+
+.pa-hero-content {
+  flex: 1;
+  z-index: 2;
+  position: relative;
+}
+
+.pa-hero-content h1 {
+  color: #fff;
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.pa-hero-img-wrap {
+  flex: 0 0 auto;
+  z-index: 2;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.pa-hero-img {
+  max-width: 460px;
+  width: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.15));
+}
+
+/* ══════════════════════════════════════════════
+   OVERVIEW
+   ══════════════════════════════════════════════ */
 .pa-overview {
-  padding: 70px 100px;
+  text-align: center;
+  padding: 70px 140px;
 }
 
 .pa-overview h2 {
   font-size: 36px;
   font-weight: 700;
-  color: #1f4e79;
-  margin-bottom: 24px;
+  color: #1D448A;
+  margin-bottom: 28px;
 }
 
 .pa-overview p {
-  font-size: 15px;
-  color: #444;
+  font-size: 15.5px;
+  color: #505865;
   line-height: 1.85;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 1020px;
 }
 
-/* ── FEATURE CARDS (3-column grid) ─────────── */
+/* ══════════════════════════════════════════════
+   FEATURE CARDS (3 × 2 grid)
+   ══════════════════════════════════════════════ */
 .pa-features {
-  padding: 0 80px 70px;
+  padding: 0 80px 80px;
 }
 
 .pa-features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 24px;
 }
 
-.pa-feature-card {
+.pa-card {
   border: 1px solid #dde4f0;
-  padding: 28px 24px;
+  padding: 32px 26px;
   background: #fff;
-  border-radius: 4px;
+  border-radius: 6px;
+  transition: background 0.25s, border-color 0.25s;
 }
 
-.pa-feature-card h3 {
+.pa-card:hover {
+  background-image: url("/Taciti assets/card.png");
+  background-size: cover;
+  background-position: center;
+  border-color: transparent;
+}
+
+.pa-card h3 {
   font-size: 17px;
-  font-weight: 600;
-  color: #1f4e79;
+  font-weight: 700;
+  color: #1D448A;
   margin-bottom: 14px;
   line-height: 1.35;
 }
 
-.pa-feature-card p {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.7;
+.pa-card p {
+  font-size: 14.5px;
+  color: #505865;
+  line-height: 1.75;
   margin: 0;
 }
 
-.pa-feature-card--active {
-  background: #3c5f99;
-  border-color: #3c5f99;
+.pa-card--active {
+  background: #2D55AD;
+  border-color: #2D55AD;
 }
 
-.pa-feature-card--active h3,
-.pa-feature-card--active p {
+.pa-card--active h3,
+.pa-card--active p {
   color: #fff;
 }
 
-/* ── OUR EXPERTISE ────────────────────────── */
+/* ══════════════════════════════════════════════
+   OUR EXPERTISE
+   ══════════════════════════════════════════════ */
 .pa-expertise {
-  background: #eef4fb;
-  padding: 70px 80px;
+  background: #EDEFF3;
+  padding: 75px 80px;
+  text-align: center;
 }
 
 .pa-expertise h2 {
-  font-size: 32px;
+  font-size: 34px;
   font-weight: 700;
-  color: #1f4e79;
-  margin-bottom: 40px;
+  color: #1D448A;
+  margin-bottom: 50px;
 }
 
 .pa-exp-grid {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 30px;
 }
 
 .pa-exp-col {
@@ -114,9 +169,9 @@
 }
 
 .pa-exp-col p {
-  margin: 16px 0;
+  margin: 18px 0;
   font-size: 15px;
-  color: #444;
+  color: #505865;
   line-height: 1.5;
 }
 
@@ -125,119 +180,106 @@
 }
 
 .pa-exp-center {
-  flex: 0 0 260px;
+  flex: 0 0 280px;
   display: flex;
   justify-content: center;
 }
 
-/* Brain circle — same as on the live site */
-.pa-brain-circle {
-  width: 260px;
-  height: 260px;
+/* Double-ring brain circle */
+.pa-brain-outer {
+  width: 280px;
+  height: 280px;
   border-radius: 50%;
-  background: #d6e8f7;
+  background: #c8dff2;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
 
-.pa-brain-circle::before {
+.pa-brain-outer::before {
   content: "";
   position: absolute;
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
-  background: #1f4e79;
+  background: #1D448A;
   top: 14%;
-  right: 9%;
+  right: 8%;
 }
 
-.pa-brain-circle::after {
+.pa-brain-outer::after {
   content: "";
   position: absolute;
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
-  background: #1f4e79;
+  background: #1D448A;
   bottom: 13%;
-  right: 9%;
+  left: 8%;
 }
 
-.pa-brain-circle img {
-  width: 140px;
-  height: 140px;
+.pa-brain-inner {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #ddeaf5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.pa-brain-inner::before {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #1D448A;
+  bottom: 12%;
+  right: 5%;
+}
+
+.pa-brain-inner img {
+  width: 120px;
+  height: 120px;
   object-fit: contain;
 }
 
-/* ════════════════════════════════════════════
+/* ══════════════════════════════════════════════
    RESPONSIVE
-   ════════════════════════════════════════════ */
-
-@media (max-width: 1100px) {
-  .pa-features-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .pa-overview {
-    padding: 60px 60px;
-  }
-  .pa-features {
-    padding: 0 60px 60px;
-  }
-  .pa-expertise {
-    padding: 60px 60px;
-  }
+   ══════════════════════════════════════════════ */
+@media (max-width: 1200px) {
+  .pa-hero { padding: 60px 60px 60px 80px; }
+  .pa-hero-content h1 { font-size: 42px; }
+  .pa-hero-img { max-width: 360px; }
+  .pa-overview { padding: 60px 80px; }
+  .pa-features { padding: 0 60px 60px; }
+  .pa-expertise { padding: 60px 60px; }
 }
 
-@media (max-width: 768px) {
-  .pa-hero {
-    min-height: 220px;
-  }
-  .pa-hero-content {
-    padding-left: 24px;
-  }
-  .pa-hero h1 {
-    font-size: 28px;
-  }
+@media (max-width: 960px) {
+  .pa-hero { flex-direction: column; text-align: center; padding: 60px 40px 80px; }
+  .pa-hero-img { max-width: 300px; margin-top: 30px; }
+  .pa-overview { padding: 50px 40px; }
+  .pa-features { padding: 0 40px 50px; }
+  .pa-features-grid { grid-template-columns: repeat(2, 1fr); }
+  .pa-expertise { padding: 50px 40px; }
+}
 
-  .pa-overview {
-    padding: 40px 20px;
-  }
-  .pa-overview h2 {
-    font-size: 26px;
-  }
-
-  .pa-features {
-    padding: 0 20px 40px;
-  }
-  .pa-features-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .pa-expertise {
-    padding: 40px 20px;
-  }
-  .pa-expertise h2 {
-    font-size: 26px;
-  }
-  .pa-exp-grid {
-    flex-direction: column;
-    gap: 30px;
-  }
-  .pa-exp-col,
-  .pa-exp-col--right {
-    text-align: center;
-    width: 100%;
-  }
-  .pa-exp-center {
-    flex: 0 0 auto;
-  }
-  .pa-brain-circle {
-    width: 180px;
-    height: 180px;
-  }
-  .pa-brain-circle img {
-    width: 100px;
-    height: 100px;
-  }
+@media (max-width: 640px) {
+  .pa-hero-content h1 { font-size: 32px; }
+  .pa-overview { padding: 40px 20px; }
+  .pa-overview h2 { font-size: 26px; }
+  .pa-features { padding: 0 20px 40px; }
+  .pa-features-grid { grid-template-columns: 1fr; }
+  .pa-expertise { padding: 40px 20px; }
+  .pa-expertise h2 { font-size: 26px; }
+  .pa-exp-grid { flex-direction: column; gap: 30px; }
+  .pa-exp-col, .pa-exp-col--right { text-align: center; width: 100%; }
+  .pa-exp-center { flex: 0 0 auto; }
+  .pa-brain-outer { width: 200px; height: 200px; }
+  .pa-brain-inner { width: 140px; height: 140px; }
+  .pa-brain-inner img { width: 90px; height: 90px; }
 }

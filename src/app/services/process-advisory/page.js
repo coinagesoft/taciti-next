@@ -5,14 +5,21 @@ export default function ProcessAdvisory() {
   return (
     <div className="pa-page">
 
-      {/* HERO */}
-      <section className="intro-section">
-        <div className="intro-box">
-          <h1 className="main-title">Next Horizon</h1>
+      {/* ── HERO ── */}
+      <section className="pa-hero">
+        <div className="pa-hero-content">
+          <h1>ERP Led<br />Transformation</h1>
+        </div>
+        <div className="pa-hero-img-wrap">
+          <img
+            src="/Taciti assets/Transformation through ERP-90.png"
+            alt="ERP Led Transformation"
+            className="pa-hero-img"
+          />
         </div>
       </section>
 
-      {/* OVERVIEW */}
+      {/* ── OVERVIEW ── */}
       <section className="pa-overview">
         <h2>Overview</h2>
         <p>
@@ -20,7 +27,7 @@ export default function ProcessAdvisory() {
           large-scale ERP-led transformations that redefine the way businesses operate. Our goal
           is to guide enterprises towards embracing innovation, efficiency and excellence through
           cutting-edge technology. At Taciti, we understand that a successful ERP transformation
-          is not just about implementing software — it&apos;s about orchestrating a harmonious
+          is not just about implementing software &ndash; it&apos;s about orchestrating a harmonious
           convergence of strategy, processes and technology. With a team of seasoned professionals
           who bring a wealth of industry knowledge and technical prowess, we are your trusted
           allies in navigating the complexities of modern business landscapes. Our clients trust
@@ -29,54 +36,55 @@ export default function ProcessAdvisory() {
         </p>
       </section>
 
-      {/* THREE FEATURE CARDS */}
+      {/* ── FEATURE CARDS (2 rows of 3) ── */}
       <section className="pa-features">
         <div className="pa-features-grid">
-          <div className="pa-feature-card">
+          <div className="pa-card">
             <h3>SAP S/4HANA Transformation</h3>
             <p>
-              Deep expertise to help clients adopt SAP S/4HANA. We have expertese across
+              Deep expertise to help clients adopt SAP S/4HANA. We have expertise across
               Greenfield, Brownfield or Select Migration Projects.
             </p>
           </div>
-          <div className="pa-feature-card pa-feature-card--active">
+          <div className="pa-card pa-card--active">
             <h3>Industry Expertise</h3>
             <p>
               We bring industry thought leadership to help design and adopt leading practices
               to improve market competitiveness of our clients across the value chain.
             </p>
           </div>
-          <div className="pa-feature-card">
+          <div className="pa-card">
             <h3>Process Design &amp; Performance Improvement</h3>
             <p>
               Through our in-depth analysis and established methodology, we bring about process
               and performance improvements across the business value chain.
             </p>
           </div>
-          <div className="pa-feature-card">
-            <h3>Program Management</h3>
+          <div className="pa-card">
+            <h3>Transformation Management</h3>
             <p>
-              Comprehensive program management services that ensure the successful execution
-              of ERP transformation.
+              End to end program and project management expertise to ensure successful
+              execution of ERP transformation.
             </p>
           </div>
-          <div className="pa-feature-card">
-            <h3>Learning &amp; Training</h3>
+          <div className="pa-card pa-card--active">
+            <h3>Organizational Change and Learning Management</h3>
             <p>
-              Empowering employees, partners, customers with appropriate training and
-              learning strategy.
+              Expertise to drive organizational change management and enable employees,
+              partners, customers with appropriate training and learning strategy.
             </p>
           </div>
-          <div className="pa-feature-card">
-            <h3>Enterprise Applications</h3>
+          <div className="pa-card">
+            <h3>Technology Acumen</h3>
             <p>
-              Expertise and experience across a range of enterprise applications.
+              New SAP product capabilities across the domains including SAP BTP, CPI,
+              Cloud Platform, Archiving, Generative AI applications.
             </p>
           </div>
         </div>
       </section>
 
-      {/* OUR EXPERTISE */}
+      {/* ── OUR EXPERTISE ── */}
       <section className="pa-expertise">
         <h2>Our Expertise</h2>
         <div className="pa-exp-grid">
@@ -87,8 +95,10 @@ export default function ProcessAdvisory() {
             <p>Global Business Process &amp; Performance Improvement Services</p>
           </div>
           <div className="pa-exp-center">
-            <div className="pa-brain-circle">
-              <img src="/Taciti assets/assets-22.png" alt="Expertise" />
+            <div className="pa-brain-outer">
+              <div className="pa-brain-inner">
+                <img src="/Taciti assets/assets-27.png" alt="Our Expertise" />
+              </div>
             </div>
           </div>
           <div className="pa-exp-col pa-exp-col--right">

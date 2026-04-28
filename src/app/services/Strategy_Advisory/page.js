@@ -5,14 +5,21 @@ export default function StrategyAdvisory() {
   return (
     <div className="sa-page">
 
-      {/* HERO */}
-      <section className="intro-section">
-        <div className="intro-box">
-          <h1 className="main-title">Next Horizon</h1>
+      {/* ── HERO ── */}
+      <section className="sa-hero">
+        <div className="sa-hero-content">
+          <h1>Business Consulting</h1>
+        </div>
+        <div className="sa-hero-img-wrap">
+          <img
+            src="/Taciti assets/assets-18.png"
+            alt="Business Consulting"
+            className="sa-hero-img"
+          />
         </div>
       </section>
 
-      {/* OVERVIEW */}
+      {/* ── OVERVIEW ── */}
       <section className="sa-overview">
         <h2>Overview</h2>
         <p>
@@ -27,55 +34,44 @@ export default function StrategyAdvisory() {
         </p>
       </section>
 
-      {/* SERVICES INCLUDE */}
+      {/* ── STRATEGY AND ADVISORY SERVICES INCLUDE ── */}
       <section className="sa-services">
         <h2>Strategy And Advisory Services Include</h2>
         <div className="sa-services-grid">
           <ul>
             <li>
-              <span className="sa-arrow-icon" aria-hidden="true"></span>
+              <span className="sa-icon" />
               CFO and CIO Advisory
             </li>
             <li>
-              <span className="sa-arrow-icon" aria-hidden="true"></span>
+              <span className="sa-icon" />
               Global Business Process and Technology Assessments
             </li>
             <li>
-              <span className="sa-arrow-icon" aria-hidden="true"></span>
+              <span className="sa-icon" />
               Mergers, Acquisitions and Divestitures related Due Diligence
             </li>
           </ul>
           <ul>
             <li>
-              <span className="sa-arrow-icon" aria-hidden="true"></span>
+              <span className="sa-icon" />
               Digital Transformation Roadmap and Business Case Management
             </li>
             <li>
-              <span className="sa-arrow-icon" aria-hidden="true"></span>
+              <span className="sa-icon" />
               ITSM Advisory
             </li>
             <li>
-              <span className="sa-arrow-icon" aria-hidden="true"></span>
+              <span className="sa-icon" />
               Vendor Selection and Benchmarking
             </li>
           </ul>
         </div>
       </section>
 
-      {/* ORGANIZATIONAL TRANSFORMATION */}
-      <section className="sa-transform">
-        <h2>Organizational Transformation For Performance Advancement</h2>
-        <p>
-          At Taciti, our strategy and advisory practice is dedicated to crafting innovative
-          and sustainable solutions that empower businesses to thrive in dynamic markets.
-          We collaborate closely with clients to develop strategic roadmaps that align
-          technology and management, driving lasting success.
-        </p>
-      </section>
-
-      {/* CARDS — 3 visible + 1 extra matching the site */}
+      {/* ── FEATURE CARDS (3 top + 2 bottom, matching live site) ── */}
       <section className="sa-cards-section">
-        <div className="sa-cards-grid">
+        <div className="sa-cards-row sa-cards-row--top">
           <div className="sa-card">
             <h3>Strategy For Sustainable Success</h3>
             <p>
@@ -89,30 +85,42 @@ export default function StrategyAdvisory() {
             <h3>Guiding Transformative Pathways</h3>
             <p>
               Our strategy and advisory expertise pave the way for transformative journeys.
-              We work hand in hand with organizations to navigate complexity, seize opportunities,
-              and implement forward-thinking strategies that propel them toward their goals.
+              We work hand in hand with organizations to navigate complexity, seize
+              opportunities, and implement forward-thinking strategies that propel them
+              toward their goals.
             </p>
           </div>
           <div className="sa-card">
             <h3>Informed Decision-Making</h3>
             <p>
-              In an ever-evolving business landscape, our advisory practice equips clients with
-              the insights needed for informed decision-making. Through data-driven analysis and
-              industry foresight, we guide strategic choices that enhance efficiency, innovation,
-              and competitiveness.
+              In an ever-evolving business landscape, our advisory practice equips clients
+              with the insights needed for informed decision-making. Through data-driven
+              analysis and industry foresight, we guide strategic choices that enhance
+              efficiency, innovation, and competitiveness.
             </p>
           </div>
+        </div>
+        <div className="sa-cards-row sa-cards-row--bottom">
           <div className="sa-card">
             <h3>Customized Solutions, Lasting Impact</h3>
             <p>
-              Our services offer personalized approaches that address current needs and position
-              your business for sustained growth and long-term competitive advantage.
+              Your unique challenges deserve tailored solutions. Our strategy and advisory
+              services offer personalized approaches that not only address current needs but
+              also position your business for sustained growth and future excellence.
+            </p>
+          </div>
+          <div className="sa-card">
+            <h3>Empowering Your Vision</h3>
+            <p>
+              We are dedicated to amplifying your vision. Through our strategic guidance
+              and advisory support, we empower you to turn aspirations into actionable plans,
+              ensuring your company achieves its utmost potential.
             </p>
           </div>
         </div>
       </section>
 
-      {/* OUR EXPERTISE */}
+      {/* ── OUR EXPERTISE ── */}
       <section className="sa-expertise">
         <h2>Our Expertise</h2>
         <div className="sa-exp-grid">
@@ -123,11 +131,13 @@ export default function StrategyAdvisory() {
             <p>Mergers, Acquisitions and Divestiture Related Due Diligence</p>
           </div>
           <div className="sa-exp-center">
-            <div className="sa-brain-circle">
-              <img src="/Taciti assets/assets-22.png" alt="Expertise" />
+            <div className="sa-brain-outer">
+              <div className="sa-brain-inner">
+                <img src="/Taciti assets/assets-27.png" alt="Our Expertise" />
+              </div>
             </div>
           </div>
-          <div className="sa-exp-col">
+          <div className="sa-exp-col sa-exp-col--right">
             <p>Cloud Transformation</p>
             <p>ITSM Benchmarking, Design, and Implementation</p>
             <p>Vendor Selection and Benchmarking</p>

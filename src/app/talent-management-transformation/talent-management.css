@@ -1,32 +1,73 @@
 /* =============================================
    HUMAN CAPITAL MANAGEMENT / TALENT MANAGEMENT
    talent-management.css
+   Matches taciti.com/talent-management-transformation
+   Colors: #1D448A, #2D55AD, #EDEFF3, #505865
    ============================================= */
 
 .tm-page {
   font-family: "Poppins", sans-serif;
-  color: #333;
+  color: #505865;
 }
 
-/* ── HERO ─────────────────────────────────── */
-.tm-intro-section {
-  background: url("/Taciti assets/assets-01.png") no-repeat;
-  height: 50vw;
-  width: 100vw;
-  background-size: cover;
-  background-position: top;
+/* ══════════════════════════════════════════════
+   HERO
+   ══════════════════════════════════════════════ */
+.tm-hero {
+  position: relative;
+  background: linear-gradient(135deg, #1D448A 0%, #2D55AD 55%, #3a6bc4 100%);
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 60px 80px 60px 120px;
 }
-.tm-intro-box {
-  margin-left: 150px;
-  padding-top: 100px;
+
+/* white arc at bottom */
+.tm-hero::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: #fff;
+  clip-path: ellipse(55% 100% at 50% 100%);
 }
-.tm-main-title {
+
+.tm-hero-content {
+  flex: 1;
+  z-index: 2;
+  position: relative;
+}
+
+.tm-hero-content h1 {
   color: #fff;
-  font-size: 55px;
-  font-family: "futuraptMedium";
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0;
 }
 
-/* ── OVERVIEW ─────────────────────────────── */
+.tm-hero-img-wrap {
+  flex: 0 0 auto;
+  z-index: 2;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.tm-hero-img {
+  max-width: 460px;
+  width: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.18));
+}
+
+/* ══════════════════════════════════════════════
+   OVERVIEW
+   ══════════════════════════════════════════════ */
 .tm-overview {
   text-align: center;
   padding: 70px 140px;
@@ -35,65 +76,61 @@
 .tm-overview h2 {
   font-size: 36px;
   font-weight: 700;
-  color: #1f4e79;
-  margin-bottom: 24px;
+  color: #1D448A;
+  margin-bottom: 28px;
 }
 
 .tm-overview p {
-  font-size: 16px;
-  color: #555;
+  font-size: 15.5px;
+  color: #505865;
   line-height: 1.85;
-  margin-bottom: 0;
+  margin: 0 auto;
   max-width: 1020px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-/* ── CORE OFFERINGS ──────────────────────── */
+/* ══════════════════════════════════════════════
+   CORE OFFERINGS
+   ══════════════════════════════════════════════ */
 .tm-offerings {
-  padding: 60px 100px;
-  background: #f8fbff;
+  padding: 60px 100px 70px;
 }
 
 .tm-offerings h2 {
-  font-size: 32px;
+  font-size: 34px;
   font-weight: 700;
-  color: #1f4e79;
+  color: #1D448A;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 44px;
 }
 
 .tm-cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 24px;
 }
 
 .tm-card {
   border: 1px solid #dde4f0;
-  padding: 28px 24px;
+  padding: 30px 26px;
   background: #fff;
-  border-radius: 4px;
-  transition: background 0.3s ease, border-color 0.3s ease;
+  border-radius: 6px;
+  transition: background 0.25s, border-color 0.25s;
   cursor: default;
 }
 
-.tm-card:hover {
-  background: #1f4e79;
-  border-color: #1f4e79;
+.tm-card:not(.tm-card--active):hover {
+  background-image: url("/Taciti assets/card.png");
+  background-size: cover;
+  background-position: center;
+  border-color: transparent;
 }
 
 .tm-card h3 {
   font-size: 17px;
-  font-weight: 600;
-  color: #1f4e79;
+  font-weight: 700;
+  color: #1D448A;
   margin-bottom: 14px;
   line-height: 1.35;
-  transition: color 0.3s ease;
-}
-
-.tm-card:hover h3 {
-  color: #fff;
 }
 
 .tm-card ul {
@@ -103,46 +140,70 @@
 }
 
 .tm-card ul li {
-  font-size: 14px;
-  color: #555;
+  font-size: 14.5px;
+  color: #505865;
   line-height: 1.7;
   margin-bottom: 6px;
   padding-left: 18px;
   position: relative;
-  transition: color 0.3s ease;
-}
-
-.tm-card:hover ul li {
-  color: #e8eef8;
 }
 
 .tm-card ul li::before {
   content: "•";
   position: absolute;
   left: 4px;
-  color: #1f4e79;
-  transition: color 0.3s ease;
+  color: #2D55AD;
 }
 
-.tm-card:hover ul li::before {
+/* Active / highlighted card */
+.tm-card--active {
+  background: #2D55AD;
+  border-color: #2D55AD;
+}
+
+.tm-card--active h3 {
   color: #fff;
 }
 
-/* ── TALENT FRAMEWORK ────────────────────── */
+.tm-card--active ul li {
+  color: #fff;
+}
+
+.tm-card--active ul li::before {
+  color: #fff;
+}
+
+/* ══════════════════════════════════════════════
+   TALENT MANAGEMENT FRAMEWORK
+   ══════════════════════════════════════════════ */
 .tm-framework {
   padding: 70px 100px;
   text-align: center;
+  background: #fff;
 }
 
 .tm-framework h2 {
-  font-size: 32px;
+  font-size: 34px;
   font-weight: 700;
-  color: #1f4e79;
+  color: #1D448A;
   margin-bottom: 50px;
 }
 
-.tm-framework-steps {
+/* Primary: show the framework image from assets */
+.tm-framework-wrap {
   display: flex;
+  justify-content: center;
+}
+
+.tm-framework-img {
+  max-width: 900px;
+  width: 100%;
+  object-fit: contain;
+}
+
+/* Fallback steps — hidden when image is present */
+.tm-framework-steps {
+  display: none;
   align-items: center;
   justify-content: center;
   gap: 0;
@@ -153,141 +214,132 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 180px;
+  width: 170px;
 }
 
 .tm-step-icon {
   width: 80px;
   height: 80px;
-  background: #1f4e79;
+  background: #1D448A;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
-.tm-step-icon img {
-  width: 40px;
-  height: 40px;
-  filter: brightness(0) invert(1);
+.tm-step-icon svg {
+  width: 38px;
+  height: 38px;
+  color: #fff;
 }
 
 .tm-step-box {
-  border: 2px solid #1f4e79;
-  border-radius: 8px;
-  padding: 14px 16px;
-  width: 150px;
+  border: 2px solid #2D55AD;
+  border-radius: 10px;
+  padding: 14px 12px;
+  width: 148px;
   text-align: center;
-  font-size: 14px;
-  color: #444;
+  font-size: 13.5px;
+  color: #505865;
   line-height: 1.4;
+  font-weight: 500;
 }
 
 .tm-step-arrow {
   font-size: 24px;
-  color: #1f4e79;
-  margin: 0 8px;
-  margin-bottom: 50px;
+  color: #2D55AD;
+  margin: 0 6px;
+  margin-bottom: 52px;
+  font-weight: 700;
 }
 
-/* ── KEY LMS SOLUTIONS ───────────────────── */
+/* ══════════════════════════════════════════════
+   KEY LMS SOLUTIONS
+   ══════════════════════════════════════════════ */
 .tm-lms {
-  padding: 60px 100px;
-  background: #f0f5fc;
+  padding: 70px 100px 80px;
+  background: #EDEFF3;
 }
 
 .tm-lms h2 {
-  font-size: 32px;
+  font-size: 34px;
   font-weight: 700;
-  color: #1f4e79;
+  color: #1D448A;
   text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .tm-lms-intro {
-  font-size: 15px;
-  color: #555;
-  line-height: 1.8;
+  font-size: 15.5px;
+  color: #505865;
+  line-height: 1.85;
   text-align: center;
   max-width: 900px;
-  margin: 0 auto 40px;
+  margin: 0 auto 50px;
 }
 
 .tm-lms-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 30px 60px;
+  gap: 40px 80px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 50px 60px;
 }
 
 .tm-lms-item h3 {
   font-size: 18px;
-  font-weight: 600;
-  color: #1f4e79;
-  margin-bottom: 10px;
+  font-weight: 700;
+  color: #1D448A;
+  margin-bottom: 12px;
 }
 
 .tm-lms-item p {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.75;
+  font-size: 14.5px;
+  color: #505865;
+  line-height: 1.8;
   margin: 0;
 }
 
-/* ════════════════════════════════════════════
+/* ══════════════════════════════════════════════
    RESPONSIVE
-   ════════════════════════════════════════════ */
-
-@media (max-width: 1100px) {
-  .tm-overview,
-  .tm-offerings,
-  .tm-framework,
-  .tm-lms {
-    padding-left: 60px;
-    padding-right: 60px;
-  }
-  .tm-cards-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+   ══════════════════════════════════════════════ */
+@media (max-width: 1200px) {
+  .tm-hero { padding: 60px 60px 60px 80px; }
+  .tm-hero-content h1 { font-size: 42px; }
+  .tm-hero-img { max-width: 360px; }
+  .tm-overview { padding: 60px 80px; }
+  .tm-offerings { padding: 50px 60px 60px; }
+  .tm-framework { padding: 60px 60px; }
+  .tm-lms { padding: 60px 60px 70px; }
+  .tm-lms-grid { padding: 40px 40px; gap: 30px 60px; }
 }
 
-@media (max-width: 768px) {
-  .tm-intro-section {
-    height: 60vw;
-  }
-  .tm-intro-box {
-    margin-left: 30px;
-    padding-top: 60px;
-  }
-  .tm-main-title {
-    font-size: 30px;
-  }
-  .tm-overview {
-    padding: 40px 20px;
-  }
-  .tm-overview h2 {
-    font-size: 26px;
-  }
-  .tm-offerings {
-    padding: 40px 20px;
-  }
-  .tm-cards-grid {
-    grid-template-columns: 1fr;
-  }
-  .tm-framework {
-    padding: 40px 20px;
-  }
-  .tm-framework-steps {
-    flex-direction: column;
-  }
-  .tm-step-arrow {
-    transform: rotate(90deg);
-    margin: 8px 0;
-  }
-  .tm-lms {
-    padding: 40px 20px;
-  }
-  .tm-lms-grid {
-    grid-template-columns: 1fr;
-  }
+@media (max-width: 960px) {
+  .tm-hero { flex-direction: column; text-align: center; padding: 60px 40px 80px; }
+  .tm-hero-img { max-width: 300px; margin-top: 30px; }
+  .tm-overview { padding: 50px 40px; }
+  .tm-offerings { padding: 40px 40px 50px; }
+  .tm-cards-grid { grid-template-columns: repeat(2, 1fr); }
+  .tm-framework { padding: 50px 40px; }
+  .tm-framework-img { max-width: 100%; }
+  .tm-lms { padding: 50px 40px; }
+  .tm-lms-grid { grid-template-columns: 1fr; gap: 30px; padding: 30px 30px; }
+}
+
+@media (max-width: 640px) {
+  .tm-hero-content h1 { font-size: 32px; }
+  .tm-overview { padding: 40px 20px; }
+  .tm-overview h2 { font-size: 26px; }
+  .tm-offerings { padding: 40px 20px 50px; }
+  .tm-offerings h2 { font-size: 26px; }
+  .tm-cards-grid { grid-template-columns: 1fr; }
+  .tm-framework { padding: 40px 20px; }
+  .tm-framework h2 { font-size: 26px; }
+  .tm-framework-steps { flex-direction: column; gap: 16px; }
+  .tm-step-arrow { transform: rotate(90deg); margin: 0; }
+  .tm-lms { padding: 40px 20px; }
+  .tm-lms h2 { font-size: 26px; }
+  .tm-lms-grid { padding: 24px 20px; gap: 24px; }
 }

@@ -5,14 +5,21 @@ export default function BusinessTransformation() {
   return (
     <div className="bt-page">
 
-      {/* HERO */}
-      <section className="intro-section">
-        <div className="intro-box">
-          <h1 className="main-title">Next Horizon</h1>
+      {/* ── HERO ── */}
+      <section className="bt-hero">
+        <div className="bt-hero-content">
+          <h1>Transformation<br />Management &amp; Governance</h1>
+        </div>
+        <div className="bt-hero-img-wrap">
+          <img
+            src="/Taciti assets/assets-10.png"
+            alt="Transformation Management & Governance"
+            className="bt-hero-img"
+          />
         </div>
       </section>
 
-      {/* OVERVIEW */}
+      {/* ── OVERVIEW ── */}
       <section className="bt-overview">
         <h2>Overview</h2>
         <p>
@@ -20,7 +27,7 @@ export default function BusinessTransformation() {
           solutions that drive successful transformations. With a keen focus on program planning,
           budgeting and risk management, we are your dedicated partners in achieving
           transformative goals. Navigating the complex landscape of modern business demands more
-          than just vision — it requires a robust framework of management and governance. Our
+          than just vision &ndash; it requires a robust framework of management and governance. Our
           seasoned experts understand the intricacies involved in orchestrating large-scale
           changes. From initial ideation to the final implementation, we offer end-to-end
           solutions that ensure your transformation journey is not only efficient but also
@@ -28,38 +35,38 @@ export default function BusinessTransformation() {
         </p>
       </section>
 
-      {/* SERVICES INCLUDE */}
+      {/* ── TRANSFORMATION MANAGEMENT SERVICES INCLUDE ── */}
       <section className="bt-services">
         <h2>Transformation Management &amp; Governance Services Include:</h2>
         <div className="bt-services-grid">
           <ul>
             <li>
-              <span className="bt-arrow-icon" aria-hidden="true"></span>
+              <span className="bt-icon" />
               Program and Project Management
             </li>
             <li>
-              <span className="bt-arrow-icon" aria-hidden="true"></span>
+              <span className="bt-icon" />
               Governance Design and Management
             </li>
             <li>
-              <span className="bt-arrow-icon" aria-hidden="true"></span>
+              <span className="bt-icon" />
               Methodology and Tools
             </li>
           </ul>
           <ul>
             <li>
-              <span className="bt-arrow-icon" aria-hidden="true"></span>
+              <span className="bt-icon" />
               Vendor Management
             </li>
             <li>
-              <span className="bt-arrow-icon" aria-hidden="true"></span>
+              <span className="bt-icon" />
               Organizational Change and Learning Management
             </li>
           </ul>
         </div>
       </section>
 
-      {/* OUR EXPERTISE — 3-column then 3-column card grid */}
+      {/* ── OUR EXPERTISE CARDS ── */}
       <section className="bt-expertise">
         <h2>Our Expertise</h2>
         <div className="bt-cards-grid">
@@ -71,9 +78,7 @@ export default function BusinessTransformation() {
               Ensuring the teams follow the approved project methodology and adapting it as
               necessary to align with organizational standards.
             </p>
-            <p>
-              Creating Agile DevOps methodology with Sprint deliverables.
-            </p>
+            <p>Creating Agile DevOps methodology with Sprint deliverables.</p>
           </div>
           <div className="bt-card bt-card--active">
             <h3>Budget, Scope &amp; Timeline</h3>
@@ -101,7 +106,7 @@ export default function BusinessTransformation() {
               project artifacts and document management.
             </p>
           </div>
-          <div className="bt-card">
+          <div className="bt-card bt-card--active">
             <h3>Training &amp; Documentation</h3>
             <p>
               Ensuring adequate training and documentation support are provided to end users
@@ -113,6 +118,29 @@ export default function BusinessTransformation() {
             <p>
               Generating and distributing regular status reports to stakeholders, keeping them
               informed about the project&apos;s progress and any relevant updates.
+            </p>
+          </div>
+
+          {/* Row 3 */}
+          <div className="bt-card">
+            <h3>Managing Milestones</h3>
+            <p>
+              Identifying and tracking crucial project milestones to assess progress and
+              ensure timely delivery of project objectives.
+            </p>
+          </div>
+          <div className="bt-card">
+            <h3>Pre and Post Go-live Support</h3>
+            <p>
+              Coordinating with the vendor to ensure adequate support is available to manage
+              and resolve issues that arise before and after go-live.
+            </p>
+          </div>
+          <div className="bt-card">
+            <h3>Continuous Improvement</h3>
+            <p>
+              Identifying areas for improvement throughout the implementation and establishing
+              mechanisms for continuous improvement post go-live.
             </p>
           </div>
 

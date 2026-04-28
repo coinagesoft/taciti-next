@@ -5,14 +5,21 @@ export default function TalentManagementTransformation() {
   return (
     <div className="tm-page">
 
-      {/* HERO */}
-      <section className="tm-intro-section">
-        <div className="tm-intro-box">
-          <h1 className="tm-main-title">Human Capital Management</h1>
+      {/* ── HERO ── */}
+      <section className="tm-hero">
+        <div className="tm-hero-content">
+          <h1>Human Capital<br />Management</h1>
+        </div>
+        <div className="tm-hero-img-wrap">
+          <img
+            src="/Taciti assets/assets-16.png"
+            alt="Human Capital Management"
+            className="tm-hero-img"
+          />
         </div>
       </section>
 
-      {/* OVERVIEW */}
+      {/* ── OVERVIEW ── */}
       <section className="tm-overview">
         <h2>Overview</h2>
         <p>
@@ -26,7 +33,7 @@ export default function TalentManagementTransformation() {
         </p>
       </section>
 
-      {/* CORE OFFERINGS */}
+      {/* ── TACITI'S CORE OFFERINGS ── */}
       <section className="tm-offerings">
         <h2>Taciti&apos;s Core Offerings</h2>
         <div className="tm-cards-grid">
@@ -40,7 +47,7 @@ export default function TalentManagementTransformation() {
             </ul>
           </div>
 
-          <div className="tm-card">
+          <div className="tm-card tm-card--active">
             <h3>Integrating COE With CSOD Expertise</h3>
             <ul>
               <li>Real-time Integration Solutions for Enrollments &amp; Completions</li>
@@ -101,56 +108,67 @@ export default function TalentManagementTransformation() {
         </div>
       </section>
 
-      {/* TALENT MANAGEMENT FRAMEWORK */}
+      {/* ── TALENT MANAGEMENT FRAMEWORK ── */}
       <section className="tm-framework">
         <h2>Talent Management Framework</h2>
-        <div className="tm-framework-steps">
+        <div className="tm-framework-wrap">
+          <img
+            src="/Taciti assets/assets-62.png"
+            alt="Talent Management Framework"
+            className="tm-framework-img"
+          />
+        </div>
+
+        {/* Fallback steps (shown if image fails) */}
+        <div className="tm-framework-steps" aria-hidden="true">
           <div className="tm-step">
             <div className="tm-step-icon">
-              <img src="/Taciti assets/assets-08.png" alt="Consulting" />
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8l4 4-4 4"/>
+              </svg>
             </div>
             <div className="tm-step-box">Consulting, BSA, Roadmap</div>
           </div>
-
-          <div className="tm-step-arrow">→</div>
-
+          <span className="tm-step-arrow">→</span>
           <div className="tm-step">
             <div className="tm-step-icon">
-              <img src="/Taciti assets/assets-09.png" alt="Time and Attendance" />
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
             </div>
             <div className="tm-step-box">Time &amp; Attendance</div>
           </div>
-
-          <div className="tm-step-arrow">→</div>
-
+          <span className="tm-step-arrow">→</span>
           <div className="tm-step">
             <div className="tm-step-icon">
-              <img src="/Taciti assets/assets-10.png" alt="Learning and Development" />
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7z"/>
+              </svg>
             </div>
             <div className="tm-step-box">Learning &amp; Development</div>
           </div>
-
-          <div className="tm-step-arrow">→</div>
-
+          <span className="tm-step-arrow">→</span>
           <div className="tm-step">
             <div className="tm-step-icon">
-              <img src="/Taciti assets/assets-11.png" alt="Performance Management" />
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+              </svg>
             </div>
             <div className="tm-step-box">Performance Management</div>
           </div>
-
-          <div className="tm-step-arrow">→</div>
-
+          <span className="tm-step-arrow">→</span>
           <div className="tm-step">
             <div className="tm-step-icon">
-              <img src="/Taciti assets/assets-12.png" alt="Succession Planning" />
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+              </svg>
             </div>
             <div className="tm-step-box">Succession Planning</div>
           </div>
         </div>
       </section>
 
-      {/* KEY LMS SOLUTIONS */}
+      {/* ── KEY LMS SOLUTIONS ── */}
       <section className="tm-lms">
         <h2>Key LMS Solutions</h2>
         <p className="tm-lms-intro">
