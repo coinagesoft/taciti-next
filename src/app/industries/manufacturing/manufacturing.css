@@ -1,0 +1,289 @@
+/* =============================================
+   MANUFACTURING INDUSTRIES PAGE
+   manufacturing.css
+   ============================================= */
+
+.mfg-page {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* ── HERO ─────────────────────────────────── */
+.mfg-hero {
+  background: url("/Taciti assets/manufacturing solutions-91.png") no-repeat;
+  height: 50vw;
+  min-height: 380px;
+  width: 100%;
+  background-size: cover;
+  background-position: center top;
+}
+
+.mfg-hero-box {
+  margin-left: 150px;
+  padding-top: 70px;   /* 👈 consistent */
+}
+
+.mfg-hero-title {
+  color: #fff;
+  font-size: 50px;
+  font-family: "futuraptMedium", sans-serif;
+  max-width: 600px;
+  line-height: 1.2;
+}
+
+/* ── OVERVIEW ─────────────────────────────── */
+.mfg-overview {
+  text-align: center;
+  padding: 70px 140px;
+  margin-top: -130px;
+  background: #fff;
+  border-top-left-radius: 60% 100px;
+  border-top-right-radius: 60% 100px;
+}
+
+.mfg-overview h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #013470;
+  margin-bottom: 24px;
+}
+
+.mfg-overview-quote {
+  font-style: italic;
+  font-size: 18px;
+  color: #013470 !important; 
+  font-weight: 600;
+  margin-bottom: 28px; 
+}
+
+.mfg-overview p {
+  font-size: 15.5px;
+  color: #555;
+  line-height: 1.85;
+  margin-bottom: 20px;
+  max-width: 1020px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── CHALLENGES ───────────────────────────── */
+/* .mfg-challenges {
+  padding: 60px 100px;
+  background: #f8fbff;
+} */
+
+.mfg-challenges-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.mfg-challenge-card {
+  background: #f3f7fc;   /* 👈 light blue card bg */
+  border: none;
+  border-radius: 6px;
+  padding: 32px 30px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.mfg-challenge-card h3 {
+  font-size: 19px;
+  font-weight: 700;
+  color: #013470;
+  margin-bottom: 20px;
+}
+
+.mfg-challenge-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mfg-challenge-card ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14.5px;
+  color: #555;
+  line-height: 1.65;
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: none;
+}
+
+.mfg-challenge-card ul li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.mfg-bullet {
+  width: 8px;
+  height: 8px;
+  min-width: 8px;
+  border-radius: 50%;
+  background: #013470;
+  margin-top: 7px;
+}
+
+/* ── OUR SOLUTIONS ────────────────────────── */
+.mfg-solutions {
+  padding: 70px 100px;
+  background: #fff;
+}
+
+.mfg-solutions h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #013470;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.mfg-solutions-intro {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.8;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 50px;
+}
+
+/* 4 pillars */
+.mfg-pillars {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.mfg-pillar {
+  text-align: center;
+  padding: 24px 18px;
+}
+
+.mfg-pillar-icon {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 18px;
+}
+
+.mfg-pillar-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.mfg-pillar h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #013470;
+  margin-bottom: 12px;
+}
+
+.mfg-pillar p {
+  font-size: 13.5px;
+  color: #666;
+  line-height: 1.7;
+}
+
+/* 3-col + ... grid */
+.mfg-solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border: 1px solid #dde4f0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* CARD BASE */
+.mfg-solution-item {
+  padding: 28px 26px;
+  border-right: 1px solid #dde4f0;
+  border-bottom: 1px solid #dde4f0;
+  position: relative;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+/* 🔵 LEFT LINE */
+.mfg-solution-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;                      /* 👈 premium spacing */
+  height: calc(100% - 20px);
+  width: 0;
+  background: #013470;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+/* 🔥 HOVER */
+.mfg-solution-item:hover::before {
+  width: 5px;
+}
+
+.mfg-solution-item:hover {
+  background: #f5f9ff;           /* 👈 subtle highlight */
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+.mfg-solution-item h4 {
+  color: #013470;   /* 👈 exact color from your screenshot */
+  font-weight: 700;
+}
+.mfg-solution-item p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ════════════════════════════════════════════
+   RESPONSIVE
+   ════════════════════════════════════════════ */
+
+@media (max-width: 1100px) {
+  .mfg-overview,
+  .mfg-challenges,
+  .mfg-solutions {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .mfg-pillars {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .mfg-hero {
+    height: 60vw;
+  }
+  .mfg-hero-box {
+    margin-left: 20px;
+    padding-top: 50px;
+  }
+  .mfg-hero-title {
+    font-size: 32px;
+  }
+  .mfg-overview {
+    padding: 40px 20px;
+  }
+  .mfg-overview h2 {
+    font-size: 26px;
+  }
+  .mfg-challenges,
+  .mfg-solutions {
+    padding: 40px 20px;
+  }
+  .mfg-challenges-grid,
+  .mfg-pillars,
+  .mfg-solutions-grid {
+    grid-template-columns: 1fr;
+  }
+}

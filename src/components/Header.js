@@ -105,11 +105,11 @@ export default function Header() {
                 Industries <RiArrowDropDownLine className="arrowiconsx" />
               </Link>
               <div className="dropdown-content">
-                <Link href="/manufacturing-industries/">Manufacturing</Link>
-                <Link href="/life-sciences/">Life Sciences</Link>
-                <Link href="/consumer-packaged-goods/">Consumer Packaged Goods</Link>
-                <Link href="/hi-tech/">Hi-Tech</Link>
-                <Link href="/utility/">Utilities</Link>
+                <Link href="/industries/manufacturing/">Manufacturing</Link>
+                <Link href="/industries/life-science/">Life Sciences</Link>
+                <Link href="/industries/consumer-packaged-goods/">Consumer Packaged Goods</Link>
+                <Link href="/industries/hi-tech/">Hi-Tech</Link>
+                <Link href="/industries/utility/">Utilities</Link>
               </div>
             </div>
           </div>
