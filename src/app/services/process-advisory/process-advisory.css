@@ -13,55 +13,37 @@
    HERO
    ══════════════════════════════════════════════ */
 .pa-hero {
-  position: relative;
-  background: linear-gradient(135deg, #1D448A 0%, #2D55AD 55%, #3a6bc4 100%);
-  min-height: 420px;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  padding: 60px 80px 60px 120px;
-}
-
-/* white arc at bottom */
-.pa-hero::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 80px;
-  background: #fff;
-  clip-path: ellipse(55% 100% at 50% 100%);
+  background: url("/Taciti assets/Transformation through ERP-90.png") no-repeat;
+  height: 50vw;              /* 👈 reduced */
+  min-height: 420px;         /* 👈 keeps balance */
+  width: 100%;
+  background-size: cover;
+  background-position: center top;
 }
 
 .pa-hero-content {
-  flex: 1;
-  z-index: 2;
-  position: relative;
+  margin-left: 150px;
+  padding-top: 100px;
 }
 
 .pa-hero-content h1 {
   color: #fff;
-  font-size: 52px;
-  font-weight: 600;
-  line-height: 1.2;
+  font-size: 55px;
+  font-family: "futuraptMedium";
   margin: 0;
 }
 
-.pa-hero-img-wrap {
-  flex: 0 0 auto;
-  z-index: 2;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.pa-hero-img {
-  max-width: 460px;
-  width: 100%;
-  object-fit: contain;
-  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.15));
+@media (max-width: 767px) {
+  .pa-hero {
+    height: 60vw;
+  }
+  .pa-hero-content {
+    margin-left: 20px;
+    padding-top: 50px;
+  }
+  .pa-hero-content h1 {
+    font-size: 40px;
+  }
 }
 
 /* ══════════════════════════════════════════════
@@ -70,6 +52,10 @@
 .pa-overview {
   text-align: center;
   padding: 70px 140px;
+  margin-top: -130px;          /* 👈 pull upward */
+  background: #fff;
+  border-top-left-radius: 60% 100px;
+  border-top-right-radius: 60% 100px;
 }
 
 .pa-overview h2 {
@@ -100,43 +86,56 @@
   gap: 24px;
 }
 
+/* ================= CARD ================= */
 .pa-card {
   border: 1px solid #dde4f0;
   padding: 32px 26px;
   background: #fff;
   border-radius: 6px;
-  transition: background 0.25s, border-color 0.25s;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* 🔵 overlay image */
+.pa-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/Taciti assets/card.png") no-repeat center/cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+/* content above */
+.pa-card h3 {
+   position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+   color: #1D448A;
+   font-weight: 700;
+}
+.pa-card p {
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+/* hover */
+.pa-card:hover::before {
+  opacity: 1;
 }
 
 .pa-card:hover {
-  background-image: url("/Taciti assets/card.png");
-  background-size: cover;
-  background-position: center;
   border-color: transparent;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
 }
 
-.pa-card h3 {
-  font-size: 17px;
-  font-weight: 700;
-  color: #1D448A;
-  margin-bottom: 14px;
-  line-height: 1.35;
-}
-
-.pa-card p {
-  font-size: 14.5px;
-  color: #505865;
-  line-height: 1.75;
-  margin: 0;
-}
-
-.pa-card--active {
-  background: #2D55AD;
-  border-color: #2D55AD;
-}
-
-.pa-card--active h3,
-.pa-card--active p {
+/* 🔥 text white */
+.pa-card:hover h3,
+.pa-card:hover p {
   color: #fff;
 }
 

@@ -2,7 +2,7 @@
    HUMAN CAPITAL MANAGEMENT / TALENT MANAGEMENT
    talent-management.css
    Matches taciti.com/talent-management-transformation
-   Colors: #1D448A, #2D55AD, #EDEFF3, #505865
+   Colors: #013470, #2D55AD, #EDEFF3, #505865
    ============================================= */
 
 .tm-page {
@@ -14,55 +14,36 @@
    HERO
    ══════════════════════════════════════════════ */
 .tm-hero {
-  position: relative;
-  background: linear-gradient(135deg, #1D448A 0%, #2D55AD 55%, #3a6bc4 100%);
-  min-height: 420px;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  padding: 60px 80px 60px 120px;
-}
-
-/* white arc at bottom */
-.tm-hero::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 80px;
-  background: #fff;
-  clip-path: ellipse(55% 100% at 50% 100%);
+  background: url("/Taciti assets/assets-16.png") no-repeat;
+  height: 50vw;          /* 👈 reduced */
+  min-height: 380px;
+  width: 100%;
+  background-size: cover;
+  background-position: center top;
 }
 
 .tm-hero-content {
-  flex: 1;
-  z-index: 2;
-  position: relative;
+  margin-left: 150px;
+  padding-top: 70px;     /* 👈 reduce */
 }
-
 .tm-hero-content h1 {
   color: #fff;
-  font-size: 52px;
-  font-weight: 600;
-  line-height: 1.2;
+  font-size: 55px;
+  font-family: "futuraptMedium";
   margin: 0;
 }
 
-.tm-hero-img-wrap {
-  flex: 0 0 auto;
-  z-index: 2;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.tm-hero-img {
-  max-width: 460px;
-  width: 100%;
-  object-fit: contain;
-  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.18));
+@media (max-width: 767px) {
+  .tm-hero {
+    height: 60vw;
+  }
+  .tm-hero-content {
+    margin-left: 20px;
+    padding-top: 50px;
+  }
+  .tm-hero-content h1 {
+    font-size: 40px;
+  }
 }
 
 /* ══════════════════════════════════════════════
@@ -71,12 +52,16 @@
 .tm-overview {
   text-align: center;
   padding: 70px 140px;
+  margin-top: -130px;     /* 👈 pull up */
+  background: #fff;
+  border-top-left-radius: 60% 100px;
+  border-top-right-radius: 60% 100px;
 }
 
 .tm-overview h2 {
   font-size: 36px;
   font-weight: 700;
-  color: #1D448A;
+  color: #013470;
   margin-bottom: 28px;
 }
 
@@ -98,7 +83,7 @@
 .tm-offerings h2 {
   font-size: 34px;
   font-weight: 700;
-  color: #1D448A;
+  color: #013470;
   text-align: center;
   margin-bottom: 44px;
 }
@@ -109,67 +94,60 @@
   gap: 24px;
 }
 
+/* ================= CARD ================= */
 .tm-card {
   border: 1px solid #dde4f0;
   padding: 30px 26px;
   background: #fff;
   border-radius: 6px;
-  transition: background 0.25s, border-color 0.25s;
-  cursor: default;
-}
-
-.tm-card:not(.tm-card--active):hover {
-  background-image: url("/Taciti assets/card.png");
-  background-size: cover;
-  background-position: center;
-  border-color: transparent;
-}
-
-.tm-card h3 {
-  font-size: 17px;
-  font-weight: 700;
-  color: #1D448A;
-  margin-bottom: 14px;
-  line-height: 1.35;
-}
-
-.tm-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.tm-card ul li {
-  font-size: 14.5px;
-  color: #505865;
-  line-height: 1.7;
-  margin-bottom: 6px;
-  padding-left: 18px;
   position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
-.tm-card ul li::before {
-  content: "•";
+/* 🔵 overlay */
+.tm-card::before {
+  content: "";
   position: absolute;
-  left: 4px;
-  color: #2D55AD;
+  inset: 0;
+  background: url("/Taciti assets/card.png") no-repeat center/cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
 }
 
-/* Active / highlighted card */
-.tm-card--active {
-  background: #2D55AD;
-  border-color: #2D55AD;
+/* content layer */
+.tm-card h3{
+  position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
+    color: #013470;
+    font-weight: 700;
+}
+.tm-card ul li {
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
 }
 
-.tm-card--active h3 {
+/* hover */
+.tm-card:hover::before {
+  opacity: 1;
+}
+
+.tm-card:hover {
+  border-color: transparent;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* 🔥 white text */
+.tm-card:hover h3,
+.tm-card:hover ul li {
   color: #fff;
 }
 
-.tm-card--active ul li {
-  color: #fff;
-}
-
-.tm-card--active ul li::before {
+.tm-card:hover ul li::before {
   color: #fff;
 }
 
@@ -185,7 +163,7 @@
 .tm-framework h2 {
   font-size: 34px;
   font-weight: 700;
-  color: #1D448A;
+  color: #013470;
   margin-bottom: 50px;
 }
 
@@ -220,7 +198,7 @@
 .tm-step-icon {
   width: 80px;
   height: 80px;
-  background: #1D448A;
+  background: #013470;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -265,7 +243,7 @@
 .tm-lms h2 {
   font-size: 34px;
   font-weight: 700;
-  color: #1D448A;
+  color: #013470;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -291,7 +269,7 @@
 .tm-lms-item h3 {
   font-size: 18px;
   font-weight: 700;
-  color: #1D448A;
+  color: #013470;
   margin-bottom: 12px;
 }
 

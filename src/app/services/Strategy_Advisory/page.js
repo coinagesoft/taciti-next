@@ -8,14 +8,8 @@ export default function StrategyAdvisory() {
       {/* ── HERO ── */}
       <section className="sa-hero">
         <div className="sa-hero-content">
-          <h1>Business Consulting</h1>
-        </div>
-        <div className="sa-hero-img-wrap">
-          <img
-            src="/Taciti assets/assets-18.png"
-            alt="Business Consulting"
-            className="sa-hero-img"
-          />
+          <h1>
+Strategy & Advisory</h1>
         </div>
       </section>
 
@@ -81,7 +75,7 @@ export default function StrategyAdvisory() {
               technology and management, driving lasting success.
             </p>
           </div>
-          <div className="sa-card sa-card--active">
+          <div className="sa-card ">
             <h3>Guiding Transformative Pathways</h3>
             <p>
               Our strategy and advisory expertise pave the way for transformative journeys.

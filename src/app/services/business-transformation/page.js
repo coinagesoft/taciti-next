@@ -10,13 +10,6 @@ export default function BusinessTransformation() {
         <div className="bt-hero-content">
           <h1>Transformation<br />Management &amp; Governance</h1>
         </div>
-        <div className="bt-hero-img-wrap">
-          <img
-            src="/Taciti assets/assets-10.png"
-            alt="Transformation Management & Governance"
-            className="bt-hero-img"
-          />
-        </div>
       </section>
 
       {/* ── OVERVIEW ── */}

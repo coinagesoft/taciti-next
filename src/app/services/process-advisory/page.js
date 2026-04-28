@@ -10,13 +10,6 @@ export default function ProcessAdvisory() {
         <div className="pa-hero-content">
           <h1>ERP Led<br />Transformation</h1>
         </div>
-        <div className="pa-hero-img-wrap">
-          <img
-            src="/Taciti assets/Transformation through ERP-90.png"
-            alt="ERP Led Transformation"
-            className="pa-hero-img"
-          />
-        </div>
       </section>
 
       {/* ── OVERVIEW ── */}

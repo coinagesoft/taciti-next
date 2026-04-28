@@ -11,14 +11,16 @@
 /* ── HERO ─────────────────────────────────── */
 .cs-intro-section {
   background: url("/Taciti assets/assets-01.png") no-repeat;
-  height: 50vw;
-  width: 100vw;
+  height: 34vw;          /* 👈 reduced */
+  min-height: 380px;
+  width: 100%;
   background-size: cover;
-  background-position: top;
+  background-position: center top;
 }
+
 .cs-intro-box {
   margin-left: 150px;
-  padding-top: 100px;
+  padding-top: 70px;     /* 👈 reduced */
 }
 .cs-main-title {
   color: #fff;
@@ -26,10 +28,27 @@
   font-family: "futuraptMedium";
 }
 
+@media (max-width: 767px) {
+  .cs-intro-section {
+    height: 60vw;
+  }
+  .cs-intro-box {
+    margin-left: 20px;
+    padding-top: 50px;
+  }
+  .cs-main-title {
+    font-size: 40px;
+  }
+}
+
 /* ── OVERVIEW ─────────────────────────────── */
 .cs-overview {
   text-align: center;
   padding: 70px 140px;
+  margin-top: -130px;     /* 👈 pull up */
+  background: #fff;
+  border-top-left-radius: 60% 100px;
+  border-top-right-radius: 60% 100px;
 }
 
 .cs-overview h2 {

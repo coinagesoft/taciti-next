@@ -10,13 +10,6 @@ export default function TalentManagementTransformation() {
         <div className="tm-hero-content">
           <h1>Human Capital<br />Management</h1>
         </div>
-        <div className="tm-hero-img-wrap">
-          <img
-            src="/Taciti assets/assets-16.png"
-            alt="Human Capital Management"
-            className="tm-hero-img"
-          />
-        </div>
       </section>
 
       {/* ── OVERVIEW ── */}
