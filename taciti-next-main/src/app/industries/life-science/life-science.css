@@ -1,0 +1,254 @@
+/* =============================================
+   LIFE SCIENCE PAGE
+   life-science.css
+   ============================================= */
+
+.ls-page {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* ── HERO ─────────────────────────────────── */
+.ls-hero {
+  background: url("/Taciti assets/assets-20.png") no-repeat;
+  height: 50vw;
+  min-height: 380px;
+  width: 100%;
+  background-size: cover;
+  background-position: center top;   /* 👈 important */
+}
+
+.ls-hero-box {
+  margin-left: 150px;
+  padding-top: 70px;                 /* 👈 consistent */
+}
+
+.ls-hero-title {
+  color: #fff;
+  font-size: 50px;
+  font-family: "futuraptMedium", sans-serif;
+  max-width: 600px;
+  line-height: 1.2;
+}
+
+/* ── OVERVIEW ─────────────────────────────── */
+.ls-overview {
+  text-align: center;
+  padding: 70px 140px;
+  margin-top: -130px;
+  background: #fff;
+  border-top-left-radius: 60% 100px;
+  border-top-right-radius: 60% 100px;
+}
+
+.ls-overview h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1f4e79;
+  margin-bottom: 24px;
+}
+
+.ls-overview p {
+  font-size: 15.5px;
+  color: #555;
+  line-height: 1.85;
+  margin-bottom: 20px;
+  max-width: 1020px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── SOLUTION CARDS ───────────────────────── */
+.ls-cards-section {
+  padding: 60px 100px;
+  background: #f8fbff;
+}
+
+.ls-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.ls-card {
+  border: 1px solid #dde4f0;
+  padding: 28px 24px;
+  background: #fff;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* 🔵 background image overlay */
+.ls-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/Taciti assets/card.png") no-repeat center/cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+
+.ls-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.ls-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1f4e79;
+  line-height: 1.35;
+  transition: color 0.3s ease;
+  margin: 0;
+}
+
+.ls-card:hover h3 {
+  color: #fff;
+}
+
+.ls-card-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+}
+
+.ls-card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: none;
+  transition: filter 0.3s ease;
+}
+
+.ls-card:hover .ls-card-icon img {
+  filter: brightness(0) invert(1);
+}
+
+.ls-card p {
+  font-size: 13.5px;
+  color: #555;
+  line-height: 1.7;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.ls-card:hover p {
+  color: #e8eef8;
+}
+
+/* ── TAILORED SOLUTIONS ───────────────────── */
+.ls-tailored {
+  padding: 70px 100px;
+  background: #f3f7fc;
+}
+
+.ls-tailored h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f4e79;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px;
+  line-height: 1.35;
+}
+
+.ls-tailored-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 60px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.ls-tailored-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ls-tailored-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  color: #444;
+  padding: 12px 0;
+  border-bottom: 1px solid #eef2f8;
+}
+
+.ls-tailored-list li:last-child {
+  border-bottom: none;
+}
+
+.ls-arrow-icon {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ls-arrow-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #1f4e79;         /* circle color */
+  stroke-width: 20;
+}
+
+/* Arrow inside */
+.ls-arrow-icon svg path {
+  fill: #1f4e79;           /* arrow color */
+}
+
+/* ════════════════════════════════════════════
+   RESPONSIVE
+   ════════════════════════════════════════════ */
+
+@media (max-width: 1100px) {
+  .ls-overview,
+  .ls-cards-section,
+  .ls-tailored {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .ls-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .ls-hero {
+    height: 60vw;
+  }
+  .ls-hero-box {
+    margin-left: 20px;
+    padding-top: 50px;
+  }
+  .ls-hero-title {
+    font-size: 32px;
+  }
+  .ls-overview {
+    padding: 40px 20px;
+  }
+  .ls-overview h2 {
+    font-size: 26px;
+  }
+  .ls-cards-section,
+  .ls-tailored {
+    padding: 40px 20px;
+  }
+  .ls-cards-grid,
+  .ls-tailored-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,239 @@
+/* =============================================
+   TRANSFORMATION MANAGEMENT & GOVERNANCE
+   business-transformation.css
+   Matches taciti.com/business-transformation
+   Colors: #1D448A, #2D55AD, #EDEFF3, #505865
+   ============================================= */
+
+.bt-page {
+  font-family: "Poppins", sans-serif;
+  color: #505865;
+}
+
+/* ══════════════════════════════════════════════
+   HERO
+   ══════════════════════════════════════════════ */
+.bt-hero {
+  background: url("/Taciti assets/assets-10.png") no-repeat;
+  height: 50vw;
+  width: 100vw;
+  background-size: 100%;
+  background-position: top;
+}
+
+.bt-hero-content {
+  margin-left: 150px;
+  padding-top: 100px;
+}
+
+.bt-hero-content h1 {
+  color: #fff;
+  font-size: 55px;
+  font-family: "futuraptMedium";
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .bt-hero {
+    height: 60vw;
+  }
+  .bt-hero-content {
+    margin-left: 20px;
+    padding-top: 50px;
+  }
+  .bt-hero-content h1 {
+    font-size: 40px;
+  }
+}
+
+/* ══════════════════════════════════════════════
+   OVERVIEW
+   ══════════════════════════════════════════════ */
+.bt-overview {
+  text-align: center;
+  padding: 70px 140px;
+  margin-top: -130px;     /* 👈 pull up */
+  background: #fff;
+  border-top-left-radius: 60% 100px;
+  border-top-right-radius: 60% 100px;
+}
+
+.bt-overview h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #013470;
+  margin-bottom: 28px;
+}
+
+.bt-overview p {
+  font-size: 15.5px;
+  color: #505865;
+  line-height: 1.85;
+  margin: 0 auto;
+  max-width: 1020px;
+}
+
+/* ══════════════════════════════════════════════
+   SERVICES INCLUDE
+   ══════════════════════════════════════════════ */
+.bt-services {
+  padding: 0 100px 60px;
+}
+
+.bt-services h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #013470;
+  margin-bottom: 30px;
+  line-height: 1.3;
+}
+
+.bt-services-grid {
+  display: flex;
+  gap: 80px;
+  text-align: left;
+}
+
+.bt-services-grid ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.bt-services-grid li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 16px 0;
+  font-size: 15px;
+  color: #505865;
+  line-height: 1.55;
+}
+
+/* Circular arrow icon */
+.bt-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #2D55AD;
+  border-radius: 50%;
+  margin-top: 1px;
+  position: relative;
+}
+
+.bt-icon::after {
+  content: "›";
+  color: #013470;
+  font-size: 15px;
+  line-height: 1;
+  margin-left: 1px;
+}
+
+/* ══════════════════════════════════════════════
+   OUR EXPERTISE — card grid (3 × 3)
+   ══════════════════════════════════════════════ */
+.bt-expertise {
+  padding: 60px 100px 80px;
+}
+
+.bt-expertise h2 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #013470;
+  margin-bottom: 36px;
+}
+
+.bt-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ================= CARD ================= */
+.bt-card {
+  border: 1px solid #dde4f0;
+  padding: 30px 26px;
+  background: #fff;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* 🔵 overlay */
+.bt-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/Taciti assets/card.png") no-repeat center/cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+/* content layer */
+.bt-card h3{
+ position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+   color: #013470;
+   font-weight: 700;
+}
+.bt-card p {
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+/* hover */
+.bt-card:hover::before {
+  opacity: 1;
+}
+
+.bt-card:hover {
+  border-color: transparent;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* 🔥 text white on hover */
+.bt-card:hover h3,
+.bt-card:hover p {
+  color: #fff;
+}
+/* ══════════════════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════════════════ */
+@media (max-width: 1200px) {
+  .bt-hero { padding: 60px 60px 60px 80px; }
+  .bt-hero-content h1 { font-size: 40px; }
+  .bt-hero-img { max-width: 340px; }
+  .bt-overview { padding: 60px 80px; }
+  .bt-services { padding: 0 80px 50px; }
+  .bt-expertise { padding: 50px 80px 60px; }
+}
+
+@media (max-width: 960px) {
+  .bt-hero { flex-direction: column; text-align: center; padding: 60px 40px 80px; }
+  .bt-hero-img { max-width: 300px; margin-top: 30px; }
+  .bt-overview { padding: 50px 40px; }
+  .bt-services { padding: 0 40px 40px; }
+  .bt-services-grid { flex-direction: column; gap: 0; }
+  .bt-expertise { padding: 40px 40px 50px; }
+  .bt-cards-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .bt-hero-content h1 { font-size: 30px; }
+  .bt-overview { padding: 40px 20px; }
+  .bt-overview h2 { font-size: 26px; }
+  .bt-services { padding: 0 20px 40px; }
+  .bt-services h2 { font-size: 20px; }
+  .bt-expertise { padding: 40px 20px 50px; }
+  .bt-expertise h2 { font-size: 26px; }
+  .bt-cards-grid { grid-template-columns: 1fr; }
+}

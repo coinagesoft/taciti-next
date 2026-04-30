@@ -1,0 +1,287 @@
+/* =============================================
+   UTILITIES INDUSTRY PAGE
+   utility.css
+   ============================================= */
+
+.utility-page {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* ── HERO ─────────────────────────────────── */
+.utility-hero {
+  background: url("/Taciti assets/technology services-92.png") no-repeat;
+  height: 50vw;
+  min-height: 380px;
+  width: 100%;
+  background-size: cover;
+  background-position: center top;
+}
+
+.utility-hero-box {
+  margin-left: 150px;
+  padding-top: 70px;
+}
+
+.utility-hero-title {
+  color: #fff;
+  font-size: 50px;
+  font-family: "futuraptMedium", sans-serif;
+  max-width: 400px;
+  line-height: 1.2;
+}
+
+/* ── OVERVIEW ─────────────────────────────── */
+.utility-overview {
+  text-align: center;
+  padding: 70px 140px;
+  margin-top: -130px;
+  background: #fff;
+  border-top-left-radius: 60% 100px;
+  border-top-right-radius: 60% 100px;
+}
+
+.utility-overview h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1f4e79;
+  margin-bottom: 24px;
+}
+
+.utility-overview p {
+  font-size: 15.5px;
+  color: #555;
+  line-height: 1.85;
+  margin-bottom: 20px;
+  max-width: 1020px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── SERVICE CARDS ────────────────────────── */
+.utility-cards-section {
+  padding: 60px 100px;
+  background: #fff;
+}
+
+.utility-cards-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto 28px;
+}
+
+.utility-cards-row-center {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+.utility-card {
+  border: 3px solid #ebebeb;
+  border-radius: 6px;
+  padding: 28px 22px;
+  min-height: 300px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease;
+  cursor: default;
+}
+
+.utility-card:hover {
+  background-image: url("/Taciti assets/card.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.utility-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.utility-card h4 {
+  font-size: 20px;
+  color: #013470;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0;
+  transition: color 0.3s;
+}
+
+.utility-card:hover h4 {
+  color: #fff;
+}
+
+.utility-card-icon {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.utility-card-icon-hover {
+  display: none;
+}
+
+.utility-card:hover .utility-card-icon-default {
+  display: none;
+}
+
+.utility-card:hover .utility-card-icon-hover {
+  display: block;
+}
+
+.utility-card p {
+  font-size: 14.5px;
+  color: #4e5764;
+  line-height: 1.65;
+  margin: 0;
+  transition: color 0.3s;
+}
+
+.utility-card:hover p {
+  color: #fff;
+}
+
+/* ── WHY US ───────────────────────────────── */
+.utility-whyus {
+  padding: 70px 100px 30px;
+  background: #fff;
+  text-align: center;
+}
+
+.utility-whyus h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1f4e79;
+  margin-bottom: 50px;
+}
+
+.utility-whyus-top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  max-width: 1100px;
+  margin: 0 auto 50px;
+}
+
+/* base */
+.utility-whyus-item {
+  padding: 30px 36px;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* hidden blue line */
+.utility-whyus-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  height: calc(100% - 20px);
+  width: 0;
+  background: #013470;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+/* 🔥 hover */
+.utility-whyus-item:hover::before {
+  width: 5px;
+}
+
+/* optional lift */
+.utility-whyus-item:hover {
+  transform: translateY(-4px);
+}
+
+
+
+.utility-whyus-item h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #013470;
+  margin-bottom: 14px;
+}
+
+.utility-whyus-item p {
+  font-size: 14.5px;
+  color: #555;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.utility-whyus-bottom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  max-width: 740px;
+  margin: 0 auto 60px;
+}
+
+.utility-whyus-bottom .utility-whyus-item {
+  text-align: left;
+  padding: 20px 36px;
+}
+
+
+.utility-whyus-bottom .utility-whyus-item:nth-child(2) h3 {
+  color: #013470;
+}
+
+/* ════════════════════════════════════════════
+   RESPONSIVE
+   ════════════════════════════════════════════ */
+
+@media (max-width: 1100px) {
+  .utility-overview,
+  .utility-cards-section,
+  .utility-whyus {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .utility-hero {
+    height: 60vw;
+  }
+  .utility-hero-box {
+    margin-left: 20px;
+    padding-top: 50px;
+  }
+  .utility-hero-title {
+    font-size: 32px;
+  }
+  .utility-overview {
+    padding: 40px 20px;
+    margin-top: -80px;
+  }
+  .utility-overview h2 {
+    font-size: 26px;
+  }
+  .utility-cards-section,
+  .utility-whyus {
+    padding: 40px 20px;
+  }
+  .utility-cards-row,
+  .utility-cards-row-center,
+  .utility-whyus-top,
+  .utility-whyus-bottom {
+    grid-template-columns: 1fr;
+  }
+  .utility-whyus-top .utility-whyus-item:nth-child(2) {
+    border-left: none;
+    border-right: none;
+    border-top: 4px solid #013470;
+    border-bottom: 4px solid #013470;
+  }
+}

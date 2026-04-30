@@ -1,0 +1,33 @@
+.stub-page {
+  font-family: "futuraptMedium", sans-serif;
+  color: #333;
+}
+.stub-hero {
+  background: url("/images/backgroundLayer.svg") no-repeat center;
+  background-size: cover;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  padding-left: 140px;
+}
+.stub-hero h1 {
+  color: #fff;
+  font-size: 46px;
+  font-family: "futuraptbold", sans-serif;
+  margin: 0;
+}
+.stub-body {
+  padding: 80px 140px;
+  background: #fff;
+}
+.stub-body p {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.8;
+  max-width: 800px;
+}
+@media(max-width:768px){
+  .stub-hero { padding-left: 20px; height:220px; }
+  .stub-hero h1 { font-size:28px; }
+  .stub-body { padding:40px 20px; }
+}

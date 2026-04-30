@@ -1,0 +1,193 @@
+/* =============================================
+   CONSUMER PACKAGED GOODS PAGE
+   consumer-packaged-goods.css
+   ============================================= */
+
+.cpg-page {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* ── HERO ─────────────────────────────────── */
+.cpg-hero {
+  background: url("/Taciti assets/assests-89.png") no-repeat;
+  height: 50vw;
+  min-height: 380px;
+  width: 100%;
+  background-size: cover;
+  background-position: center top;
+}
+
+.cpg-hero-box {
+  margin-left: 150px;
+  padding-top: 70px;
+}
+
+.cpg-hero-title {
+  color: #fff;
+  font-size: 50px;
+  font-family: "futuraptMedium", sans-serif;
+  max-width: 600px;
+  line-height: 1.2;
+}
+
+/* ── OVERVIEW ─────────────────────────────── */
+.cpg-overview {
+  text-align: center;
+  padding: 70px 140px;
+  margin-top: -130px;
+  background: #fff;
+  border-top-left-radius: 60% 100px;
+  border-top-right-radius: 60% 100px;
+}
+
+.cpg-overview h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1f4e79;
+  margin-bottom: 24px;
+}
+
+.cpg-overview p {
+  font-size: 15.5px;
+  color: #555;
+  line-height: 1.85;
+  margin-bottom: 20px;
+  max-width: 1020px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── OUR EXPERTISE ────────────────────────── */
+.cpg-expertise {
+  padding: 80px 100px;     /* 👈 slightly more top/bottom */
+  /* background: #f8fbff; */
+}
+
+.cpg-expertise-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;                 /* 👈 more breathing space */
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.cpg-expertise-content h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #013470;          /* 👈 exact color from site */
+  margin-bottom: 18px;
+}
+
+.cpg-expertise-content p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+.cpg-expertise-image {
+  display: flex;
+  justify-content: center;
+}
+
+.cpg-expertise-image img {
+  width: 100%;
+  max-width: 520px;        /* 👈 matches Elementor */
+  height: auto;
+  object-fit: contain;
+}
+
+/* ── PRINCIPLES ───────────────────────────── */
+/* SECTION */
+.cpg-principles {
+  padding: 70px 100px;
+  background: #fff;
+  text-align: center;
+}
+
+/* HEADING */
+.cpg-principles-heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: #013470;
+  margin-bottom: 50px;
+  line-height: 1.4;
+}
+
+/* GRID */
+.cpg-principles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ITEM */
+.cpg-principle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* ICON */
+.cpg-principle img {
+  width: 70px;
+  height: auto;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+
+/* TEXT */
+.cpg-principle p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+  max-width: 280px;
+}
+
+/* ════════════════════════════════════════════
+   RESPONSIVE
+   ════════════════════════════════════════════ */
+
+@media (max-width: 1100px) {
+  .cpg-overview,
+  .cpg-expertise,
+  .cpg-principles {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .cpg-principles-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cpg-hero {
+    height: 60vw;
+  }
+  .cpg-hero-box {
+    margin-left: 20px;
+    padding-top: 50px;
+  }
+  .cpg-hero-title {
+    font-size: 32px;
+  }
+  .cpg-overview {
+    padding: 40px 20px;
+  }
+  .cpg-overview h2 {
+    font-size: 26px;
+  }
+  .cpg-expertise,
+  .cpg-principles-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .cpg-expertise-inner,
+  .cpg-principles-list {
+    grid-template-columns: 1fr;
+  }
+}

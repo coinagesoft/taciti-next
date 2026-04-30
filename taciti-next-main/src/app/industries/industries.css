@@ -1,0 +1,228 @@
+/* =============================================
+   INDUSTRIES PAGE
+   industries.css
+   ============================================= */
+
+.ind-page {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* ── HERO ─────────────────────────────────── */
+.ind-hero {
+  background: url("/Taciti assets/assets-23.png") no-repeat;
+  height: 50vw;
+  min-height: 380px;
+  width: 100%;
+  background-size: cover;
+  background-position: center top;
+}
+
+.ind-hero-content {
+  margin-left: 150px;
+  padding-top: 70px;
+}
+
+.ind-hero h1 {
+  color: #fff;
+  font-size: 50px;
+  font-family: "futuraptMedium", sans-serif;
+  max-width: 500px;
+  line-height: 1.15;
+}
+
+/* ── INTRO ────────────────────────────────── */
+.ind-intro {
+  background: #fff;
+  margin-top: -130px;
+  border-top-left-radius: 60% 100px;
+  border-top-right-radius: 60% 100px;
+  padding: 70px 140px 50px;
+  text-align: center;
+}
+
+.ind-intro h2.ind-sub {
+  font-size: 36px;
+  font-weight: 700;
+  color: #013470;
+  margin-bottom: 24px;
+}
+
+.ind-intro p {
+  font-size: 15.5px;
+  color: #555;
+  line-height: 1.85;
+  max-width: 1020px;
+  margin: 0 auto 18px;
+}
+
+.ind-intro h2.ind-know {
+  font-size: 28px;
+  font-weight: 700;
+  color: #013470;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* ── INDUSTRY CARDS ───────────────────────── */
+.ind-cards-section {
+  padding: 0 100px 70px;
+  background: #fff;
+}
+
+.ind-cards-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto 28px;
+}
+
+.ind-cards-row-center {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+/* CARD */
+.ind-card {
+  border: 3px solid #ebebeb;
+  border-radius: 6px;
+  padding: 24px 20px 28px;
+  min-height: 380px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s;
+  cursor: default;
+}
+
+.ind-card:hover {
+  background-image: url("/Taciti assets/card.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ind-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  gap: 12px;
+}
+
+.ind-card h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #013470;
+  line-height: 1.25;
+  margin: 0;
+  transition: color 0.3s;
+}
+
+.ind-card:hover h4 {
+  color: #fff;
+}
+
+.ind-card-icon {
+  width: 40px;
+  height: 50px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.ind-card-icon-cpg {
+  width: 65px;
+  height: 50px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.ind-card-icon-util {
+  width: 30px;
+  height: 50px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.ind-icon-hover {
+  display: none;
+}
+
+.ind-card:hover .ind-icon-default {
+  display: none;
+}
+
+.ind-card:hover .ind-icon-hover {
+  display: block;
+}
+
+.ind-card p {
+  font-size: 14.5px;
+  color: #4e5764;
+  line-height: 1.7;
+  margin: 0 0 16px;
+  transition: color 0.3s;
+}
+
+.ind-card:hover p {
+  color: #fff;
+}
+
+.ind-card a {
+  font-size: 14px;
+  font-weight: 600;
+  color: #013470;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.ind-card:hover a {
+  color: #fff;
+}
+
+.ind-card a:hover {
+  text-decoration: underline;
+}
+
+/* ════════════════════════════════════════════
+   RESPONSIVE
+   ════════════════════════════════════════════ */
+
+@media (max-width: 1100px) {
+  .ind-intro,
+  .ind-cards-section {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ind-hero {
+    height: 60vw;
+    min-height: 240px;
+  }
+  .ind-hero-content {
+    margin-left: 20px;
+    padding-top: 50px;
+  }
+  .ind-hero h1 {
+    font-size: 32px;
+  }
+  .ind-intro {
+    padding: 40px 20px;
+    margin-top: -80px;
+  }
+  .ind-intro h2.ind-sub {
+    font-size: 24px;
+  }
+  .ind-cards-section {
+    padding: 0 20px 50px;
+  }
+  .ind-cards-row,
+  .ind-cards-row-center {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,146 @@
+/* =============================================
+   HI-TECH INDUSTRIES PAGE
+   hi-tech.css
+   ============================================= */
+
+.hitech-page {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* ── HERO ─────────────────────────────────── */
+.hitech-hero {
+  background: url("/Taciti assets/Hi tech-14.png") no-repeat;
+  height: 50vw;
+  min-height: 380px;
+  width: 100%;
+  background-size: cover;
+  background-position: center top;
+}
+
+.hitech-hero-box {
+  margin-left: 150px;
+  padding-top: 70px;
+}
+
+.hitech-hero-title {
+  color: #fff;
+  font-size: 50px;
+  font-family: "futuraptMedium", sans-serif;
+  max-width: 600px;
+  line-height: 1.2;
+}
+
+/* ── OVERVIEW ─────────────────────────────── */
+.hitech-overview {
+  text-align: center;
+  padding: 70px 140px;
+  margin-top: -130px;
+  background: #fff;
+  border-top-left-radius: 60% 100px;
+  border-top-right-radius: 60% 100px;
+}
+
+.hitech-overview h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1f4e79;
+  margin-bottom: 24px;
+}
+
+.hitech-overview p {
+  font-size: 15.5px;
+  color: #555;
+  line-height: 1.85;
+  margin-bottom: 20px;
+  max-width: 1020px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── CAPABILITIES GRID ────────────────────── */
+.hitech-capabilities {
+  padding: 60px 100px;
+  background: #fff;
+}
+
+.hitech-capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hitech-cap-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hitech-cap-icon {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  background: #e8f0fb;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.hitech-cap-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hitech-cap-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #013470;
+  line-height: 1.4;
+}
+
+/* ════════════════════════════════════════════
+   RESPONSIVE
+   ════════════════════════════════════════════ */
+
+@media (max-width: 1100px) {
+  .hitech-overview,
+  .hitech-capabilities {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .hitech-capabilities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hitech-hero {
+    height: 60vw;
+  }
+  .hitech-hero-box {
+    margin-left: 20px;
+    padding-top: 50px;
+  }
+  .hitech-hero-title {
+    font-size: 32px;
+  }
+  .hitech-overview {
+    padding: 40px 20px;
+    margin-top: -80px;
+  }
+  .hitech-overview h2 {
+    font-size: 26px;
+  }
+  .hitech-capabilities {
+    padding: 40px 20px;
+  }
+  .hitech-capabilities-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}

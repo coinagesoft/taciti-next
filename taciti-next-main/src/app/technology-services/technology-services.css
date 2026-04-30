@@ -1,0 +1,327 @@
+/* =============================================
+   TECHNOLOGY SERVICES
+   technology-services.css
+   ============================================= */
+
+.ts-page {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* ── HERO ─────────────────────────────────── */
+.ts-intro-section {
+  background: url("/Taciti assets/technology services-92.png") no-repeat;
+  height: 50vw;          /* 👈 reduced */
+  min-height: 380px;
+  width: 100%;
+  background-size: cover;
+  background-position: center top;
+}
+
+.ts-intro-box {
+  margin-left: 150px;
+  padding-top: 70px;     /* 👈 reduce */
+}
+.ts-main-title {
+  color: #fff;
+  font-size: 55px;
+  font-family: "futuraptMedium";
+}
+
+@media (max-width: 767px) {
+  .ts-intro-section {
+    height: 60vw;
+  }
+  .ts-intro-box {
+    margin-left: 20px;
+    padding-top: 50px;
+  }
+  .ts-main-title {
+    font-size: 40px;
+  }
+}
+
+/* ── OVERVIEW ─────────────────────────────── */
+.ts-overview {
+  text-align: center;
+  padding: 70px 140px;
+  margin-top: -130px;     /* 👈 pull up */
+  background: #fff;
+  border-top-left-radius: 60% 100px;
+  border-top-right-radius: 60% 100px;
+}
+
+.ts-overview h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #013470;
+  margin-bottom: 24px;
+}
+
+.ts-overview p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.85;
+  margin-bottom: 20px;
+  max-width: 1020px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── SERVICES INCLUDE ─────────────────────── */
+.ts-services {
+  padding: 60px 100px;
+  background: #f8fbff;
+}
+
+.ts-services h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #013470;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.ts-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* ================= CARD ================= */
+.ts-card {
+  border: 1px solid #dde4f0;
+  padding: 28px 24px;
+  background: #fff;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* 🔵 overlay image */
+.ts-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/Taciti assets/card.png") no-repeat center/cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+/* content layer */
+.ts-card h3{
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+   color: #013470;
+   font-weight: 700;
+}
+.ts-card ul li {
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+/* hover */
+.ts-card:hover::before {
+  opacity: 1;
+}
+
+.ts-card:hover {
+  border-color: transparent;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* 🔥 white text */
+.ts-card:hover h3,
+.ts-card:hover ul li {
+  color: #fff;
+}
+
+.ts-card:hover ul li::before {
+  color: #fff;
+}
+
+/* ── OUR EXPERTISE ────────────────────────── */
+.ts-expertise {
+  padding: 70px 100px;
+}
+
+.ts-expertise h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #013470;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.ts-expertise-intro {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.8;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+.ts-expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.ts-expertise-item h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #013470;
+  margin-bottom: 16px;
+}
+
+.ts-expertise-item ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ts-expertise-item ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.ts-arrow-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #013470;
+  border-radius: 50%;
+  margin-top: 1px;
+  position: relative;
+}
+
+.ts-arrow-icon::after {
+  content: "›";
+  color: #013470;
+  font-size: 14px;
+  line-height: 1;
+  margin-left: 1px;
+}
+
+/* ── EXPERTISE QUALITIES ─────────────────── */
+.ts-qualities {
+  padding: 60px 100px;
+  background: #f0f5fc;
+}
+
+.ts-qualities h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #013470;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.ts-qualities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.ts-quality-card {
+  border: 1px solid #dde4f0;
+  padding: 28px 24px;
+  background: #fff;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.ts-quality-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/Taciti assets/card.png") no-repeat center/cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.ts-quality-card h3,
+.ts-quality-card p {
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.ts-quality-card:hover::before {
+  opacity: 1;
+}
+
+.ts-quality-card:hover {
+  border-color: transparent;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.ts-quality-card:hover h3,
+.ts-quality-card:hover p {
+  color: #fff;
+}
+/* ════════════════════════════════════════════
+   RESPONSIVE
+   ════════════════════════════════════════════ */
+
+@media (max-width: 1100px) {
+  .ts-overview,
+  .ts-services,
+  .ts-expertise,
+  .ts-qualities {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .ts-cards-grid,
+  .ts-qualities-grid,
+  .ts-expertise-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .ts-intro-section {
+    height: 60vw;
+  }
+  .ts-intro-box {
+    margin-left: 30px;
+    padding-top: 60px;
+  }
+  .ts-main-title {
+    font-size: 30px;
+  }
+  .ts-overview {
+    padding: 40px 20px;
+  }
+  .ts-overview h2 {
+    font-size: 26px;
+  }
+  .ts-services,
+  .ts-expertise,
+  .ts-qualities {
+    padding: 40px 20px;
+  }
+  .ts-cards-grid,
+  .ts-qualities-grid,
+  .ts-expertise-grid {
+    grid-template-columns: 1fr;
+  }
+}

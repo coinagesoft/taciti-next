@@ -1,0 +1,323 @@
+/* =============================================
+   HUMAN CAPITAL MANAGEMENT / TALENT MANAGEMENT
+   talent-management.css
+   Matches taciti.com/talent-management-transformation
+   Colors: #013470, #2D55AD, #EDEFF3, #505865
+   ============================================= */
+
+.tm-page {
+  font-family: "Poppins", sans-serif;
+  color: #505865;
+}
+
+/* ══════════════════════════════════════════════
+   HERO
+   ══════════════════════════════════════════════ */
+.tm-hero {
+  background: url("/Taciti assets/assets-16.png") no-repeat;
+  height: 50vw;          /* 👈 reduced */
+  min-height: 380px;
+  width: 100%;
+  background-size: cover;
+  background-position: center top;
+}
+
+.tm-hero-content {
+  margin-left: 150px;
+  padding-top: 70px;     /* 👈 reduce */
+}
+.tm-hero-content h1 {
+  color: #fff;
+  font-size: 55px;
+  font-family: "futuraptMedium";
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .tm-hero {
+    height: 60vw;
+  }
+  .tm-hero-content {
+    margin-left: 20px;
+    padding-top: 50px;
+  }
+  .tm-hero-content h1 {
+    font-size: 40px;
+  }
+}
+
+/* ══════════════════════════════════════════════
+   OVERVIEW
+   ══════════════════════════════════════════════ */
+.tm-overview {
+  text-align: center;
+  padding: 70px 140px;
+  margin-top: -130px;     /* 👈 pull up */
+  background: #fff;
+  border-top-left-radius: 60% 100px;
+  border-top-right-radius: 60% 100px;
+}
+
+.tm-overview h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #013470;
+  margin-bottom: 28px;
+}
+
+.tm-overview p {
+  font-size: 15.5px;
+  color: #505865;
+  line-height: 1.85;
+  margin: 0 auto;
+  max-width: 1020px;
+}
+
+/* ══════════════════════════════════════════════
+   CORE OFFERINGS
+   ══════════════════════════════════════════════ */
+.tm-offerings {
+  padding: 60px 100px 70px;
+}
+
+.tm-offerings h2 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #013470;
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.tm-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ================= CARD ================= */
+.tm-card {
+  border: 1px solid #dde4f0;
+  padding: 30px 26px;
+  background: #fff;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* 🔵 overlay */
+.tm-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/Taciti assets/card.png") no-repeat center/cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+/* content layer */
+.tm-card h3{
+  position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
+    color: #013470;
+    font-weight: 700;
+}
+.tm-card ul li {
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+/* hover */
+.tm-card:hover::before {
+  opacity: 1;
+}
+
+.tm-card:hover {
+  border-color: transparent;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* 🔥 white text */
+.tm-card:hover h3,
+.tm-card:hover ul li {
+  color: #fff;
+}
+
+.tm-card:hover ul li::before {
+  color: #fff;
+}
+
+/* ══════════════════════════════════════════════
+   TALENT MANAGEMENT FRAMEWORK
+   ══════════════════════════════════════════════ */
+.tm-framework {
+  padding: 70px 100px;
+  text-align: center;
+  background: #fff;
+}
+
+.tm-framework h2 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #013470;
+  margin-bottom: 50px;
+}
+
+/* Primary: show the framework image from assets */
+.tm-framework-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.tm-framework-img {
+  max-width: 900px;
+  width: 100%;
+  object-fit: contain;
+}
+
+/* Fallback steps — hidden when image is present */
+.tm-framework-steps {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.tm-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 170px;
+}
+
+.tm-step-icon {
+  width: 80px;
+  height: 80px;
+  background: #013470;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.tm-step-icon svg {
+  width: 38px;
+  height: 38px;
+  color: #fff;
+}
+
+.tm-step-box {
+  border: 2px solid #2D55AD;
+  border-radius: 10px;
+  padding: 14px 12px;
+  width: 148px;
+  text-align: center;
+  font-size: 13.5px;
+  color: #505865;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.tm-step-arrow {
+  font-size: 24px;
+  color: #2D55AD;
+  margin: 0 6px;
+  margin-bottom: 52px;
+  font-weight: 700;
+}
+
+/* ══════════════════════════════════════════════
+   KEY LMS SOLUTIONS
+   ══════════════════════════════════════════════ */
+.tm-lms {
+  padding: 70px 100px 80px;
+  background: #EDEFF3;
+}
+
+.tm-lms h2 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #013470;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tm-lms-intro {
+  font-size: 15.5px;
+  color: #505865;
+  line-height: 1.85;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 50px;
+}
+
+.tm-lms-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 80px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 50px 60px;
+}
+
+.tm-lms-item h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #013470;
+  margin-bottom: 12px;
+}
+
+.tm-lms-item p {
+  font-size: 14.5px;
+  color: #505865;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ══════════════════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════════════════ */
+@media (max-width: 1200px) {
+  .tm-hero { padding: 60px 60px 60px 80px; }
+  .tm-hero-content h1 { font-size: 42px; }
+  .tm-hero-img { max-width: 360px; }
+  .tm-overview { padding: 60px 80px; }
+  .tm-offerings { padding: 50px 60px 60px; }
+  .tm-framework { padding: 60px 60px; }
+  .tm-lms { padding: 60px 60px 70px; }
+  .tm-lms-grid { padding: 40px 40px; gap: 30px 60px; }
+}
+
+@media (max-width: 960px) {
+  .tm-hero { flex-direction: column; text-align: center; padding: 60px 40px 80px; }
+  .tm-hero-img { max-width: 300px; margin-top: 30px; }
+  .tm-overview { padding: 50px 40px; }
+  .tm-offerings { padding: 40px 40px 50px; }
+  .tm-cards-grid { grid-template-columns: repeat(2, 1fr); }
+  .tm-framework { padding: 50px 40px; }
+  .tm-framework-img { max-width: 100%; }
+  .tm-lms { padding: 50px 40px; }
+  .tm-lms-grid { grid-template-columns: 1fr; gap: 30px; padding: 30px 30px; }
+}
+
+@media (max-width: 640px) {
+  .tm-hero-content h1 { font-size: 32px; }
+  .tm-overview { padding: 40px 20px; }
+  .tm-overview h2 { font-size: 26px; }
+  .tm-offerings { padding: 40px 20px 50px; }
+  .tm-offerings h2 { font-size: 26px; }
+  .tm-cards-grid { grid-template-columns: 1fr; }
+  .tm-framework { padding: 40px 20px; }
+  .tm-framework h2 { font-size: 26px; }
+  .tm-framework-steps { flex-direction: column; gap: 16px; }
+  .tm-step-arrow { transform: rotate(90deg); margin: 0; }
+  .tm-lms { padding: 40px 20px; }
+  .tm-lms h2 { font-size: 26px; }
+  .tm-lms-grid { padding: 24px 20px; gap: 24px; }
+}

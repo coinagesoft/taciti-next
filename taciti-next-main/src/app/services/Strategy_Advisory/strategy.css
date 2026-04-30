@@ -1,0 +1,387 @@
+/* =============================================
+   STRATEGY & ADVISORY  ·  strategy.css
+   Matches taciti.com/business-consulting
+   Colors: #1D448A, #2D55AD, #EDEFF3, #505865
+   ============================================= */
+
+.sa-page {
+  font-family: "Poppins", sans-serif;
+  color: #505865;
+}
+
+/* ══════════════════════════════════════════════
+   HERO
+   ══════════════════════════════════════════════ */
+.sa-hero {
+  background: url("/Taciti assets/assets-18.png") no-repeat;
+  height: 50vw;
+  width: 100vw;
+  background-size: cover;
+  background-position: top;
+}
+
+.sa-hero-content {
+  margin-left: 150px;
+  padding-top: 70px;
+}
+
+.sa-hero-content h1 {
+  color: #fff;
+  font-size: 55px;
+  font-family: "futuraptMedium";
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .sa-hero {
+    height: 60vw;
+  }
+  .sa-hero-content {
+    margin-left: 20px;
+    padding-top: 50px;
+  }
+  .sa-hero-content h1 {
+    font-size: 40px;
+  }
+}
+
+/* ══════════════════════════════════════════════
+   OVERVIEW
+   ══════════════════════════════════════════════ */
+.sa-overview {
+  text-align: center;
+  padding: 70px 140px;
+  margin-top: -100px; /* 👈 pulls it upward slightly */
+  background: #fff;
+  border-top-left-radius: 60% 100px;
+  border-top-right-radius: 60% 100px;
+}
+
+.sa-overview h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1D448A;
+  margin-bottom: 28px;
+}
+
+.sa-overview p {
+  font-size: 15.5px;
+  color: #505865;
+  line-height: 1.85;
+  margin-bottom: 20px;
+  max-width: 1020px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ══════════════════════════════════════════════
+   STRATEGY SERVICES INCLUDE
+   ══════════════════════════════════════════════ */
+.sa-services {
+  padding: 20px 100px 70px;
+  text-align: center;
+}
+
+.sa-services h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #1D448A;
+  margin-bottom: 40px;
+}
+
+.sa-services-grid {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  text-align: left;
+}
+
+.sa-services-grid ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sa-services-grid li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 18px 0;
+  font-size: 15px;
+  color: #505865;
+  line-height: 1.55;
+  max-width: 380px;
+}
+
+/* Circular arrow icon — matches taciti.com */
+.sa-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #2D55AD;
+  border-radius: 50%;
+  margin-top: 1px;
+  position: relative;
+}
+
+.sa-icon::after {
+  content: "›";
+  color: #2D55AD;
+  font-size: 15px;
+  line-height: 1;
+  margin-left: 1px;
+}
+
+/* ══════════════════════════════════════════════
+   FEATURE CARDS  (3-top + 2-bottom)
+   ══════════════════════════════════════════════ */
+.sa-cards-section {
+  padding: 0 80px 80px;
+}
+
+.sa-cards-row {
+  display: grid;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.sa-cards-row--top {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.sa-cards-row--bottom {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+}
+
+/* ================= CARD ================= */
+.sa-card {
+  border: 1px solid #dde4f0;
+  padding: 32px 26px;
+  background: #fff;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* 🔵 Background image layer */
+.sa-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/Taciti assets/card.png") no-repeat center/cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+/* Content above overlay */
+.sa-card h3,
+.sa-card p {
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.sa-card:hover::before {
+  opacity: 1;
+}
+
+.sa-card:hover {
+  border-color: transparent;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* 🔥 Text turns white */
+.sa-card:hover h3,
+.sa-card:hover p {
+  color: #fff;
+}
+
+/* ================= TEXT ================= */
+.sa-card h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #1D448A;
+  line-height: 1.35;
+}
+
+.sa-card p {
+  font-size: 14.5px;
+  color: #505865;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* ================= ACTIVE CARD ================= */
+.sa-card--active {
+  background: #2D55AD;
+  border-color: #2D55AD;
+}
+
+.sa-card--active h3,
+.sa-card--active p {
+  color: #fff;
+}
+
+/* ══════════════════════════════════════════════
+   OUR EXPERTISE
+   ══════════════════════════════════════════════ */
+.sa-expertise {
+  background: #EDEFF3;
+  padding: 75px 80px;
+  text-align: center;
+}
+
+.sa-expertise h2 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #1D448A;
+  margin-bottom: 50px;
+}
+
+.sa-exp-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.sa-exp-col {
+  flex: 1;
+  text-align: left;
+}
+
+.sa-exp-col p {
+  margin: 18px 0;
+  font-size: 15px;
+  color: #505865;
+  line-height: 1.5;
+}
+
+.sa-exp-col--right {
+  text-align: right;
+}
+
+.sa-exp-center {
+  flex: 0 0 280px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Double-ring brain circle matching live site */
+.sa-brain-outer {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: #c8dff2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* decorative dots */
+.sa-brain-outer::before {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #1D448A;
+  top: 14%;
+  right: 8%;
+}
+
+.sa-brain-outer::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #1D448A;
+  bottom: 13%;
+  left: 8%;
+}
+
+.sa-brain-inner {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #ddeaf5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* extra dot */
+.sa-brain-inner::before {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #1D448A;
+  bottom: 12%;
+  right: 5%;
+}
+
+.sa-brain-inner img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+/* ══════════════════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════════════════ */
+@media (max-width: 1200px) {
+  .sa-hero { padding: 60px 60px 60px 80px; }
+  .sa-hero-content h1 { font-size: 42px; }
+  .sa-hero-img { max-width: 360px; }
+  .sa-overview, .sa-services { padding-left: 60px; padding-right: 60px; }
+  .sa-cards-section { padding: 0 60px 60px; }
+  .sa-cards-row--top { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 960px) {
+  .sa-hero { flex-direction: column; text-align: center; padding: 60px 40px 80px; }
+  .sa-hero-img { max-width: 300px; margin-top: 30px; }
+  .sa-overview { padding: 50px 40px; }
+  .sa-services { padding: 20px 40px 50px; }
+  .sa-services-grid { flex-direction: column; gap: 0; align-items: center; }
+  .sa-cards-section { padding: 0 40px 50px; }
+  .sa-cards-row--top { grid-template-columns: 1fr 1fr; }
+  .sa-cards-row--bottom { grid-template-columns: 1fr 1fr; max-width: 100%; }
+  .sa-expertise { padding: 50px 40px; }
+}
+
+@media (max-width: 640px) {
+  .sa-hero-content h1 { font-size: 32px; }
+  .sa-overview { padding: 40px 20px; }
+  .sa-overview h2 { font-size: 26px; }
+  .sa-services { padding: 20px 20px 40px; }
+  .sa-services h2 { font-size: 22px; }
+  .sa-services-grid li { max-width: 100%; }
+  .sa-cards-section { padding: 0 20px 40px; }
+  .sa-cards-row--top, .sa-cards-row--bottom { grid-template-columns: 1fr; }
+  .sa-expertise { padding: 40px 20px; }
+  .sa-expertise h2 { font-size: 26px; }
+  .sa-exp-grid { flex-direction: column; gap: 30px; }
+  .sa-exp-col, .sa-exp-col--right { text-align: center; width: 100%; }
+  .sa-exp-center { flex: 0 0 auto; }
+  .sa-brain-outer { width: 200px; height: 200px; }
+  .sa-brain-inner { width: 140px; height: 140px; }
+  .sa-brain-inner img { width: 90px; height: 90px; }
+}
