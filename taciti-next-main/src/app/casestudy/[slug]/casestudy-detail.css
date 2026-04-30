@@ -1,0 +1,214 @@
+/* =============================================
+   CASE STUDY DETAIL PAGE
+   ============================================= */
+
+.csd-page {
+  font-family: "futuraptMedium", sans-serif;
+  color: #333;
+}
+
+/* ── HERO ─────────────────────────────────── */
+.csd-hero {
+  background: url("/Taciti assets/assets-02.png") no-repeat center top;
+  height: 50vw;
+  min-height: 380px;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+}
+
+.csd-hero-content {
+  margin-left: 150px;
+  padding-top: 70px;
+}
+
+.csd-hero h1 {
+  color: #fff;
+  font-size: 40px;
+  font-family: "futuraptMedium", sans-serif;
+  max-width: 700px;
+  line-height: 1.25;
+}
+
+/* ── WHITE CURVED WRAPPER ─────────────────── */
+.csd-body {
+  background: #fff;
+  margin-top: -130px;
+  border-top-left-radius: 60% 100px;
+  border-top-right-radius: 60% 100px;
+  padding: 60px 140px 80px;
+}
+
+/* ── ABOUT CLIENT ─────────────────────────── */
+.csd-about {
+  margin-bottom: 50px;
+}
+
+.csd-section-title {
+  font-size: 22px;
+  font-family: "futuraptbold", sans-serif;
+  color: #013470;
+  margin-bottom: 14px;
+}
+
+.csd-about p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #444;
+  max-width: 800px;
+}
+
+/* ── TWO-COLUMN SECTIONS ─────────────────── */
+.csd-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+/* ── BULLET LIST ──────────────────────────── */
+.csd-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.csd-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #444;
+}
+
+.csd-list li::before {
+  content: "";
+  display: block;
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2.5px solid #013470;
+  background: #013470;
+  margin-top: 5px;
+}
+
+/* ── DIVIDER ──────────────────────────────── */
+.csd-divider {
+  border: none;
+  border-top: 1px solid #e2e8f3;
+  margin: 50px 0;
+}
+
+/* ── RELATED CASE STUDIES ─────────────────── */
+.csd-related {
+  margin-top: 50px;
+}
+
+.csd-related-header {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.csd-related-title {
+  font-size: 20px;
+  font-family: "futuraptbold", sans-serif;
+  color: #013470;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.csd-related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.csd-related-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(1, 52, 112, 0.08);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  display: block;
+}
+
+.csd-related-card:hover {
+  box-shadow: 0 6px 28px rgba(1, 52, 112, 0.18);
+  transform: translateY(-4px);
+}
+
+.csd-related-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── BACK LINK ────────────────────────────── */
+.csd-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #013470;
+  font-size: 14px;
+  font-family: "futuraptMedium", sans-serif;
+  text-decoration: none;
+  margin-bottom: 40px;
+  transition: opacity 0.2s;
+}
+
+.csd-back:hover {
+  opacity: 0.7;
+}
+
+.csd-back svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ════════════════════════════════════════════
+   RESPONSIVE
+   ════════════════════════════════════════════ */
+@media (max-width: 1100px) {
+  .csd-body {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media (max-width: 900px) {
+  .csd-two-col {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .csd-related-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .csd-hero {
+    height: 60vw;
+    min-height: 260px;
+  }
+  .csd-hero-content {
+    margin-left: 20px;
+    padding-top: 50px;
+  }
+  .csd-hero h1 {
+    font-size: 26px;
+  }
+  .csd-body {
+    margin-top: -80px;
+    padding: 40px 20px 60px;
+  }
+  .csd-related-grid {
+    grid-template-columns: 1fr;
+  }
+}

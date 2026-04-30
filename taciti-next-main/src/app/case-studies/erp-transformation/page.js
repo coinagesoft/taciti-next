@@ -1,5 +1,15 @@
+"use client";
+
 import "./erp-transformation.css";
 import Link from "next/link";
+import { useMemo, useState } from "react";
+
+const CATEGORIES = {
+  all: "all",
+  erpTransformation: "erp-transformation",
+  strategyAdvisory: "strategy-advisory",
+  technologyServices: "technology-services",
+};
 
 const CASE_STUDIES = [
   {
@@ -8,20 +18,23 @@ const CASE_STUDIES = [
     title:
       "A large scale SAP S/4HANA led digital transformation for a US based manufacturer.",
     href: "/casestudy/a-large-scale-sap-s-4hana-led-digital-transformation-for-a-us-based-manufacturer",
+    categories: [CATEGORIES.erpTransformation],
   },
   {
     id: 2,
     image: "/Taciti assets/TACITI NEW  - 7 dec-24.png",
     title:
       "A SAP S/4HANA led Engineer to Order (ETO), process transformation for a global industrial manufacturer.",
-    href: "/casestudy/a-sap-s-4hana-led-engineer-to-order-eto-configure-to-order-cto-process-transformation-for-a-global-industrial-manufacturer-offering-complex-configurable-products",
+    href: "/casestudy/a-sap-s-4hana-led-engineer-to-order-eto-configure-to-order-cto-process-transformation",
+    categories: [CATEGORIES.erpTransformation],
   },
   {
     id: 3,
     image: "/Taciti assets/thumbnail6.png",
     title:
       "Intelligent Predictive Maintenance and Service for large manufacturing plants across US and Canada.",
-    href: "/casestudy/intelligent-predictive-maintenance-and-service-for-large-manufacturing-plants-across-us-and-canada",
+    href: "/casestudy/intelligent-predictive-maintenance-and-service-for-large-manufacturing-plants",
+    categories: [CATEGORIES.erpTransformation],
   },
   {
     id: 4,
@@ -29,6 +42,7 @@ const CASE_STUDIES = [
     title:
       "Optimizing Working Capital, An Order to Cash transformation for a leading Life Sciences major.",
     href: "/casestudy/optimizing-working-capital-an-order-to-cash-transformation-for-a-leading-life-sciences-major",
+    categories: [CATEGORIES.erpTransformation, CATEGORIES.strategyAdvisory],
   },
   {
     id: 5,
@@ -36,6 +50,7 @@ const CASE_STUDIES = [
     title:
       "Global Quality Process Assessment & Process Mapping for a leading Hi-tech Manufacturer.",
     href: "/casestudy/global-quality-process-assessment-process-mapping",
+    categories: [CATEGORIES.erpTransformation, CATEGORIES.strategyAdvisory],
   },
   {
     id: 6,
@@ -43,29 +58,38 @@ const CASE_STUDIES = [
     title:
       "Empowering Innovation with No-Code/Low-Code (MS Power Platform) for a Manufacturing Leader.",
     href: "/casestudy/empowering-innovation-with-no-code-low-code-ms-power-platform-for-a-manufacturing-leader",
+    categories: [CATEGORIES.erpTransformation, CATEGORIES.technologyServices],
+  },
+  {
+    id: 7,
+    image: "/Taciti assets/thumbnail3.png",
+    title:
+      "ITSM strategy assessment, design and global roll out for a global Hi-Tech Manufacturer.",
+    href: "/casestudy/itsm-it-service-management-strategy-assessment-design-and-global-roll-out-for-a-global-hi-tech-manufacturer",
+    categories: [CATEGORIES.strategyAdvisory],
   },
 ];
 
 const TABS = [
-  { label: "All", href: "/case-studies", active: false },
-  {
-    label: "ERP Transformation",
-    href: "/case-studies/erp-transformation",
-    active: true,
-  },
-  {
-    label: "Strategy & Advisory",
-    href: "/case-studies/strategy-advisory",
-    active: false,
-  },
-  {
-    label: "Technology Services",
-    href: "/case-studies/technology-services",
-    active: false,
-  },
+  { label: "All", value: CATEGORIES.all },
+  { label: "ERP Transformation", value: CATEGORIES.erpTransformation },
+  { label: "Strategy & Advisory", value: CATEGORIES.strategyAdvisory },
+  { label: "Technology Services", value: CATEGORIES.technologyServices },
 ];
 
 export default function ERPTransformationCaseStudies() {
+  const [activeCategory, setActiveCategory] = useState(CATEGORIES.erpTransformation);
+
+  const filteredCaseStudies = useMemo(() => {
+    if (activeCategory === CATEGORIES.all) {
+      return CASE_STUDIES;
+    }
+
+    return CASE_STUDIES.filter((caseStudy) =>
+      caseStudy.categories?.includes(activeCategory)
+    );
+  }, [activeCategory]);
+
   return (
     <div className="cs-page">
       {/* HERO */}
@@ -80,19 +104,20 @@ export default function ERPTransformationCaseStudies() {
         {/* Category Tabs */}
         <div className="cs-tabs-bar">
           {TABS.map((tab) => (
-            <Link
-              key={tab.label}
-              href={tab.href}
-              className={`cs-tab${tab.active ? " active" : ""}`}
+            <button
+              key={tab.value}
+              type="button"
+              className={`cs-tab${activeCategory === tab.value ? " active" : ""}`}
+              onClick={() => setActiveCategory(tab.value)}
             >
               {tab.label}
-            </Link>
+            </button>
           ))}
         </div>
 
         {/* Case Study Cards Grid */}
         <div className="cs-grid">
-          {CASE_STUDIES.map((cs) => (
+          {filteredCaseStudies.map((cs) => (
             <Link key={cs.id} href={cs.href} className="cs-card">
               <div className="cs-card-img-wrap">
                 <img src={cs.image} alt={cs.title} />
