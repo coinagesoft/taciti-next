@@ -526,9 +526,12 @@ body {
     display: block;
   }
 
-  .descripitioncustom {
-    text-align: center !important;
+.descripitioncustom {
+  text-align: center !important;
+  color: white !important;
+
     width: 350px !important;
+    color: white;
   }
 
   /* .searchInputContainer {
@@ -580,6 +583,7 @@ body {
 
 .descripitioncustom {
   width: 700px;
+  color: white !important;
 }
 
 /* Footer styles */
