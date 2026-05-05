@@ -1,71 +1,113 @@
 "use client";
 import "./consumer-packaged-goods.css";
 
+const PRINCIPLES = [
+  {
+    icon: "/Taciti assets/small icons-02.png",
+    text: "Quickly adapt product innovation for quicker market launches",
+  },
+  {
+    icon: "/Taciti assets/small icons-03.png",
+    text: "Stay competitive by assessing value levers in production and distribution",
+  },
+  {
+    icon: "/Taciti assets/small icons-04.png",
+    text: "Applying preset templates for better visualizations and adoption",
+  },
+  {
+    icon: "/Taciti assets/small icons-06.png",
+    text: "Hassle-free mergers & acquisitions",
+  },
+  {
+    icon: "/Taciti assets/small icons-05.png",
+    text: "Nominal disruptions to the existing ecosystem",
+  },
+];
+
 export default function ConsumerPackagedGoods() {
   return (
     <div className="cpg-page">
 
-      {/* HERO */}
+      {/* ── HERO ──────────────────────────────── */}
       <section className="cpg-hero">
         <div className="cpg-hero-box">
-          <h1 className="cpg-hero-title">Consumer Packaged Goods</h1>
+          <h1 className="cpg-hero-title">
+            Consumer<br />Packaged Goods (CPG)
+          </h1>
         </div>
       </section>
 
-      {/* OVERVIEW */}
+      {/* ── OVERVIEW ──────────────────────────── */}
       <section className="cpg-overview">
         <h2>Overview</h2>
         <p>
-          In the dynamic world of Consumer Packaged Goods, speed, agility, and customer-centricity are paramount.
-          Our CPG practice supports brands in driving supply chain excellence, digital innovation, and operational
-          efficiency — enabling them to stay ahead of shifting consumer demands and market disruptions.
-        </p>
-        <p>
-          At Taciti, we work with leading CPG companies to design and implement scalable, integrated business
-          platforms powered by SAP. Our team brings deep industry knowledge and hands-on experience across
-          planning, manufacturing, logistics, and commercial operations to help you compete and grow.
+          Where there&apos;s growth, there are also unique challenges. The meteoric rise of the Consumer
+          Packaged Goods (CPG) industry, in just a few decades, has brought forth unique challenges that
+          require unconventional solutions. The main fuel behind CPG companies&apos; success has been global
+          consumer markets, a sharp focus on a high-demand product portfolio, fast development of
+          international scale value chain operations, innovative products and customer satisfaction.
+          But this formula cannot work forever. The issues of the future have arrived today.
         </p>
       </section>
 
-      {/* EXPERTISE */}
+      {/* ── OUR EXPERTISE ─────────────────────── */}
       <section className="cpg-expertise">
         <div className="cpg-expertise-inner">
+
+          <div className="cpg-expertise-image">
+            <img
+              src="/Taciti assets/consumer-87.png"
+              alt="CPG Expertise"
+            />
+          </div>
+
           <div className="cpg-expertise-content">
             <h2>Our Expertise</h2>
             <p>
-              We help CPG companies unlock value through end-to-end transformation — from demand sensing and
-              integrated business planning to trade promotion management and direct-store delivery.
+              Natural resource depletion, market disruption, technological disruptions, strict carbon
+              emission standards and tedious and strict industry regulations are already causing widespread
+              disruptions. Organizations need to adapt, evolve and build an ecosystem that is agile,
+              scalable and resilient to meet the new generation of challenges. Decades have brought forth
+              unique challenges that require unconventional solutions. The main fuel behind CPG companies&apos;
+              success has been global consumer markets, sharp focus on high-demand product portfolio, fast
+              development of international scale value chain operations, innovative products and customer
+              satisfaction. But this formula cannot work forever. The issues of the future have arrived today.
             </p>
             <p>
-              Our SAP-led solutions cover the full value chain: procurement, manufacturing, quality, warehousing,
-              distribution, and customer service — all connected in real-time for better visibility and faster decisions.
+              At Taciti, solving issues in the CPG industry has been our forte as we have been closely
+              associated with the top international names in the CPG industry for the past 20 years. We have
+              firsthand seen the challenges of a globally competitive market and the challenges across the
+              value chain. We have helped our clients overcome these challenges through transformation.
             </p>
           </div>
-          <div className="cpg-expertise-image">
-            <img src="/Taciti assets/Consumer packaged goods-86.png" alt="CPG Expertise" />
-          </div>
+
         </div>
       </section>
 
-      {/* PRINCIPLES */}
+      {/* ── TRANSFORMATION PRINCIPLES ─────────── */}
       <section className="cpg-principles">
-        <h2 className="cpg-principles-heading">
-          Empowering CPG Brands with Innovation &amp; Intelligence
-        </h2>
-        <div className="cpg-principles-grid">
-          <div className="cpg-principle">
-            <img src="/Taciti assets/assets-04.png" alt="Supply Chain" />
-            <p>Supply Chain Excellence &amp; End-to-End Visibility</p>
-          </div>
-          <div className="cpg-principle">
-            <img src="/Taciti assets/assets-05.png" alt="Digital Commerce" />
-            <p>Digital Commerce &amp; Customer Engagement</p>
-          </div>
-          <div className="cpg-principle">
-            <img src="/Taciti assets/assets-06.png" alt="Analytics" />
-            <p>Data-Driven Insights &amp; Predictive Analytics</p>
-          </div>
+        <h2>Our approach to transformation will be based on the following principles:</h2>
+
+        {/* Row 1 — 3 items */}
+        <div className="cpg-principles-row cpg-principles-row--3">
+          {PRINCIPLES.slice(0, 3).map((p) => (
+            <div key={p.text} className="cpg-principle">
+              <img src={p.icon} alt="" />
+              <p>{p.text}</p>
+            </div>
+          ))}
         </div>
+
+        {/* Row 2 — 2 items centred */}
+        <div className="cpg-principles-row cpg-principles-row--2">
+          {PRINCIPLES.slice(3).map((p) => (
+            <div key={p.text} className="cpg-principle">
+              <img src={p.icon} alt="" />
+              <p>{p.text}</p>
+            </div>
+          ))}
+        </div>
+
       </section>
 
     </div>

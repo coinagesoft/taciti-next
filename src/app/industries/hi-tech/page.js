@@ -1,78 +1,81 @@
 "use client";
 import "./hi-tech.css";
 
+const CAPABILITIES = [
+  {
+    icon: "/Taciti assets/assets-34.png",
+    label: "Comprehensive Product Management",
+  },
+  {
+    icon: "/Taciti assets/assets-36.png",
+    label: "Digital Transformation",
+  },
+  {
+    icon: "/Taciti assets/assets-59.png",
+    label: "Next-Generation M&A IT Integration",
+  },
+  {
+    icon: "/Taciti assets/assets-35.png",
+    label: "Transforming Experiences",
+  },
+  {
+    icon: "/Taciti assets/assets-58.png",
+    label: "Next-Generation Application Management",
+  },
+  {
+    icon: "/Taciti assets/assets-38.png",
+    label: "Cloud Transformation",
+  },
+];
+
 export default function HiTech() {
   return (
     <div className="hitech-page">
 
-      {/* HERO */}
+      {/* ── HERO ──────────────────────────────── */}
       <section className="hitech-hero">
         <div className="hitech-hero-box">
-          <h1 className="hitech-hero-title">Hi-Tech</h1>
+          <h1 className="hitech-hero-title">Hi-Tech Industries</h1>
         </div>
       </section>
 
-      {/* OVERVIEW */}
+      {/* ── OVERVIEW ──────────────────────────── */}
       <section className="hitech-overview">
         <h2>Overview</h2>
         <p>
-          The Hi-Tech industry is defined by rapid innovation, complex global supply chains, and intense
-          competitive pressure. From semiconductors and software to electronics and telecommunications,
-          companies must continuously reinvent themselves to stay relevant.
+          The Hi-Tech industry operates within a highly competitive landscape, where the speed of product
+          life cycles has intensified the importance of innovation as the driving force. For hi-tech
+          organizations to flourish, they must rapidly discern customer needs, streamline expenses, and
+          cultivate unique selling points. Additionally, significant mergers and acquisitions (M&amp;As)
+          are reshaping the industry by granting access to novel business domains, specialized expertise
+          and valuable Intellectual Property.
         </p>
         <p>
-          At Taciti, we partner with hi-tech companies to accelerate product innovation and operational
-          efficiency through SAP-led digital transformation. Our experts help you streamline engineer-to-order
-          processes, optimize supply chain execution, and leverage AI-powered insights for better decision-making.
+          In the dynamic and intricate environment that prevails, it is imperative for companies to harness
+          robust technological solutions to seize emerging business prospects and prevent missed opportunities.
         </p>
-      </section>
+        <p>
+          Taciti has formed strategic alliances with prominent global hi-tech leaders, collaborating closely
+          to revolutionize their product and service roadmaps. Our contributions have been instrumental in
+          generating fresh revenue streams, streamlining business processes, envisioning cutting-edge
+          immersive customer experiences and enhancing profitability for our esteemed hi-tech clients.
+        </p>
+        <p>
+          Leveraging our extensive domain knowledge, we have played a pivotal role in rationalizing their
+          IT portfolios, offering valuable insights into supply chains and empowering marketing and sales
+          enablement strategies.
+        </p>
 
-      {/* CAPABILITIES */}
-      <section className="hitech-capabilities">
+        {/* CAPABILITIES GRID — 2 rows of 3 */}
         <div className="hitech-capabilities-grid">
-
-          <div className="hitech-cap-item">
-            <div className="hitech-cap-icon">
-              <img src="/Taciti assets/assets-01.png" alt="Product Lifecycle" />
+          {CAPABILITIES.map((cap) => (
+            <div key={cap.label} className="hitech-cap-item">
+              <div className="hitech-cap-icon-wrap">
+                <img src={cap.icon} alt={cap.label} />
+              </div>
+              <span className="hitech-cap-label">{cap.label}</span>
             </div>
-            <span className="hitech-cap-label">Product Lifecycle Management</span>
-          </div>
-
-          <div className="hitech-cap-item">
-            <div className="hitech-cap-icon">
-              <img src="/Taciti assets/assets-02.png" alt="Supply Chain" />
-            </div>
-            <span className="hitech-cap-label">Global Supply Chain Optimization</span>
-          </div>
-
-          <div className="hitech-cap-item">
-            <div className="hitech-cap-icon">
-              <img src="/Taciti assets/assets-03.png" alt="Revenue" />
-            </div>
-            <span className="hitech-cap-label">Revenue Recognition &amp; Subscription Management</span>
-          </div>
-
-          <div className="hitech-cap-item">
-            <div className="hitech-cap-icon">
-              <img src="/Taciti assets/assets-04.png" alt="ITSM" />
-            </div>
-            <span className="hitech-cap-label">ITSM Strategy &amp; Global Rollout</span>
-          </div>
-
-          <div className="hitech-cap-item">
-            <div className="hitech-cap-icon">
-              <img src="/Taciti assets/assets-05.png" alt="Quality" />
-            </div>
-            <span className="hitech-cap-label">Quality Process Assessment &amp; Process Mapping</span>
-          </div>
-
-          <div className="hitech-cap-item">
-            <div className="hitech-cap-icon">
-              <img src="/Taciti assets/assets-06.png" alt="AI" />
-            </div>
-            <span className="hitech-cap-label">AI &amp; Analytics-Driven Innovation</span>
-          </div>
-
+          ))}
         </div>
       </section>
 

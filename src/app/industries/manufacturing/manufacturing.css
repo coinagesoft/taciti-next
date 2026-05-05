@@ -287,3 +287,10 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* empty grid cell — no hover effects */
+.mfg-solution-item--empty {
+  pointer-events: none;
+  background: #fafcff;
+}
+.mfg-solution-item--empty::before { display: none; }
