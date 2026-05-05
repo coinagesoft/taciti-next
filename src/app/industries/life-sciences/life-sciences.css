@@ -1,0 +1,153 @@
+/* =============================================
+   LIFE SCIENCES INDUSTRY PAGE
+   life-sciences.css
+   ============================================= */
+
+.lsci-page {
+  font-family: "futuraptMedium", sans-serif;
+  color: #333;
+}
+
+.lsci-hero {
+  background: url("/Taciti assets/life science DNA-88.png") no-repeat;
+  height: 50vw;
+  min-height: 380px;
+  width: 100%;
+  background-size: cover;
+  background-position: center top;
+}
+
+.lsci-hero-box {
+  margin-left: 150px;
+  padding-top: 70px;
+}
+
+.lsci-hero-title {
+  color: #fff;
+  font-size: 50px;
+  font-family: "futuraptMedium", sans-serif;
+  max-width: 600px;
+  line-height: 1.2;
+}
+
+.lsci-overview {
+  text-align: center;
+  padding: 70px 140px;
+  margin-top: -130px;
+  background: #fff;
+  border-top-left-radius: 60% 100px;
+  border-top-right-radius: 60% 100px;
+}
+
+.lsci-overview h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #013470;
+  margin-bottom: 24px;
+  font-family: "futuraptbold", sans-serif;
+}
+
+.lsci-overview p {
+  font-size: 15.5px;
+  color: #555;
+  line-height: 1.85;
+  margin-bottom: 20px;
+  max-width: 1020px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Roboto-Light", sans-serif;
+}
+
+.lsci-cards-section {
+  padding: 0 100px 70px;
+  background: #fff;
+}
+
+.lsci-cards-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto 28px;
+}
+
+.lsci-cards-row-center {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+.lsci-card {
+  border: 5px solid #ebebeb;
+  border-radius: 5px;
+  padding: 30px 20px;
+  min-height: 300px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+.lsci-card:hover {
+  background-image: url("/Taciti assets/card.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.lsci-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  gap: 12px;
+}
+
+.lsci-card h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #013470;
+  line-height: 1.2;
+  margin: 0;
+  transition: color 0.3s;
+  font-family: "futuraptbold", sans-serif;
+}
+
+.lsci-card:hover h4 { color: #fff; }
+
+.lsci-card-icon {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.lsci-icon-hover { display: none; }
+.lsci-card:hover .lsci-icon-default { display: none; }
+.lsci-card:hover .lsci-icon-hover { display: block; }
+
+.lsci-card p {
+  font-size: 18px;
+  color: #4e5764;
+  line-height: 22px;
+  margin: 0;
+  transition: color 0.3s;
+  font-family: "Roboto-Light", sans-serif;
+}
+
+.lsci-card:hover p { color: #fff; }
+
+@media (max-width: 1100px) {
+  .lsci-overview, .lsci-cards-section { padding-left: 60px; padding-right: 60px; }
+}
+
+@media (max-width: 768px) {
+  .lsci-hero { height: 60vw; min-height: 240px; }
+  .lsci-hero-box { margin-left: 20px; padding-top: 40px; }
+  .lsci-hero-title { font-size: 32px; }
+  .lsci-overview { padding: 40px 20px; margin-top: -80px; }
+  .lsci-overview h2 { font-size: 24px; }
+  .lsci-cards-section { padding: 0 20px 50px; }
+  .lsci-cards-row, .lsci-cards-row-center { grid-template-columns: 1fr; }
+}

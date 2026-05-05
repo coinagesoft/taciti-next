@@ -1,0 +1,153 @@
+/* =============================================
+   UTILITIES INDUSTRY PAGE
+   utilities.css
+   ============================================= */
+
+.util-page {
+  font-family: "futuraptMedium", sans-serif;
+  color: #333;
+}
+
+.util-hero {
+  background: url("/Taciti assets/technology services-92.png") no-repeat;
+  height: 50vw;
+  min-height: 380px;
+  width: 100%;
+  background-size: cover;
+  background-position: center top;
+}
+
+.util-hero-box {
+  margin-left: 150px;
+  padding-top: 70px;
+}
+
+.util-hero-title {
+  color: #fff;
+  font-size: 50px;
+  font-family: "futuraptMedium", sans-serif;
+  max-width: 400px;
+  line-height: 1.2;
+}
+
+.util-overview {
+  text-align: center;
+  padding: 70px 140px;
+  margin-top: -130px;
+  background: #fff;
+  border-top-left-radius: 60% 100px;
+  border-top-right-radius: 60% 100px;
+}
+
+.util-overview h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #013470;
+  margin-bottom: 24px;
+  font-family: "futuraptbold", sans-serif;
+}
+
+.util-overview p {
+  font-size: 15.5px;
+  color: #555;
+  line-height: 1.85;
+  margin-bottom: 20px;
+  max-width: 1020px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Roboto-Light", sans-serif;
+}
+
+.util-cards-section {
+  padding: 0 100px 70px;
+  background: #fff;
+}
+
+.util-cards-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto 28px;
+}
+
+.util-cards-row-center {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+.util-card {
+  border: 5px solid #ebebeb;
+  border-radius: 5px;
+  padding: 30px 20px;
+  min-height: 300px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+.util-card:hover {
+  background-image: url("/Taciti assets/card.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.util-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  gap: 12px;
+}
+
+.util-card h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #013470;
+  line-height: 1.2;
+  margin: 0;
+  transition: color 0.3s;
+  font-family: "futuraptbold", sans-serif;
+}
+
+.util-card:hover h4 { color: #fff; }
+
+.util-card-icon {
+  width: 30px;
+  height: 50px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.util-icon-hover { display: none; }
+.util-card:hover .util-icon-default { display: none; }
+.util-card:hover .util-icon-hover { display: block; }
+
+.util-card p {
+  font-size: 18px;
+  color: #4e5764;
+  line-height: 22px;
+  margin: 0;
+  transition: color 0.3s;
+  font-family: "Roboto-Light", sans-serif;
+}
+
+.util-card:hover p { color: #fff; }
+
+@media (max-width: 1100px) {
+  .util-overview, .util-cards-section { padding-left: 60px; padding-right: 60px; }
+}
+
+@media (max-width: 768px) {
+  .util-hero { height: 60vw; min-height: 240px; }
+  .util-hero-box { margin-left: 20px; padding-top: 40px; }
+  .util-hero-title { font-size: 32px; }
+  .util-overview { padding: 40px 20px; margin-top: -80px; }
+  .util-overview h2 { font-size: 24px; }
+  .util-cards-section { padding: 0 20px 50px; }
+  .util-cards-row, .util-cards-row-center { grid-template-columns: 1fr; }
+}

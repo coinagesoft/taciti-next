@@ -9,7 +9,7 @@
 
 /* ── HERO ─────────────────────────────────── */
 .cs-hero {
-  background: url("/Taciti assets/assets-02.png") no-repeat center top;
+  background: url("/Taciti assets/assets-11.png") no-repeat center top;
   height: 50vw;
   min-height: 380px;
   width: 100%;
@@ -74,10 +74,27 @@
 }
 
 /* ── CASE STUDY CARDS GRID ─────────────────── */
+.cs-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
 .cs-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
+}
+
+/* Centre the last row when it has fewer than 3 cards */
+.cs-grid--centre {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.cs-grid--centre .cs-card {
+  width: calc((100% - 64px) / 3);
 }
 
 /* ── SINGLE CARD ─────────────────────────────*/
@@ -94,7 +111,7 @@
 }
 
 .cs-card:hover {
-  box-shadow: 0 6px 28px rgba(1, 52, 112, 0.18);
+  /* box-shadow: 0 6px 28px rgba(1, 52, 112, 0.18); */
   transform: translateY(-4px);
 }
 
@@ -145,6 +162,12 @@
   .cs-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .cs-grid--centre {
+    flex-wrap: wrap;
+  }
+  .cs-grid--centre .cs-card {
+    width: calc(50% - 16px);
+  }
 }
 
 @media (max-width: 768px) {
@@ -170,7 +193,12 @@
     font-size: 12px;
     padding: 8px 14px;
   }
-  .cs-grid {
+  .cs-grid,
+  .cs-grid--centre {
     grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+  .cs-grid--centre .cs-card {
+    width: 100%;
   }
 }
