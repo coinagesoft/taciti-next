@@ -121,9 +121,9 @@ export default function Header() {
                 Case Studies <RiArrowDropDownLine />
               </Link>
               <div className="dropdown-content">
-                <Link href="/casestudy/case-study-category-erp-transformation#e">ERP Transformation</Link>
-                <Link href="/casestudy/case-study-category-strategy-advisory/">Strategy &amp; Advisory</Link>
-                <Link href="/casestudy/case-study-category-technology-services">Technology Services</Link>
+                <Link href="/case-studies/erp-transformation">ERP Transformation</Link>
+                <Link href="/case-studies/strategy-advisory/">Strategy &amp; Advisory</Link>
+                <Link href="/case-studies/technology-services">Technology Services</Link>
               </div>
             </div>
           </div>

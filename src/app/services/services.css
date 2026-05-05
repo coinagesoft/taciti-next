@@ -1,21 +1,23 @@
 /* =============================================
    OUR SERVICES PAGE
-   our-services.css
+   services.css  — matches live taciti.com
    ============================================= */
 
+/* ── FONTS ─────────────────────────────────── */
+/* futuraptMedium, futuraptbold are defined in globals.css */
+
+/* ── HERO ─────────────────────────────────── */
 .os-page {
-  font-family: "Poppins", sans-serif;
+  font-family: "futuraptMedium", sans-serif;
   color: #333;
 }
 
-/* ── HERO ─────────────────────────────────── */
 .os-hero {
-  background: url("/Taciti assets/assets-02.png") no-repeat;
+  background: url("/Taciti assets/assets-02.png") no-repeat center top;
   height: 50vw;
   min-height: 380px;
   width: 100%;
   background-size: cover;
-  background-position: center top;
   position: relative;
 }
 
@@ -45,6 +47,7 @@
 .os-intro h2 {
   font-size: 32px;
   font-weight: 700;
+  font-family: "futuraptbold", sans-serif;
   color: #013470;
   margin-bottom: 24px;
   line-height: 1.35;
@@ -52,83 +55,68 @@
 
 .os-intro p {
   font-size: 15.5px;
+  font-family: "futuraptMedium", sans-serif;
   color: #555;
   line-height: 1.85;
   max-width: 1000px;
   margin: 0 auto;
 }
 
-/* ── SERVICE TABS ─────────────────────────── */
+/* ── SERVICE TABS SECTION ─────────────────── */
 .os-tabs-section {
   background: #fff;
-  padding: 0;
+  padding: 0 140px 70px;
 }
 
-/* White background pill-button tab bar — matches live site */
-/* ── TABS BAR ─────────────────────────── */
+/* ── TABS BAR — pill boxes with border-radius, active = blue fill ── */
 .os-tabs-bar {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 28px;
-  padding: 20px 140px 0;
-  border-bottom: 1px solid #e5eaf3;
+  gap: 14px;
+  padding: 30px 0 40px;
 }
 
-/* TAB */
+/* Each tab is a pill/box */
 .os-tab {
   position: relative;
-  padding: 10px 0;
-  font-size: 15px;
+  padding: 10px 22px;
+  font-size: 14px;
+  font-family: "futuraptMedium", sans-serif;
   font-weight: 500;
-  color: #6b7280;
+  color: #013470;
   cursor: pointer;
-  background: none;
-  border: none;
+  background: #f0f4fb;
+  border: 1.5px solid #cdd9ef;
+  border-radius: 8px;
   transition: all 0.25s ease;
+  white-space: nowrap;
 }
 
-/* 🔵 underline (hidden by default) */
-.os-tab::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -12px;
-  width: 0;
-  height: 3px;
-  background: #013470;
-  transition: width 0.3s ease;
-}
-
-/* 🔥 hover */
 .os-tab:hover {
-  color: #013470;
+  background: #013470;
+  color: #fff;
+  border-color: #013470;
 }
 
-.os-tab:hover::after {
-  width: 100%;
-}
-
-/* ✅ ACTIVE TAB */
+/* ACTIVE TAB — solid blue background */
 .os-tab.active {
-  color: #013470;
-  font-weight: 600;
-}
-
-.os-tab.active::after {
-  width: 100%;
+  background: #013470;
+  color: #fff;
+  border-color: #013470;
+  font-family: "futuraptbold", sans-serif;
 }
 
 /* ── TAB CONTENT PANEL ────────────────────── */
 .os-panel {
   display: none;
-  padding: 50px 140px 70px;
-  background: #fff;
 }
 
 .os-panel.active {
   display: flex;
   gap: 60px;
   align-items: flex-start;
+  padding: 10px 0 0;
 }
 
 .os-panel-left {
@@ -137,7 +125,7 @@
 
 .os-panel-left h3 {
   font-size: 26px;
-  font-weight: 700;
+  font-family: "futuraptbold", sans-serif;
   color: #013470;
   margin-bottom: 28px;
 }
@@ -154,11 +142,11 @@
   gap: 14px;
   padding: 9px 0;
   font-size: 15.5px;
+  font-family: "futuraptMedium", sans-serif;
   color: #333;
   line-height: 1.55;
 }
 
-/* Filled blue circle bullet — matches live site */
 .os-panel-left ul li::before {
   content: "";
   width: 9px;
@@ -173,6 +161,7 @@
   display: inline-block;
   margin-top: 8px;
   font-size: 14.5px;
+  font-family: "futuraptMedium", sans-serif;
   font-weight: 500;
   color: #013470;
   text-decoration: none;
@@ -184,7 +173,6 @@
   opacity: 0.8;
 }
 
-/* Right illustration — no box background, just the image floating */
 .os-panel-right {
   flex-shrink: 0;
   width: 320px;
@@ -206,9 +194,11 @@
    ════════════════════════════════════════════ */
 
 @media (max-width: 1100px) {
-  .os-intro,
-  .os-tabs-bar,
-  .os-panel {
+  .os-intro {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .os-tabs-section {
     padding-left: 60px;
     padding-right: 60px;
   }
@@ -233,17 +223,19 @@
   .os-intro h2 {
     font-size: 22px;
   }
+  .os-tabs-section {
+    padding: 0 20px 50px;
+  }
   .os-tabs-bar {
-    padding: 20px 20px 0;
-    gap: 8px;
+    gap: 10px;
+    padding: 20px 0 30px;
   }
   .os-tab {
     font-size: 12px;
-    padding: 8px 16px;
+    padding: 8px 14px;
   }
   .os-panel.active {
     flex-direction: column;
-    padding: 40px 20px;
     gap: 32px;
   }
   .os-panel-right {

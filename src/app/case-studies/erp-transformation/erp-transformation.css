@@ -1,0 +1,176 @@
+/* =============================================
+   ERP TRANSFORMATION CASE STUDIES PAGE
+   ============================================= */
+
+.cs-page {
+  font-family: "futuraptMedium", sans-serif;
+  color: #333;
+}
+
+/* ── HERO ─────────────────────────────────── */
+.cs-hero {
+  background: url("/Taciti assets/assets-02.png") no-repeat center top;
+  height: 50vw;
+  min-height: 380px;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+}
+
+.cs-hero-content {
+  margin-left: 150px;
+  padding-top: 70px;
+}
+
+.cs-hero h1 {
+  color: #fff;
+  font-size: 50px;
+  font-family: "futuraptMedium", sans-serif;
+  max-width: 600px;
+  line-height: 1.2;
+}
+
+/* ── WHITE CURVED SECTION ─────────────────── */
+.cs-main {
+  background: #fff;
+  margin-top: -130px;
+  border-top-left-radius: 60% 100px;
+  border-top-right-radius: 60% 100px;
+  padding: 60px 140px 80px;
+}
+
+/* ── CATEGORY TABS ─────────────────────────── */
+.cs-tabs-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  padding: 0 0 50px;
+}
+
+.cs-tab {
+  padding: 10px 26px;
+  font-size: 14px;
+  font-family: "futuraptMedium", sans-serif;
+  color: #013470;
+  cursor: pointer;
+  background: #f0f4fb;
+  border: 1.5px solid #cdd9ef;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  display: inline-block;
+}
+
+.cs-tab:hover,
+.cs-tab.active {
+  background: #013470;
+  color: #fff;
+  border-color: #013470;
+}
+
+.cs-tab.active {
+  font-family: "futuraptbold", sans-serif;
+}
+
+/* ── CASE STUDY CARDS GRID ─────────────────── */
+.cs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* ── SINGLE CARD ─────────────────────────────*/
+.cs-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(1, 52, 112, 0.08);
+  background: #fff;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.cs-card:hover {
+  box-shadow: 0 6px 28px rgba(1, 52, 112, 0.18);
+  transform: translateY(-4px);
+}
+
+.cs-card-img-wrap {
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: #e8edf6;
+}
+
+.cs-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.cs-card:hover .cs-card-img-wrap img {
+  transform: scale(1.04);
+}
+
+.cs-card-body {
+  padding: 20px 22px 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cs-card-body p {
+  font-size: 15px;
+  font-family: "futuraptMedium", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+/* ════════════════════════════════════════════
+   RESPONSIVE
+   ════════════════════════════════════════════ */
+@media (max-width: 1100px) {
+  .cs-main {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media (max-width: 900px) {
+  .cs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cs-hero {
+    height: 60vw;
+    min-height: 260px;
+  }
+  .cs-hero-content {
+    margin-left: 20px;
+    padding-top: 50px;
+  }
+  .cs-hero h1 {
+    font-size: 32px;
+  }
+  .cs-main {
+    margin-top: -80px;
+    padding: 40px 20px 60px;
+  }
+  .cs-tabs-bar {
+    gap: 10px;
+  }
+  .cs-tab {
+    font-size: 12px;
+    padding: 8px 14px;
+  }
+  .cs-grid {
+    grid-template-columns: 1fr;
+  }
+}

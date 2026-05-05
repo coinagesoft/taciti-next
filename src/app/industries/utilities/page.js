@@ -4,10 +4,10 @@ export default function Page() {
   return (
     <div className="stub-page">
       <section className="stub-hero">
-        <h1>Consumer Packaged Goods</h1>
+        <h1>Utilities</h1>
       </section>
       <section className="stub-body">
-        <p>Our CPG practice supports brands in driving supply chain excellence and digital innovation.</p>
+        <p>Taciti helps utility companies modernize operations and embrace digital transformation.</p>
       </section>
     </div>
   );
