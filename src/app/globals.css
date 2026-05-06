@@ -743,8 +743,6 @@ body {
   /* Example background color */
 }
 
-#footer .cent {}
-
 .servicesBox {
   flex: 1;
   /* text-align: center; */
@@ -1293,12 +1291,7 @@ body {
   }
 }
 
-.bookBox {
-  /* height: calc(100vh - 100px); */
-  /* margin-bottom: 200px; */
-}
 
-.book {}
 
 .reco-img-sx {
   display: flex;
@@ -1644,7 +1637,7 @@ textarea.input-blue-bottom-border {
   font-family: "Roboto-Light";
 }
 
-.input-blue-bottom-border:focus {}
+
 
 textarea.input-blue-bottom-border {
   min-height: 20px;
