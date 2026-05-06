@@ -65,7 +65,7 @@ export default function LifeScience() {
               <h3>Complaint Management</h3>
               <div className="ls-card-icon">
                 <img
-                  src="/Taciti assets/assets-54.png"
+                  src="/Taciti assets/assets-50.png"
                   alt="Complaint Management"
                 />
               </div>
@@ -95,7 +95,7 @@ export default function LifeScience() {
             <div className="ls-card-header">
               <h3>Order-To-Cash</h3>
               <div className="ls-card-icon">
-                <img src="/Taciti assets/assets-53.png" alt="Order To Cash" />
+                <img src="/Taciti assets/assets-52.png" alt="Order To Cash" />
               </div>
             </div>
             <p>
@@ -110,7 +110,7 @@ export default function LifeScience() {
               <h3>Supply Chain Planning</h3>
               <div className="ls-card-icon">
                 <img
-                  src="/Taciti assets/assets-54.png"
+                  src="/Taciti assets/assets-53.png"
                   alt="Supply Chain Planning"
                 />
               </div>
@@ -126,7 +126,7 @@ export default function LifeScience() {
             <div className="ls-card-header">
               <h3>Track &amp; Trace Solution</h3>
               <div className="ls-card-icon">
-                <img src="/Taciti assets/asset 89.png" alt="Track and Trace" />
+                <img src="/Taciti assets/assets-54.png" alt="Track and Trace" />
               </div>
             </div>
             <p>
@@ -141,7 +141,7 @@ export default function LifeScience() {
               <h3>Compliant Manufacturing</h3>
               <div className="ls-card-icon">
                 <img
-                  src="/Taciti assets/assets-53.png"
+                  src="/Taciti assets/assets-51.png"
                   alt="Compliant Manufacturing"
                 />
               </div>
