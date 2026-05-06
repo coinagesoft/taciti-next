@@ -193,7 +193,7 @@ export default function Header() {
               <div className="dropdown">
                 <div className="drawerLinkRow" onClick={toggleServices}>
                   <Link
-                    href="/our-services/"
+                    href="/services/"
                     className="drawerLink"
                     onClick={handleNav}
                   >

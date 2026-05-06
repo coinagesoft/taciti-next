@@ -85,6 +85,106 @@
   } */
 }
 
+/* =========================================
+   GLOBAL TYPOGRAPHY STANDARD
+   ========================================= */
+
+/* MAIN HEADINGS */
+h1,
+h2,
+h3,
+h4,
+.heading,
+.hero-title,
+.section-title {
+  font-family: "futuramdmedium", sans-serif !important;
+  color: #013470;
+}
+
+/* PARAGRAPHS + BODY */
+p,
+li,
+span,
+.body-text {
+  font-family: "Roboto-Light", sans-serif !important;
+  color: #4e5764;
+}
+
+/* CARD TITLES */
+.card-title,
+.card h3 {
+  font-family: "futuramdmedium", sans-serif !important;
+  color: #013470;
+}
+
+/* CARD CONTENT */
+.card p,
+.card li {
+  font-family: "Roboto-Light", sans-serif !important;
+  color: #4e5764;
+}
+/* =========================================
+   STANDARD PAGE SPACING
+   ========================================= */
+
+.page-section {
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+@media (max-width: 1100px) {
+  .page-section {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+h1 {
+  font-size: 50px;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 37px;
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: 22px;
+  line-height: 1.3;
+}
+
+p,
+li {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  p,
+  li {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+}
 body {
   overflow-x: hidden;
   font-family: "futuraptMedium", sans-serif;
@@ -581,10 +681,7 @@ body {
   }
 }
 
-.descripitioncustom {
-  width: 700px;
-  color: white !important;
-}
+
 
 /* Footer styles */
 .footer {

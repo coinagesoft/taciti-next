@@ -106,11 +106,25 @@ export default function TechnologyServices() {
             <h3>Navigating Tech-Driven Change</h3>
             <ul>
               <li>
-                <span className="ts-arrow-icon" aria-hidden="true"></span>
+                <svg
+  className="ts-arrow-svg"
+  aria-hidden="true"
+  viewBox="0 0 512 512"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z" />
+</svg>
                 Guide organizations through mergers, acquisitions, and critical technology upgrades
               </li>
               <li>
-                <span className="ts-arrow-icon" aria-hidden="true"></span>
+                <svg
+  className="ts-arrow-svg"
+  aria-hidden="true"
+  viewBox="0 0 512 512"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z" />
+</svg>
                 Expert technology consulting for seamless transitions
               </li>
             </ul>
@@ -119,11 +133,25 @@ export default function TechnologyServices() {
             <h3>Leveraging Technological Advancements</h3>
             <ul>
               <li>
-                <span className="ts-arrow-icon" aria-hidden="true"></span>
+                <svg
+  className="ts-arrow-svg"
+  aria-hidden="true"
+  viewBox="0 0 512 512"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z" />
+</svg>
                 Harness the latest advancements to enhance operational efficiency
               </li>
               <li>
-                <span className="ts-arrow-icon" aria-hidden="true"></span>
+                <svg
+  className="ts-arrow-svg"
+  aria-hidden="true"
+  viewBox="0 0 512 512"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z" />
+</svg>
                 Streamline processes and empower your organization in the digital era
               </li>
             </ul>
@@ -132,11 +160,25 @@ export default function TechnologyServices() {
             <h3>Custom-Tailored Strategies</h3>
             <ul>
               <li>
-                <span className="ts-arrow-icon" aria-hidden="true"></span>
+                <svg
+  className="ts-arrow-svg"
+  aria-hidden="true"
+  viewBox="0 0 512 512"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z" />
+</svg>
                 Highly personalized approach aligned with your specific challenges
               </li>
               <li>
-                <span className="ts-arrow-icon" aria-hidden="true"></span>
+                <svg
+  className="ts-arrow-svg"
+  aria-hidden="true"
+  viewBox="0 0 512 512"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z" />
+</svg>
                 Solutions that ensure maximum return on investment
               </li>
             </ul>

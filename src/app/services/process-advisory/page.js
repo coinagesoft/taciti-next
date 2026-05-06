@@ -26,21 +26,21 @@ export default function ProcessAdvisory() {
           redefine the way businesses operate. Our goal is to guide enterprises
           towards embracing innovation, efficiency and excellence through
           cutting-edge technology.
-        </p>
+       
 
-        <p>
+       
           At Taciti, we understand that a successful ERP transformation is not
-          just about implementing software &ndash; it&apos;s about orchestrating
+          just about implementing software its about orchestrating
           a harmonious convergence of strategy, processes and technology.
-        </p>
+       
 
-        <p>
+       
           With a team of seasoned professionals who bring a wealth of industry
           knowledge and technical prowess, we are your trusted allies in
           navigating the complexities of modern business landscapes.
-        </p>
+       
 
-        <p>
+        
           Our clients trust us for our detailed approach to ensure program
           design, roadmap and associated budgets take a pragmatic view and avoid
           major surprises while execution.

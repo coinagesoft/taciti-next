@@ -1,183 +1,272 @@
 /* =============================================
    TECHNOLOGY SERVICES
-   technology-services.css
-   ============================================= */
+   Exact Elementor Match
+============================================= */
 
 .ts-page {
   font-family: "Poppins", sans-serif;
   color: #333;
+  overflow-x: hidden;
+  background: #fff;
 }
 
-/* ── HERO ─────────────────────────────────── */
+/* ══════════════════════════════════════════════
+   HERO
+══════════════════════════════════════════════ */
+
 .ts-intro-section {
-  background: url("/Taciti assets/technology services-92.png") no-repeat;
-  height: 50vw;          /* 👈 reduced */
-  min-height: 380px;
-  width: 100%;
+  background: url("/Taciti assets/technology services-92.png")
+    no-repeat center top;
   background-size: cover;
-  background-position: center top;
+  width: 100%;
+  height: 50vw;
+  min-height: 380px;
+  display: flex;
+  align-items: flex-start;
 }
 
 .ts-intro-box {
   margin-left: 150px;
-  padding-top: 70px;     /* 👈 reduce */
+  padding-top: 70px;
 }
+
 .ts-main-title {
   color: #fff;
   font-size: 55px;
-  font-family: "futuraptMedium";
+  line-height: 1.08;
+  font-weight: 600;
+  margin: 0;
+  font-family: "futuraptMedium", sans-serif;
 }
 
-@media (max-width: 767px) {
-  .ts-intro-section {
-    height: 60vw;
-  }
-  .ts-intro-box {
-    margin-left: 20px;
-    padding-top: 50px;
-  }
-  .ts-main-title {
-    font-size: 40px;
-  }
-}
+/* ══════════════════════════════════════════════
+   OVERVIEW
+══════════════════════════════════════════════ */
 
-/* ── OVERVIEW ─────────────────────────────── */
 .ts-overview {
   text-align: center;
-  padding: 70px 140px;
-  margin-top: -130px;     /* 👈 pull up */
+  padding: 70px 140px 55px;
+  margin-top: -90px;
   background: #fff;
   border-top-left-radius: 60% 100px;
   border-top-right-radius: 60% 100px;
+  position: relative;
+  z-index: 2;
 }
 
 .ts-overview h2 {
-  font-size: 36px;
+  font-size: 37px;
   font-weight: 700;
   color: #013470;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
+  font-family: "Futura Md BT", sans-serif;
 }
 
 .ts-overview p {
-  font-size: 16px;
-  color: #555;
+  font-size: 18px;
   line-height: 1.85;
-  margin-bottom: 20px;
-  max-width: 1020px;
-  margin-left: auto;
-  margin-right: auto;
+  color: #4E5764;
+  max-width: 1080px;
+  margin: 0 auto 18px;
+  font-family: "Roboto-Light", sans-serif;
 }
 
-/* ── SERVICES INCLUDE ─────────────────────── */
+/* ══════════════════════════════════════════════
+   SERVICES
+══════════════════════════════════════════════ */
+
 .ts-services {
-  padding: 60px 100px;
-  background: #f8fbff;
+  padding: 20px 140px 85px;
+  background: #fff;
 }
 
 .ts-services h2 {
-  font-size: 32px;
+  font-size: 37px;
   font-weight: 700;
   color: #013470;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 45px;
+  font-family: "Futura Md BT", sans-serif;
 }
+
+/* GRID */
 
 .ts-cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 34px;
+  align-items: stretch;
+
+  max-width: 1220px;
+  margin: 0 auto;
 }
 
-/* ================= CARD ================= */
+/* ══════════════════════════════════════════════
+   CARD
+══════════════════════════════════════════════ */
+
 .ts-card {
-  border: 1px solid #dde4f0;
-  padding: 28px 24px;
+  border: 5px solid #EBEBEB;
+  padding: 34px 26px 32px;
   background: #fff;
-  border-radius: 6px;
+  border-radius: 4px;
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
+  box-sizing: border-box;
+
+  min-height: 340px;
+
+  display: flex;
+  flex-direction: column;
 }
 
-/* 🔵 overlay image */
+/* OVERLAY */
+
 .ts-card::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("/Taciti assets/card.png") no-repeat center/cover;
+  background: url("/Taciti assets/card.png")
+    no-repeat center/cover;
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 0;
 }
 
-/* content layer */
-.ts-card h3{
-  position: relative;
-  z-index: 1;
-  transition: color 0.3s ease;
-   color: #013470;
-   font-weight: 700;
-}
-.ts-card ul li {
-  position: relative;
-  z-index: 1;
-  transition: color 0.3s ease;
-}
-
-/* hover */
 .ts-card:hover::before {
   opacity: 1;
 }
 
-.ts-card:hover {
-  border-color: transparent;
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+/* CONTENT */
+
+.ts-card h3,
+.ts-card ul,
+.ts-card li {
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
 }
 
-/* 🔥 white text */
+/* TITLE */
+
+.ts-card h3 {
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #013470;
+  margin: 0 0 20px;
+  font-family: "Futura PT Bold", sans-serif;
+}
+
+/* LIST */
+
+.ts-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* LIST ITEMS */
+
+.ts-card li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+
+  padding: 9px 0;
+  margin-bottom: 0;
+
+  font-size: 18px;
+  line-height: 1.55;
+  color: #4E5764;
+
+  font-family: "Roboto-Light", sans-serif;
+}
+
+/* SVG STYLE BULLET */
+
+.ts-card li::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  min-width: 9px;
+
+  background: #013470;
+  border-radius: 50%;
+
+  margin-top: 9px;
+
+  transition: all 0.3s ease;
+}
+
+/* HOVER */
+
 .ts-card:hover h3,
-.ts-card:hover ul li {
+.ts-card:hover li {
   color: #fff;
 }
 
-.ts-card:hover ul li::before {
-  color: #fff;
+.ts-card:hover li::before {
+  background: #fff;
 }
 
-/* ── OUR EXPERTISE ────────────────────────── */
+.ts-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ══════════════════════════════════════════════
+   OUR EXPERTISE
+══════════════════════════════════════════════ */
+
 .ts-expertise {
-  padding: 70px 100px;
+  padding: 60px 140px 80px;
+  background: #fff;
 }
 
 .ts-expertise h2 {
-  font-size: 32px;
+  font-size: 37px;
   font-weight: 700;
   color: #013470;
-  margin-bottom: 16px;
   text-align: center;
+  margin-bottom: 20px;
+  font-family: "Futura Md BT", sans-serif;
 }
 
 .ts-expertise-intro {
-  font-size: 15px;
-  color: #555;
-  line-height: 1.8;
+  font-size: 18px;
+  line-height: 1.85;
+  color: #4E5764;
   text-align: center;
-  max-width: 900px;
-  margin: 0 auto 40px;
+  max-width: 1120px;
+  margin: 0 auto 55px;
+  font-family: "Roboto-Light", sans-serif;
 }
+
+/* GRID */
 
 .ts-expertise-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 34px;
+
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+/* EXPERTISE ITEM */
+
+.ts-expertise-item {
+  padding: 0;
 }
 
 .ts-expertise-item h3 {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 28px;
+  line-height: 1.22;
+  font-weight: 700;
   color: #013470;
-  margin-bottom: 16px;
+  margin-bottom: 22px;
+  font-family: "Futura PT Bold", sans-serif;
 }
 
 .ts-expertise-item ul {
@@ -187,75 +276,93 @@
 }
 
 .ts-expertise-item ul li {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 12px;
-  font-size: 14px;
-  color: #555;
-  line-height: 1.6;
+  position: relative;
+  padding-left: 34px;
+
+  font-size: 18px;
+  line-height: 1.8;
+  color: #4E5764;
+  margin-bottom: 18px;
+
+  font-family: "Roboto-Light", sans-serif;
 }
 
-.ts-arrow-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+/* CIRCLE ARROW */
+
+.ts-arrow-svg {
+  position: absolute;
+  left: 0;
+  top: 6px;
+
   width: 22px;
   height: 22px;
-  border: 2px solid #013470;
-  border-radius: 50%;
-  margin-top: 1px;
-  position: relative;
-}
 
-.ts-arrow-icon::after {
-  content: "›";
+  flex-shrink: 0;
   color: #013470;
-  font-size: 14px;
-  line-height: 1;
-  margin-left: 1px;
 }
 
-/* ── EXPERTISE QUALITIES ─────────────────── */
+.ts-arrow-svg path {
+  fill: currentColor;
+}
+/* ══════════════════════════════════════════════
+   QUALITIES
+══════════════════════════════════════════════ */
+
 .ts-qualities {
-  padding: 60px 100px;
-  background: #f0f5fc;
+  padding: 20px 140px 90px;
+  background: #fff;
 }
 
 .ts-qualities h2 {
-  font-size: 32px;
+  font-size: 37px;
   font-weight: 700;
   color: #013470;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 45px;
+  font-family: "Futura Md BT", sans-serif;
 }
 
 .ts-qualities-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 34px;
+
+  max-width: 1220px;
+  margin: 0 auto;
 }
 
+/* QUALITY CARD */
+
 .ts-quality-card {
-  border: 1px solid #dde4f0;
-  padding: 28px 24px;
+  border: 5px solid #EBEBEB;
+  padding: 34px 28px 30px;
   background: #fff;
-  border-radius: 6px;
+  border-radius: 4px;
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
+
+  min-height: 320px;
 }
+
+/* OVERLAY */
 
 .ts-quality-card::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("/Taciti assets/card.png") no-repeat center/cover;
+  background: url("/Taciti assets/card.png")
+    no-repeat center/cover;
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 0;
 }
+
+.ts-quality-card:hover::before {
+  opacity: 1;
+}
+
+/* CONTENT */
 
 .ts-quality-card h3,
 .ts-quality-card p {
@@ -264,25 +371,82 @@
   transition: color 0.3s ease;
 }
 
-.ts-quality-card:hover::before {
-  opacity: 1;
+/* TITLE */
+
+.ts-quality-card h3 {
+  font-size: 24px;
+  line-height: 1.22;
+  font-weight: 700;
+  color: #013470;
+  margin-bottom: 18px;
+  font-family: "Futura PT Bold", sans-serif;
 }
 
-.ts-quality-card:hover {
-  border-color: transparent;
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+/* TEXT */
+
+.ts-quality-card p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #4E5764;
+  margin: 0;
+  font-family: "Roboto-Light", sans-serif;
 }
+
+/* HOVER */
 
 .ts-quality-card:hover h3,
 .ts-quality-card:hover p {
   color: #fff;
 }
-/* ════════════════════════════════════════════
-   RESPONSIVE
-   ════════════════════════════════════════════ */
 
-@media (max-width: 1100px) {
+.ts-quality-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ══════════════════════════════════════════════
+   LARGE SCREEN
+══════════════════════════════════════════════ */
+
+@media (min-width: 1400px) {
+
+  .ts-overview,
+  .ts-services,
+  .ts-expertise,
+  .ts-qualities {
+    padding-left: 140px;
+    padding-right: 140px;
+  }
+}
+
+/* ══════════════════════════════════════════════
+   LAPTOP
+══════════════════════════════════════════════ */
+
+@media (min-width: 1025px) and (max-width: 1399px) {
+
+  .ts-overview,
+  .ts-services,
+  .ts-expertise,
+  .ts-qualities {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+/* ══════════════════════════════════════════════
+   TABLET
+══════════════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+
+  .ts-intro-box {
+    margin-left: 70px;
+  }
+
+  .ts-main-title {
+    font-size: 46px;
+  }
+
   .ts-overview,
   .ts-services,
   .ts-expertise,
@@ -290,38 +454,88 @@
     padding-left: 60px;
     padding-right: 60px;
   }
+
   .ts-cards-grid,
-  .ts-qualities-grid,
-  .ts-expertise-grid {
+  .ts-expertise-grid,
+  .ts-qualities-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 768px) {
+/* ══════════════════════════════════════════════
+   MOBILE
+══════════════════════════════════════════════ */
+
+@media (max-width: 767px) {
+
   .ts-intro-section {
-    height: 60vw;
+    height: 68vw;
+    min-height: 220px;
   }
+
   .ts-intro-box {
-    margin-left: 30px;
-    padding-top: 60px;
+    margin-left: 20px;
+    padding-top: 42px;
   }
+
   .ts-main-title {
-    font-size: 30px;
+    font-size: 32px;
+    line-height: 1.1;
   }
+
   .ts-overview {
-    padding: 40px 20px;
+    padding: 38px 22px 30px;
+    margin-top: -45px;
+    border-top-left-radius: 30% 50px;
+    border-top-right-radius: 30% 50px;
   }
-  .ts-overview h2 {
-    font-size: 26px;
+
+  .ts-overview h2,
+  .ts-services h2,
+  .ts-expertise h2,
+  .ts-qualities h2 {
+    font-size: 28px;
   }
+
+  .ts-overview p,
+  .ts-expertise-intro {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
   .ts-services,
   .ts-expertise,
   .ts-qualities {
-    padding: 40px 20px;
+    padding: 40px 22px 55px;
   }
+
   .ts-cards-grid,
-  .ts-qualities-grid,
-  .ts-expertise-grid {
+  .ts-expertise-grid,
+  .ts-qualities-grid {
     grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .ts-card,
+  .ts-quality-card {
+    min-height: auto;
+    padding: 28px 22px;
+  }
+
+  .ts-card h3,
+  .ts-quality-card h3,
+  .ts-expertise-item h3 {
+    font-size: 22px;
+  }
+
+  .ts-card li,
+  .ts-quality-card p,
+  .ts-expertise-item ul li {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .ts-card ul {
+    padding: 0;
   }
 }

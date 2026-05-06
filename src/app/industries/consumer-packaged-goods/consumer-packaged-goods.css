@@ -1,19 +1,31 @@
 /* =============================================
    CONSUMER PACKAGED GOODS PAGE
-   consumer-packaged-goods.css
-   ============================================= */
+   EXACT TACITI MATCH
+============================================= */
 
 .cpg-page {
-  font-family: "Poppins", sans-serif;
-  color: #333;
+  font-family: "futuraptMedium", sans-serif;
+  color: #4e5764;
+  overflow-x: hidden;
+  background: #fff;
 }
 
-/* ── HERO ─────────────────────────────────── */
+/* ═══════════════════════════════════════
+   HERO
+═══════════════════════════════════════ */
+
 .cpg-hero {
-  background: url("/Taciti assets/assests-89.png") no-repeat center top / cover;
+  background: url("/Taciti assets/assests-89.png")
+    no-repeat center top;
+
+  background-size: cover;
+
+  width: 100%;
   height: 50vw;
   min-height: 380px;
-  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
 }
 
 .cpg-hero-box {
@@ -23,99 +35,162 @@
 
 .cpg-hero-title {
   color: #fff;
-  font-size: 50px;
+
+  font-size: 55px;
+  line-height: 1.08;
+
+  max-width: 700px;
+
+  margin: 0;
+
+  font-weight: 600;
   font-family: "futuraptMedium", sans-serif;
-  max-width: 600px;
-  line-height: 1.2;
 }
 
-/* ── OVERVIEW ─────────────────────────────── */
+/* ═══════════════════════════════════════
+   OVERVIEW
+═══════════════════════════════════════ */
+
 .cpg-overview {
-  text-align: center;
-  padding: 70px 140px;
-  margin-top: -130px;
   background: #fff;
+
+  margin-top: -80px;
+
   border-top-left-radius: 60% 100px;
   border-top-right-radius: 60% 100px;
+
+  position: relative;
+  z-index: 2;
+
+  padding: 70px 140px 50px;
+
+  text-align: center;
 }
 
 .cpg-overview h2 {
-  font-size: 36px;
-  font-weight: 700;
+  font-size: 37px;
+  line-height: 1.2;
+
   color: #013470;
-  margin-bottom: 24px;
+
+  margin-bottom: 28px;
+
+  font-weight: 700;
+  font-family: "futuraptbold", sans-serif;
 }
 
 .cpg-overview p {
-  font-size: 15.5px;
-  color: #555;
+  font-size: 18px;
   line-height: 1.85;
-  margin-bottom: 20px;
-  max-width: 1020px;
+
+  color: #4e5764;
+
+  max-width: 1280px;
+
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
 }
 
-/* ── OUR EXPERTISE ────────────────────────── */
+/* ═══════════════════════════════════════
+   EXPERTISE
+═══════════════════════════════════════ */
+
 .cpg-expertise {
-  padding: 60px 100px;
-  background: #f8fbff;
+  background: #fff;
+
+  padding: 40px 140px 80px;
 }
 
 .cpg-expertise-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
+
   gap: 70px;
+
   align-items: center;
-  max-width: 1100px;
+
+  max-width: 1300px;
+
   margin: 0 auto;
+}
+
+/* IMAGE */
+
+.cpg-expertise-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cpg-expertise-image img {
   width: 100%;
-  max-width: 520px;
+  max-width: 620px;
+
   height: auto;
+
   object-fit: contain;
-  border-radius: 6px;
 }
 
+/* CONTENT */
+
 .cpg-expertise-content h2 {
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 37px;
+  line-height: 1.2;
+
   color: #013470;
-  margin-bottom: 18px;
+
+  margin-bottom: 24px;
+
+  font-weight: 700;
+  font-family: "futuraptbold", sans-serif;
 }
 
 .cpg-expertise-content p {
-  font-size: 15px;
-  color: #555;
-  line-height: 1.8;
-  margin-bottom: 14px;
+  font-size: 18px;
+  line-height: 1.85;
+
+  color: #4e5764;
+
+  margin-bottom: 20px;
 }
 
-/* ── TRANSFORMATION PRINCIPLES ────────────── */
+/* ═══════════════════════════════════════
+   PRINCIPLES
+═══════════════════════════════════════ */
+
 .cpg-principles {
-  padding: 70px 100px;
   background: #fff;
+
+  padding: 40px 140px 100px;
 }
 
 .cpg-principles h2 {
-  font-size: 22px;
-  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.35;
+
   color: #013470;
+
   text-align: center;
-  margin-bottom: 50px;
-  max-width: 780px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.45;
+
+  max-width: 1050px;
+
+  margin: 0 auto 70px;
+
+  font-weight: 700;
+  font-family: "futuraptbold", sans-serif;
 }
+
+/* ROWS */
 
 .cpg-principles-row {
   display: grid;
+
   gap: 40px;
-  max-width: 1050px;
-  margin: 0 auto 40px;
+
+  max-width: 1250px;
+
+  margin: 0 auto 50px;
 }
 
 .cpg-principles-row--3 {
@@ -124,60 +199,175 @@
 
 .cpg-principles-row--2 {
   grid-template-columns: repeat(2, 1fr);
-  max-width: 700px;
+
+  max-width: 820px;
 }
+
+/* CARD */
 
 .cpg-principle {
   display: flex;
   align-items: center;
-  gap: 20px;
-  background: #f3f7fc;
-  border-radius: 8px;
-  padding: 22px 20px;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+  gap: 26px;
+
+  min-height: 150px;
+
+  padding: 26px 28px;
+
+  background: #fff;
+
+  border: 1px solid #e4ebf4;
+
+  transition: all 0.3s ease;
 }
 
 .cpg-principle:hover {
-  box-shadow: 0 8px 24px rgba(1, 52, 112, 0.1);
   transform: translateY(-3px);
+
+  box-shadow: 0 10px 30px rgba(1, 52, 112, 0.08);
 }
 
+/* ICON */
+
 .cpg-principle img {
-  width: 60px;
-  height: 60px;
+  width: 82px;
+  height: 82px;
+
   object-fit: contain;
+
   flex-shrink: 0;
 }
 
+/* TEXT */
+
 .cpg-principle p {
-  font-size: 14.5px;
-  color: #333;
-  line-height: 1.6;
   margin: 0;
+
+  font-size: 17px;
+  line-height: 1.7;
+
+  color: #4e5764;
+
+  font-family: "futuraptMedium", sans-serif;
 }
 
-/* ── RESPONSIVE ───────────────────────────── */
-@media (max-width: 1100px) {
+/* ═══════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════ */
+
+@media (max-width: 1200px) {
   .cpg-overview,
   .cpg-expertise,
   .cpg-principles {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  .cpg-hero-box {
+    margin-left: 70px;
+  }
+
+  .cpg-principles-row--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cpg-principles-row--2 {
+    grid-template-columns: repeat(2, 1fr);
+
+    max-width: 100%;
   }
 }
 
-@media (max-width: 768px) {
-  .cpg-hero { height: 60vw; min-height: 240px; }
-  .cpg-hero-box { margin-left: 20px; padding-top: 40px; }
-  .cpg-hero-title { font-size: 30px; }
+@media (max-width: 1024px) {
+  .cpg-hero-title {
+    font-size: 44px;
+  }
 
-  .cpg-overview { padding: 40px 20px; margin-top: -80px; }
-  .cpg-overview h2 { font-size: 24px; }
+  .cpg-overview,
+  .cpg-expertise,
+  .cpg-principles {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 
-  .cpg-expertise { padding: 40px 20px; }
-  .cpg-expertise-inner { grid-template-columns: 1fr; gap: 30px; }
+  .cpg-expertise-inner {
+    gap: 40px;
+  }
 
-  .cpg-principles { padding: 40px 20px; }
+  .cpg-principle {
+    padding: 24px 22px;
+  }
+
+  .cpg-principle img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 767px) {
+  .cpg-hero {
+    height: 65vw;
+    min-height: 240px;
+  }
+
+  .cpg-hero-box {
+    margin-left: 20px;
+    padding-top: 45px;
+  }
+
+  .cpg-hero-title {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+
+  .cpg-overview {
+    margin-top: -40px;
+
+    padding: 40px 22px;
+
+    border-top-left-radius: 30% 50px;
+    border-top-right-radius: 30% 50px;
+  }
+
+  .cpg-overview h2,
+  .cpg-expertise-content h2,
+  .cpg-principles h2 {
+    font-size: 28px;
+  }
+
+  .cpg-overview p,
+  .cpg-expertise-content p,
+  .cpg-principle p {
+    font-size: 15px;
+  }
+
+  .cpg-expertise,
+  .cpg-principles {
+    padding: 40px 22px;
+  }
+
+  .cpg-expertise-inner,
   .cpg-principles-row--3,
-  .cpg-principles-row--2 { grid-template-columns: 1fr; }
+  .cpg-principles-row--2 {
+    grid-template-columns: 1fr;
+  }
+
+  .cpg-principles-row {
+    gap: 22px;
+    margin-bottom: 22px;
+  }
+
+  .cpg-principle {
+    min-height: auto;
+
+    padding: 22px 18px;
+
+    gap: 18px;
+  }
+
+  .cpg-principle img {
+    width: 58px;
+    height: 58px;
+  }
 }

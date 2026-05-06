@@ -50,14 +50,14 @@
 
 .mfg-overview-quote {
   font-style: italic;
-  font-size: 18px;
+  font-size: 24px;
   color: #013470 !important; 
   font-weight: 600;
   margin-bottom: 28px; 
 }
 
 .mfg-overview p {
-  font-size: 15.5px;
+  font-size: 18px;
   color: #555;
   line-height: 1.85;
   margin-bottom: 20px;
@@ -90,10 +90,11 @@
 }
 
 .mfg-challenge-card h3 {
-  font-size: 19px;
+  font-size: 24px;
   font-weight: 700;
   color: #013470;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .mfg-challenge-card ul {
@@ -106,12 +107,13 @@
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  font-size: 14.5px;
+  font-size: 18px;
   color: #555;
   line-height: 1.65;
   margin-bottom: 14px;
   padding-bottom: 14px;
   border-bottom: none;
+  text-align: left;
 }
 
 .mfg-challenge-card ul li:last-child {
@@ -144,7 +146,7 @@
 }
 
 .mfg-solutions-intro {
-  font-size: 15px;
+  font-size: 18px;
   color: #555;
   line-height: 1.8;
   text-align: center;
@@ -178,14 +180,14 @@
 }
 
 .mfg-pillar h3 {
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 700;
   color: #013470;
   margin-bottom: 12px;
 }
 
 .mfg-pillar p {
-  font-size: 13.5px;
+  font-size: 18px;
   color: #666;
   line-height: 1.7;
 }
@@ -236,9 +238,10 @@
 .mfg-solution-item h4 {
   color: #013470;   /* 👈 exact color from your screenshot */
   font-weight: 700;
+  font-size: 22px;
 }
 .mfg-solution-item p {
-  font-size: 13px;
+  font-size: 18px;
   color: #666;
   line-height: 1.65;
   margin: 0;

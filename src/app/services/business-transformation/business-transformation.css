@@ -1,8 +1,7 @@
 /* =============================================
    TRANSFORMATION MANAGEMENT & GOVERNANCE
-   business-transformation.css
-   Exact Taciti Match
-   ============================================= */
+   Exact Elementor Match
+============================================= */
 
 .bt-page {
   font-family: "Poppins", sans-serif;
@@ -12,14 +11,15 @@
 
 /* ══════════════════════════════════════════════
    HERO
-   ══════════════════════════════════════════════ */
+══════════════════════════════════════════════ */
 
 .bt-hero {
-  background: url("/Taciti assets/assets-10.png") no-repeat center top;
+  background: url("/Taciti assets/assets-10.png")
+    no-repeat center top;
+  background-size: cover;
+  width: 100%;
   height: 50vw;
   min-height: 380px;
-  width: 100%;
-  background-size: cover;
   display: flex;
   align-items: flex-start;
 }
@@ -32,19 +32,19 @@
 .bt-hero-content h1 {
   color: #fff;
   font-size: 55px;
-  font-family: "futuraptMedium", sans-serif;
-  margin: 0;
+  line-height: 1.08;
   font-weight: 600;
-  line-height: 1.1;
+  margin: 0;
+  font-family: "futuraptMedium", sans-serif;
 }
 
 /* ══════════════════════════════════════════════
    OVERVIEW
-   ══════════════════════════════════════════════ */
+══════════════════════════════════════════════ */
 
 .bt-overview {
   text-align: center;
-  padding: 70px 140px 50px;
+  padding: 70px 115px 55px;
   margin-top: -80px;
   background: #fff;
   border-top-left-radius: 60% 100px;
@@ -63,36 +63,36 @@
 
 .bt-overview p {
   font-size: 18px;
-  color: #505865;
   line-height: 1.85;
+  color: #4E5764;
   margin: 0 auto;
-  max-width: 1020px;
+  max-width: 1100px;
   font-family: "Roboto-Light", sans-serif;
 }
 
 /* ══════════════════════════════════════════════
    SERVICES INCLUDE
-   SAME AS STRATEGY PAGE
-   ══════════════════════════════════════════════ */
+══════════════════════════════════════════════ */
 
 .bt-services {
-  padding: 20px 100px 50px;
+  padding: 10px 115px 60px;
   background: #fff;
 }
 
 .bt-services h2 {
   font-size: 37px;
   font-weight: 700;
-  color: #1D448A;
-  margin-bottom: 30px;
+  color: #013470;
+  margin-bottom: 34px;
   text-align: center;
   font-family: "Futura Md BT", sans-serif;
 }
 
 .bt-services-grid {
   display: flex;
-  gap: 80px;
-  justify-content: flex-start;
+  gap: 90px;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .bt-services-grid ul {
@@ -105,30 +105,28 @@
 .bt-services-grid li {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  margin: 18px 0;
+  gap: 14px;
+  margin-bottom: 22px;
   font-size: 18px;
-  color: #4E5764;
   line-height: 1.55;
+  color: #4E5764;
   font-family: "Roboto-Light", sans-serif;
 }
 
-/* SAME ICON AS STRATEGY PAGE */
-
 .bt-icon-svg {
-  flex-shrink: 0;
   width: 22px;
   height: 22px;
-  margin-top: 1px;
+  flex-shrink: 0;
+  margin-top: 2px;
   color: #1D448A;
 }
 
 /* ══════════════════════════════════════════════
    OUR EXPERTISE
-   ══════════════════════════════════════════════ */
+══════════════════════════════════════════════ */
 
 .bt-expertise {
-  padding: 60px 100px 80px;
+  padding: 60px 115px 90px;
   background: #fff;
 }
 
@@ -146,33 +144,38 @@
 .bt-cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 34px;
+  align-items: stretch;
 }
 
 /* ══════════════════════════════════════════════
    CARD
-   SAME AS STRATEGY PAGE
-   ══════════════════════════════════════════════ */
+══════════════════════════════════════════════ */
 
 .bt-card {
   border: 5px solid #EBEBEB;
-  padding: 30px 20px;
+  padding: 34px 26px 30px;
   background: #fff;
   border-radius: 5px;
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
-  min-height: 260px;
+  min-height: 320px;
   box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-/* HOVER OVERLAY */
+/* HOVER */
 
 .bt-card::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("/Taciti assets/card.png") no-repeat center/cover;
+  background: url("/Taciti assets/card.png")
+    no-repeat center/cover;
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 0;
@@ -181,8 +184,6 @@
 .bt-card:hover::before {
   opacity: 1;
 }
-
-/* CONTENT */
 
 .bt-card h3,
 .bt-card p {
@@ -193,21 +194,25 @@
 
 .bt-card h3 {
   font-size: 22px;
+  line-height: 1.22;
   font-weight: 700;
   color: #013470;
-  margin-bottom: 14px;
-  line-height: 1.2;
+  margin-bottom: 18px;
   text-align: left;
   font-family: "Futura PT Bold", "futuraptMedium", sans-serif;
 }
 
 .bt-card p {
   font-size: 18px;
+  line-height: 1.55;
   color: #4E5764;
-  line-height: 1.5;
-  margin: 0;
+  margin: 0 0 14px;
   text-align: left;
   font-family: "Roboto-Light", sans-serif;
+}
+
+.bt-card p:last-child {
+  margin-bottom: 0;
 }
 
 .bt-card:hover h3,
@@ -216,12 +221,40 @@
 }
 
 .bt-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
 }
 
 /* ══════════════════════════════════════════════
-   RESPONSIVE
-   ══════════════════════════════════════════════ */
+   LARGE SCREEN
+══════════════════════════════════════════════ */
+
+@media (min-width: 1400px) {
+
+  .bt-overview,
+  .bt-services,
+  .bt-expertise {
+    padding-left: 140px;
+    padding-right: 140px;
+  }
+}
+
+/* ══════════════════════════════════════════════
+   LAPTOP
+══════════════════════════════════════════════ */
+
+@media (min-width: 1025px) and (max-width: 1399px) {
+
+  .bt-overview,
+  .bt-services,
+  .bt-expertise {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+/* ══════════════════════════════════════════════
+   TABLET LANDSCAPE
+══════════════════════════════════════════════ */
 
 @media (min-width: 769px) and (max-width: 1024px) {
 
@@ -234,23 +267,34 @@
   }
 
   .bt-overview {
-    padding: 60px 80px 40px;
+    padding: 60px 60px 45px;
   }
 
   .bt-services {
-    padding: 20px 60px 40px;
+    padding: 20px 60px 50px;
   }
 
   .bt-expertise {
-    padding: 50px 60px;
+    padding: 55px 60px 70px;
+  }
+
+  .bt-services-grid {
+    gap: 50px;
   }
 
   .bt-cards-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+
+  .bt-card {
+    min-height: 340px;
   }
 }
 
-/* TABLET */
+/* ══════════════════════════════════════════════
+   TABLET
+══════════════════════════════════════════════ */
 
 @media (min-width: 768px) and (max-width: 768px) {
 
@@ -264,11 +308,11 @@
   }
 
   .bt-overview {
-    padding: 50px 40px 30px;
+    padding: 50px 40px 35px;
   }
 
   .bt-services {
-    padding: 20px 40px 30px;
+    padding: 20px 40px 40px;
   }
 
   .bt-services-grid {
@@ -277,35 +321,43 @@
   }
 
   .bt-expertise {
-    padding: 40px 40px 50px;
+    padding: 50px 40px 60px;
   }
 
   .bt-cards-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .bt-card {
+    min-height: 320px;
   }
 }
 
-/* MOBILE */
+/* ══════════════════════════════════════════════
+   MOBILE
+══════════════════════════════════════════════ */
 
 @media (max-width: 767px) {
 
   .bt-hero {
-    height: 65vw;
+    height: 68vw;
     min-height: 220px;
   }
 
   .bt-hero-content {
     margin-left: 20px;
-    padding-top: 40px;
+    padding-top: 42px;
   }
 
   .bt-hero-content h1 {
     font-size: 32px;
+    line-height: 1.12;
   }
 
   .bt-overview {
-    padding: 35px 20px 25px;
-    margin-top: -40px;
+    padding: 38px 22px 30px;
+    margin-top: -45px;
     border-top-left-radius: 30% 50px;
     border-top-right-radius: 30% 50px;
   }
@@ -320,11 +372,12 @@
   }
 
   .bt-services {
-    padding: 20px 20px 35px;
+    padding: 20px 22px 35px;
   }
 
   .bt-services h2 {
     font-size: 28px;
+    line-height: 1.3;
     text-align: left;
   }
 
@@ -335,10 +388,11 @@
 
   .bt-services-grid li {
     font-size: 16px;
+    line-height: 1.6;
   }
 
   .bt-expertise {
-    padding: 40px 20px 50px;
+    padding: 40px 22px 55px;
   }
 
   .bt-expertise h2 {
@@ -347,10 +401,12 @@
 
   .bt-cards-grid {
     grid-template-columns: 1fr;
+    gap: 22px;
   }
 
   .bt-card {
     min-height: auto;
+    padding: 28px 22px;
   }
 
   .bt-card h3 {
@@ -359,5 +415,6 @@
 
   .bt-card p {
     font-size: 15px;
+    line-height: 1.7;
   }
 }

@@ -1,175 +1,272 @@
 /* =============================================
    LIFE SCIENCE PAGE
-   life-science.css
-   ============================================= */
+   EXACT TACITI MATCH
+============================================= */
 
 .ls-page {
-  font-family: "Poppins", sans-serif;
-  color: #333;
+  font-family: "futuraptMedium", sans-serif;
+  color: #4e5764;
+  overflow-x: hidden;
+  background: #fff;
 }
 
-/* ── HERO ─────────────────────────────────── */
+/* ═══════════════════════════════════════
+   HERO
+═══════════════════════════════════════ */
+
 .ls-hero {
-  background: url("/Taciti assets/assets-20.png") no-repeat;
+  background: url("/Taciti assets/assets-20.png")
+    no-repeat center top;
+
+  background-size: cover;
+
+  width: 100%;
   height: 50vw;
   min-height: 380px;
-  width: 100%;
-  background-size: cover;
-  background-position: center top;   /* 👈 important */
+
+  display: flex;
+  align-items: flex-start;
 }
 
 .ls-hero-box {
   margin-left: 150px;
-  padding-top: 70px;                 /* 👈 consistent */
+  padding-top: 70px;
 }
 
 .ls-hero-title {
   color: #fff;
-  font-size: 50px;
+
+  font-size: 55px;
+  line-height: 1.08;
+
+  max-width: 700px;
+
+  margin: 0;
+
+  font-weight: 600;
   font-family: "futuraptMedium", sans-serif;
-  max-width: 600px;
-  line-height: 1.2;
 }
 
-/* ── OVERVIEW ─────────────────────────────── */
+/* ═══════════════════════════════════════
+   OVERVIEW
+═══════════════════════════════════════ */
+
 .ls-overview {
-  text-align: center;
-  padding: 70px 140px;
-  margin-top: -130px;
   background: #fff;
+
+  margin-top: -80px;
+
   border-top-left-radius: 60% 100px;
   border-top-right-radius: 60% 100px;
+
+  position: relative;
+  z-index: 2;
+
+  padding: 70px 140px 50px;
+
+  text-align: center;
 }
 
 .ls-overview h2 {
-  font-size: 36px;
+  font-size: 37px;
+  line-height: 1.2;
+
+  color: #013470;
+
+  margin-bottom: 28px;
+
   font-weight: 700;
-  color: #1f4e79;
-  margin-bottom: 24px;
+  font-family: "futuraptbold", sans-serif;
 }
 
 .ls-overview p {
-  font-size: 15.5px;
-  color: #555;
+  font-size: 18px;
   line-height: 1.85;
-  margin-bottom: 20px;
-  max-width: 1020px;
+
+  color: #4e5764;
+
+  max-width: 1300px;
+
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 24px;
 }
 
-/* ── SOLUTION CARDS ───────────────────────── */
+/* ═══════════════════════════════════════
+   SOLUTION CARDS
+═══════════════════════════════════════ */
+
 .ls-cards-section {
-  padding: 60px 100px;
-  background: #f8fbff;
+  padding: 30px 140px 80px;
+  background: #fff;
 }
 
 .ls-cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  max-width: 1100px;
-  margin: 0 auto;
+
+  gap: 28px;
 }
+
+/* CARD */
 
 .ls-card {
-  border: 1px solid #dde4f0;
-  padding: 28px 24px;
+  border: 5px solid #ebebeb;
+
+  padding: 30px 22px;
+
+  min-height: 260px;
+
   background: #fff;
-  border-radius: 4px;
+
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease;
+
+  transition: all 0.35s ease;
 }
 
-/* 🔵 background image overlay */
+/* HOVER BACKGROUND */
+
 .ls-card::before {
   content: "";
+
   position: absolute;
   inset: 0;
-  background: url("/Taciti assets/card.png") no-repeat center/cover;
+
+  background: url("/Taciti assets/card.png")
+    no-repeat center center;
+
+  background-size: cover;
+
   opacity: 0;
-  transition: opacity 0.3s ease;
+
+  transition: opacity 0.35s ease;
+
   z-index: 0;
 }
 
+.ls-card:hover::before {
+  opacity: 1;
+}
+
+/* CONTENT */
+
+.ls-card-header,
+.ls-card p {
+  position: relative;
+  z-index: 2;
+}
 
 .ls-card-header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 16px;
+
   margin-bottom: 14px;
 }
 
+/* TITLE */
+
 .ls-card h3 {
-  font-size: 16px;
-  font-weight: 700;
-  color: #1f4e79;
-  line-height: 1.35;
-  transition: color 0.3s ease;
+  font-size: 22px;
+  line-height: 1.2;
+
+  color: #013470;
+
   margin: 0;
+
+  font-weight: 700;
+  font-family: "futuraptbold", sans-serif;
+
+  transition: color 0.3s ease;
 }
 
-.ls-card:hover h3 {
-  color: #fff;
+/* DESCRIPTION */
+
+.ls-card p {
+  font-size: 18px;
+  line-height: 1.55;
+
+  color: #4e5764;
+
+  margin: 0;
+
+  font-family: "Roboto-Light", sans-serif;
+
+  transition: color 0.3s ease;
 }
+
+/* ICON */
 
 .ls-card-icon {
-  width: 44px;
-  height: 44px;
+  width: 52px;
+  height: 52px;
+
   flex-shrink: 0;
 }
 
 .ls-card-icon img {
   width: 100%;
   height: 100%;
+
   object-fit: contain;
-  filter: none;
+
   transition: filter 0.3s ease;
+}
+
+/* HOVER */
+
+.ls-card:hover h3,
+.ls-card:hover p {
+  color: #fff;
 }
 
 .ls-card:hover .ls-card-icon img {
   filter: brightness(0) invert(1);
 }
 
-.ls-card p {
-  font-size: 13.5px;
-  color: #555;
-  line-height: 1.7;
-  margin: 0;
-  transition: color 0.3s ease;
-}
+/* ═══════════════════════════════════════
+   TAILORED SOLUTIONS
+═══════════════════════════════════════ */
 
-.ls-card:hover p {
-  color: #e8eef8;
-}
-
-/* ── TAILORED SOLUTIONS ───────────────────── */
 .ls-tailored {
-  padding: 70px 100px;
   background: #f3f7fc;
+
+  padding: 80px 140px;
 }
 
 .ls-tailored h2 {
-  font-size: 28px;
-  font-weight: 700;
-  color: #1f4e79;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 50px;
+  font-size: 36px;
   line-height: 1.35;
+
+  color: #013470;
+
+  text-align: center;
+
+  max-width: 1050px;
+
+  margin: 0 auto 60px;
+
+  font-weight: 700;
+  font-family: "futuraptbold", sans-serif;
 }
 
 .ls-tailored-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+
   gap: 0 60px;
-  max-width: 960px;
+
+  max-width: 1200px;
+
   margin: 0 auto;
 }
 
 .ls-tailored-list {
   list-style: none;
+
   padding: 0;
   margin: 0;
 }
@@ -177,78 +274,148 @@
 .ls-tailored-list li {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  font-size: 15px;
-  color: #444;
-  padding: 12px 0;
-  border-bottom: 1px solid #eef2f8;
+
+  gap: 14px;
+
+  padding: 14px 0;
+
+  border-bottom: 1px solid #dfe7f1;
+
+  font-size: 17px;
+  line-height: 1.7;
+
+  color: #4e5764;
 }
 
 .ls-tailored-list li:last-child {
   border-bottom: none;
 }
 
+/* ICON */
+
 .ls-arrow-icon {
   width: 24px;
   height: 24px;
+
   min-width: 24px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  margin-top: 2px;
 }
 
 .ls-arrow-icon svg {
   width: 100%;
   height: 100%;
-  fill: none;
-  stroke: #1f4e79;         /* circle color */
-  stroke-width: 20;
+
+  fill: #013470;
 }
 
-/* Arrow inside */
-.ls-arrow-icon svg path {
-  fill: #1f4e79;           /* arrow color */
-}
-
-/* ════════════════════════════════════════════
+/* ═══════════════════════════════════════
    RESPONSIVE
-   ════════════════════════════════════════════ */
+═══════════════════════════════════════ */
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .ls-overview,
   .ls-cards-section,
   .ls-tailored {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 70px;
+    padding-right: 70px;
   }
+
+  .ls-hero-box {
+    margin-left: 70px;
+  }
+
   .ls-cards-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 768px) {
-  .ls-hero {
-    height: 60vw;
-  }
-  .ls-hero-box {
-    margin-left: 20px;
-    padding-top: 50px;
-  }
+@media (max-width: 1024px) {
   .ls-hero-title {
-    font-size: 32px;
+    font-size: 44px;
   }
-  .ls-overview {
-    padding: 40px 20px;
-  }
-  .ls-overview h2 {
-    font-size: 26px;
-  }
+
+  .ls-overview,
   .ls-cards-section,
   .ls-tailored {
-    padding: 40px 20px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
+
+  .ls-card {
+    min-height: 280px;
+  }
+
+  .ls-tailored-grid {
+    gap: 0 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .ls-hero {
+    height: 65vw;
+    min-height: 240px;
+  }
+
+  .ls-hero-box {
+    margin-left: 20px;
+    padding-top: 45px;
+  }
+
+  .ls-hero-title {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+
+  .ls-overview {
+    margin-top: -40px;
+
+    padding: 40px 22px;
+
+    border-top-left-radius: 30% 50px;
+    border-top-right-radius: 30% 50px;
+  }
+
+  .ls-overview h2,
+  .ls-tailored h2 {
+    font-size: 28px;
+  }
+
+  .ls-overview p,
+  .ls-tailored-list li {
+    font-size: 15px;
+  }
+
+  .ls-cards-section,
+  .ls-tailored {
+    padding: 40px 22px;
+  }
+
   .ls-cards-grid,
   .ls-tailored-grid {
     grid-template-columns: 1fr;
+  }
+
+  .ls-card {
+    min-height: auto;
+    padding: 28px 20px;
+  }
+
+  .ls-card h3 {
+    font-size: 24px;
+  }
+
+  .ls-card p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .ls-card-icon {
+    width: 48px;
+    height: 48px;
   }
 }

@@ -43,7 +43,7 @@
 
 .pa-overview {
   text-align: center;
-  padding: 70px 140px 50px;
+   padding: 70px 115px 55px;
   margin-top: -80px;
   background: #fff;
   border-top-left-radius: 60% 100px;
@@ -73,28 +73,32 @@
    ══════════════════════════════════════════════ */
 
 .pa-features {
-  padding: 20px 80px 60px;
+  padding: 10px 115px 70px;
   background: #fff;
 }
 
 .pa-features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 34px;
+  align-items: stretch;
 }
-
 /* CARD */
 
 .pa-card {
   border: 5px solid #EBEBEB;
-  padding: 30px 20px;
+  padding: 34px 26px 30px;
   background: #fff;
   border-radius: 5px;
   position: relative;
   overflow: hidden;
-  transition: color 0.3s ease;
-  min-height: 300px;
+  transition: all 0.3s ease;
+  min-height: 320px;
   box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 /* hover overlay */
@@ -113,7 +117,7 @@
   opacity: 1;
 }
 
-/* content above overlay */
+/* content */
 
 .pa-card h3,
 .pa-card p {
@@ -126,8 +130,8 @@
   font-size: 22px;
   font-weight: 700;
   color: #013470;
-  margin-bottom: 15px;
-  line-height: 1.2;
+  margin-bottom: 18px;
+  line-height: 1.22;
   font-family: "Futura PT Bold", "futuraptMedium", sans-serif;
   text-align: left;
 }
@@ -135,7 +139,7 @@
 .pa-card p {
   font-size: 18px;
   color: #4E5764;
-  line-height: 22px;
+  line-height: 1.55;
   margin: 0;
   text-align: left;
   font-family: "Roboto-Light", sans-serif;
@@ -146,10 +150,8 @@
   color: #fff;
 }
 
-/* remove old active class effect */
-
-.pa-card--active {
-  background: #fff;
+.pa-card:hover {
+  transform: translateY(-4px);
 }
 
 /* ══════════════════════════════════════════════
@@ -159,7 +161,7 @@
 
 .pa-expertise {
   background: #ffffff;
-  padding: 60px 80px 80px;
+   padding: 60px 115px 90px;
   text-align: center;
 }
 
@@ -177,7 +179,7 @@
 
 .pa-exp-box {
   background: #edf7fc;
-  padding: 45px 40px;
+   padding: 55px 55px;
 }
 
 .pa-exp-grid {
@@ -286,11 +288,11 @@
   }
 
   .pa-features {
-    padding: 20px 60px 40px;
+    padding: 20px 60px 50px;
   }
 
   .pa-expertise {
-    padding: 60px 60px;
+    padding: 60px 60px 70px;
   }
 
   .pa-card h3 {
@@ -371,7 +373,7 @@
   }
 
   .pa-features {
-    padding: 10px 20px 30px;
+     padding: 10px 22px 35px;
   }
 
   .pa-features-grid {
