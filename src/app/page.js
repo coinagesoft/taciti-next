@@ -11,11 +11,7 @@ export default function Home() {
             Empowering <br /> Digital <br /> Transformations
           </h1>
           <div className="descripitioncustom">
-            Our expertise lies in providing end-to-end digital transformation
-            services for businesses. Our unbiased advisory approach helps our
-            clients grow and succeed in their industries. Our services include
-            Strategy and Advisory, Process Re-engineering and Optimization and
-            Technology Implementations.
+           Our expertise lies in providing end-to-end digital transformation services for businesses. Our unbiased advisory approach helps our clients grow and succeed in their industries. Our services include Strategy and Advisory, Process Re-engineering and Optimization and Technology Implementations.
           </div>
         </div>
       </div>

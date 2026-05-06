@@ -630,7 +630,7 @@ body {
   text-align: center !important;
   color: white !important;
 
-    width: 350px !important;
+    /* width: 350px !important; */
     color: white;
   }
 
@@ -834,11 +834,14 @@ body {
   font-family: "futuramdmedium" !important;
 }
 
-.landingBox .textBox p {
+.landingBox .textBox .descripitioncustom {
   color: #ffffff !important;
-  font-size: 22px !important;
+  font-size: 18px !important;
   font-family: "Roboto-Light" !important;
+  line-height: 1.6;
+  max-width: 700px;
 }
+
 
 .landingBox .butterfly {
   position: absolute;
@@ -1818,9 +1821,9 @@ textarea.input-blue-bottom-border {
     margin-bottom: 10px
   }
 
-  .textBox1 {
+  /* .textBox1 {
     padding-top: 65% !important;
-  }
+  } */
 
   /* Styling for input fields */
   .contacttextwidth input,
@@ -2717,4 +2720,106 @@ body .pops {
   color: #555;
   margin: 4px 0;
   line-height: 1.6;
+}
+
+/* =========================================
+   HOME HERO RESPONSIVE FIX
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  .landingBox {
+    height: 100vh;
+    min-height: 700px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 40px;
+  }
+
+  .landingBox .textBox.textBox1 {
+    margin: 0 !important;
+    padding: 0 24px !important;
+    width: 100%;
+    top: 120px;
+    left: 0;
+    position: relative !important;
+  }
+
+  .landingBox .textBox h1 {
+    font-size: 42px !important;
+    line-height: 1.15 !important;
+    margin-bottom: 24px !important;
+    max-width: 100%;
+  }
+
+  .landingBox .textBox .descripitioncustom {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 16px !important;
+    line-height: 1.8 !important;
+    text-align: left !important;
+    padding-right: 10px;
+  }
+}
+
+/* EXTRA SMALL DEVICES */
+@media (max-width: 480px) {
+
+  .landingBox {
+    min-height: 760px;
+  }
+
+  .landingBox .textBox.textBox1 {
+    top: 110px;
+    padding: 0 20px !important;
+  }
+
+  .landingBox .textBox h1 {
+    font-size: 34px !important;
+    line-height: 1.2 !important;
+  }
+
+  .landingBox .textBox .descripitioncustom {
+    font-size: 15px !important;
+    line-height: 1.75 !important;
+  }
+}
+/* =========================================
+   HOME HERO TABLET RESPONSIVE
+   ========================================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .landingBox {
+    height: 100vh;
+    min-height: 850px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .landingBox .textBox.textBox1 {
+    position: relative !important;
+    margin: 0 !important;
+    padding-left: 60px !important;
+    padding-right: 60px !important;
+    top: 160px;
+    width: 100%;
+  }
+
+  .landingBox .textBox h1 {
+    font-size: 52px !important;
+    line-height: 1.15 !important;
+    max-width: 650px;
+    margin-bottom: 28px !important;
+  }
+
+  .landingBox .textBox .descripitioncustom {
+    width: 100% !important;
+    max-width: 620px !important;
+    font-size: 18px !important;
+    line-height: 1.8 !important;
+    text-align: left !important;
+  }
 }
