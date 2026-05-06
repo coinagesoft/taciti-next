@@ -48,7 +48,7 @@ export default function LifeScience() {
               <h3>R&amp;D Administration</h3>
               <div className="ls-card-icon">
                 <img
-                  src="/Taciti assets/assets-53.png"
+                  src="/Taciti assets/inverse icon-02.png"
                   alt="R&D Administration"
                 />
               </div>

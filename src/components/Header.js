@@ -192,7 +192,7 @@ export default function Header() {
           </div>
         )}
         {/* ── MOBILE DRAWER ── */}
-        /* ── MOBILE DRAWER ── */
+       
         <div className={`drawer ${isDrawerOpen ? "open" : ""}`}>
           <div className="drawerContent">
             {/* Drawer header */}
