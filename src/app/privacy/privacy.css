@@ -1,0 +1,112 @@
+/* =========================================
+   PRIVACY PAGE
+   Exact Taciti Match
+   ========================================= */
+
+.privacy-page {
+  width: 100%;
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+/* MAIN CONTENT */
+.privacy-container {
+  max-width: 87.5%;
+  margin: auto;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+
+/* MAIN TITLE */
+.privacy-container h1 {
+  font-family: "Futura Md BT", sans-serif;
+  font-size: 37px;
+  font-weight: 600;
+  color: #013470;
+  margin-bottom: 42px;
+  line-height: 1.2;
+}
+
+/* SECTION HEADINGS */
+.privacy-container h2 {
+  font-family: "Futura Md BT", sans-serif;
+  font-size: 37px;
+  font-weight: 600;
+  color: #013470;
+  margin-top: 50px;
+  margin-bottom: 22px;
+  line-height: 1.2;
+}
+
+/* PARAGRAPHS */
+.privacy-container p {
+  font-family: "Roboto-Light", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #4E5764;
+  line-height: 1.9;
+  margin-bottom: 24px;
+  text-align: justify;
+}
+
+/* LISTS */
+.privacy-container ul {
+  padding-left: 28px;
+  margin-bottom: 24px;
+}
+
+.privacy-container li {
+  font-family: "Roboto-Light", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #4E5764;
+  line-height: 1.9;
+  margin-bottom: 12px;
+}
+
+/* STRONG */
+.privacy-container strong {
+  font-weight: 700;
+  color: #013470;
+}
+
+/* LINKS */
+.privacy-container a {
+  color: #013470;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.privacy-container a:hover {
+  color: #0f5db8;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .privacy-container {
+    max-width: 92%;
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+  }
+
+  .privacy-container h1,
+  .privacy-container h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .privacy-container h2 {
+    margin-top: 40px;
+  }
+
+  .privacy-container p,
+  .privacy-container li {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .privacy-container ul {
+    padding-left: 22px;
+  }
+}

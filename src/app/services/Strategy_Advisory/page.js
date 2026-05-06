@@ -8,8 +8,7 @@ export default function StrategyAdvisory() {
       {/* ── HERO ── */}
       <section className="sa-hero">
         <div className="sa-hero-content">
-          <h1>
-Strategy & Advisory</h1>
+          <h1>Strategy &amp; Advisory</h1>
         </div>
       </section>
 
@@ -30,40 +29,63 @@ Strategy & Advisory</h1>
 
       {/* ── STRATEGY AND ADVISORY SERVICES INCLUDE ── */}
       <section className="sa-services">
-        <h2>Strategy And Advisory Services Include</h2>
+        <div className="sa-services-subtitle">Strategy And Advisory Services Include</div>
         <div className="sa-services-grid">
           <ul>
             <li>
-              <span className="sa-icon" />
+              <svg className="sa-icon" aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                <path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"/>
+              </svg>
               CFO and CIO Advisory
             </li>
             <li>
-              <span className="sa-icon" />
+              <svg className="sa-icon" aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                <path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"/>
+              </svg>
               Global Business Process and Technology Assessments
             </li>
             <li>
-              <span className="sa-icon" />
+              <svg className="sa-icon" aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                <path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"/>
+              </svg>
               Mergers, Acquisitions and Divestitures related Due Diligence
             </li>
           </ul>
           <ul>
             <li>
-              <span className="sa-icon" />
+              <svg className="sa-icon" aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                <path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"/>
+              </svg>
               Digital Transformation Roadmap and Business Case Management
             </li>
             <li>
-              <span className="sa-icon" />
+              <svg className="sa-icon" aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                <path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"/>
+              </svg>
               ITSM Advisory
             </li>
             <li>
-              <span className="sa-icon" />
+              <svg className="sa-icon" aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                <path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"/>
+              </svg>
               Vendor Selection and Benchmarking
             </li>
           </ul>
         </div>
       </section>
 
-      {/* ── FEATURE CARDS (3 top + 2 bottom, matching live site) ── */}
+      {/* ── ORGANIZATIONAL TRANSFORMATION HEADING + DESCRIPTION ── */}
+      <section className="sa-org-heading">
+        <h2>Organizational Transformation For Performance Advancement</h2>
+        <p>
+          At Taciti, our strategy and advisory practice is dedicated to crafting innovative and
+          sustainable solutions that empower businesses to thrive in dynamic markets. We
+          collaborate closely with clients to develop strategic roadmaps that align technology
+          and management, driving lasting success.
+        </p>
+      </section>
+
+      {/* ── FEATURE CARDS: 3 top + 2 bottom centered (matches Elementor col-md-2 offset) ── */}
       <section className="sa-cards-section">
         <div className="sa-cards-row sa-cards-row--top">
           <div className="sa-card">
@@ -75,7 +97,7 @@ Strategy & Advisory</h1>
               technology and management, driving lasting success.
             </p>
           </div>
-          <div className="sa-card ">
+          <div className="sa-card">
             <h3>Guiding Transformative Pathways</h3>
             <p>
               Our strategy and advisory expertise pave the way for transformative journeys.
@@ -117,25 +139,27 @@ Strategy & Advisory</h1>
       {/* ── OUR EXPERTISE ── */}
       <section className="sa-expertise">
         <h2>Our Expertise</h2>
-        <div className="sa-exp-grid">
-          <div className="sa-exp-col">
-            <p>CFO and CIO Advisory Services</p>
-            <p>Digital Transformation Roadmap and Business Case Development</p>
-            <p>Global Business Process and Technology Assessments</p>
-            <p>Mergers, Acquisitions and Divestiture Related Due Diligence</p>
-          </div>
-          <div className="sa-exp-center">
-            <div className="sa-brain-outer">
-              <div className="sa-brain-inner">
-                <img src="/Taciti assets/assets-27.png" alt="Our Expertise" />
+        <div className="sa-exp-box">
+          <div className="sa-exp-grid">
+            <div className="sa-exp-col">
+              <p>CFO and CIO Advisory Services</p>
+              <p>Digital Transformation Roadmap and Business Case Development</p>
+              <p>Global Business Process and Technology Assessments</p>
+              <p>Mergers, Acquisitions and Divestiture Related Due Diligence</p>
+            </div>
+            <div className="sa-exp-center">
+              <div className="sa-brain-outer">
+                <div className="sa-brain-inner">
+                  <img src="/Taciti assets/assets-27.png" alt="Our Expertise" />
+                </div>
               </div>
             </div>
-          </div>
-          <div className="sa-exp-col sa-exp-col--right">
-            <p>Cloud Transformation</p>
-            <p>ITSM Benchmarking, Design, and Implementation</p>
-            <p>Vendor Selection and Benchmarking</p>
-            <p>Advanced Data and Analytics</p>
+            <div className="sa-exp-col sa-exp-col--right">
+              <p>Cloud Transformation</p>
+              <p>ITSM Benchmarking, Design, and Implementation</p>
+              <p>Vendor Selection and Benchmarking</p>
+              <p>Advanced Data and Analytics</p>
+            </div>
           </div>
         </div>
       </section>
