@@ -1,83 +1,80 @@
 /* =============================================
-   ERP LED TRANSFORMATION  ·  process-advisory.css
-   Matches taciti.com/process-advisory
-   Colors: #1D448A, #2D55AD, #EDEFF3, #505865
+   ERP LED TRANSFORMATION
+   SAME STYLE AS STRATEGY PAGE
    ============================================= */
 
 .pa-page {
   font-family: "Poppins", sans-serif;
-  color: #505865;
+  color: #4E5764;
+  overflow-x: hidden;
 }
 
 /* ══════════════════════════════════════════════
    HERO
    ══════════════════════════════════════════════ */
+
 .pa-hero {
-  background: url("/Taciti assets/Transformation through ERP-90.png") no-repeat;
-  height: 50vw;              /* 👈 reduced */
-  min-height: 420px;         /* 👈 keeps balance */
+  background: url("/Taciti assets/Transformation through ERP-90.png")
+    no-repeat center top;
+  height: 50vw;
+  min-height: 380px;
   width: 100%;
   background-size: cover;
-  background-position: center top;
+  display: flex;
+  align-items: flex-start;
 }
 
 .pa-hero-content {
   margin-left: 150px;
-  padding-top: 100px;
+  padding-top: 70px;
 }
 
 .pa-hero-content h1 {
   color: #fff;
   font-size: 55px;
-  font-family: "futuraptMedium";
+  font-family: "futuraptMedium", sans-serif;
   margin: 0;
-}
-
-@media (max-width: 767px) {
-  .pa-hero {
-    height: 60vw;
-  }
-  .pa-hero-content {
-    margin-left: 20px;
-    padding-top: 50px;
-  }
-  .pa-hero-content h1 {
-    font-size: 40px;
-  }
+  font-weight: 600;
 }
 
 /* ══════════════════════════════════════════════
    OVERVIEW
    ══════════════════════════════════════════════ */
+
 .pa-overview {
   text-align: center;
-  padding: 70px 140px;
-  margin-top: -130px;          /* 👈 pull upward */
+  padding: 70px 140px 50px;
+  margin-top: -80px;
   background: #fff;
   border-top-left-radius: 60% 100px;
   border-top-right-radius: 60% 100px;
+  position: relative;
+  z-index: 2;
 }
 
 .pa-overview h2 {
-  font-size: 36px;
+  font-size: 37px;
   font-weight: 700;
   color: #1D448A;
   margin-bottom: 28px;
 }
 
 .pa-overview p {
-  font-size: 15.5px;
-  color: #505865;
+  font-size: 18px;
+  color: #4E5764;
   line-height: 1.85;
-  margin: 0 auto;
-  max-width: 1020px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ══════════════════════════════════════════════
-   FEATURE CARDS (3 × 2 grid)
+   FEATURE CARDS
+   SAME AS STRATEGY PAGE
    ══════════════════════════════════════════════ */
+
 .pa-features {
-  padding: 0 80px 80px;
+  padding: 20px 80px 60px;
+  background: #fff;
 }
 
 .pa-features-grid {
@@ -86,18 +83,22 @@
   gap: 24px;
 }
 
-/* ================= CARD ================= */
+/* CARD */
+
 .pa-card {
-  border: 1px solid #dde4f0;
-  padding: 32px 26px;
+  border: 5px solid #EBEBEB;
+  padding: 30px 20px;
   background: #fff;
-  border-radius: 6px;
+  border-radius: 5px;
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
+  min-height: 300px;
+  box-sizing: border-box;
 }
 
-/* 🔵 overlay image */
+/* hover overlay */
+
 .pa-card::before {
   content: "";
   position: absolute;
@@ -108,58 +109,82 @@
   z-index: 0;
 }
 
-/* content above */
-.pa-card h3 {
-   position: relative;
-  z-index: 1;
-  transition: color 0.3s ease;
-   color: #1D448A;
-   font-weight: 700;
+.pa-card:hover::before {
+  opacity: 1;
 }
+
+/* content above overlay */
+
+.pa-card h3,
 .pa-card p {
   position: relative;
   z-index: 1;
   transition: color 0.3s ease;
 }
 
-/* hover */
-.pa-card:hover::before {
-  opacity: 1;
+.pa-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #013470;
+  margin-bottom: 15px;
+  line-height: 1.2;
+  font-family: "Futura PT Bold", "futuraptMedium", sans-serif;
+  text-align: left;
 }
 
-.pa-card:hover {
-  border-color: transparent;
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+.pa-card p {
+  font-size: 18px;
+  color: #4E5764;
+  line-height: 22px;
+  margin: 0;
+  text-align: left;
+  font-family: "Roboto-Light", sans-serif;
 }
 
-/* 🔥 text white */
 .pa-card:hover h3,
 .pa-card:hover p {
   color: #fff;
 }
 
+/* remove old active class effect */
+
+.pa-card--active {
+  background: #fff;
+}
+
 /* ══════════════════════════════════════════════
    OUR EXPERTISE
+   SAME AS STRATEGY PAGE
    ══════════════════════════════════════════════ */
+
 .pa-expertise {
-  background: #EDEFF3;
-  padding: 75px 80px;
+  background: #ffffff;
+  padding: 60px 80px 80px;
   text-align: center;
 }
 
 .pa-expertise h2 {
-  font-size: 34px;
-  font-weight: 700;
-  color: #1D448A;
-  margin-bottom: 50px;
+  font-family: "Futura Md BT", sans-serif;
+  font-size: 37px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #013470;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+/* light blue box */
+
+.pa-exp-box {
+  background: #edf7fc;
+  padding: 45px 40px;
 }
 
 .pa-exp-grid {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
+  gap: 40px;
 }
 
 .pa-exp-col {
@@ -168,117 +193,307 @@
 }
 
 .pa-exp-col p {
-  margin: 18px 0;
-  font-size: 15px;
-  color: #505865;
-  line-height: 1.5;
+  margin: 0 0 38px;
+  padding: 0;
+  font-size: 18px;
+  line-height: 1.45;
+  color: #4E5764;
+  font-family: "Roboto-Light", sans-serif;
+  font-weight: 400;
+}
+
+.pa-exp-col p:last-child {
+  margin-bottom: 0;
 }
 
 .pa-exp-col--right {
-  text-align: right;
+  text-align: left;
 }
+
+/* CENTER IMAGE */
 
 .pa-exp-center {
-  flex: 0 0 280px;
+  flex: 0 0 320px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-/* Double-ring brain circle */
 .pa-brain-outer {
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
-  background: #c8dff2;
+  width: auto;
+  height: auto;
+  background: transparent;
+  border-radius: 0;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
 
-.pa-brain-outer::before {
-  content: "";
-  position: absolute;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: #1D448A;
-  top: 14%;
-  right: 8%;
-}
-
-.pa-brain-outer::after {
-  content: "";
-  position: absolute;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: #1D448A;
-  bottom: 13%;
-  left: 8%;
+.pa-brain-outer::before,
+.pa-brain-outer::after,
+.pa-brain-inner::before,
+.pa-brain-inner::after {
+  display: none;
 }
 
 .pa-brain-inner {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: #ddeaf5;
+  width: auto;
+  height: auto;
+  background: transparent;
+  border-radius: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-}
-
-.pa-brain-inner::before {
-  content: "";
-  position: absolute;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: #1D448A;
-  bottom: 12%;
-  right: 5%;
 }
 
 .pa-brain-inner img {
-  width: 120px;
-  height: 120px;
+  width: 280px;
+  height: auto;
   object-fit: contain;
+  display: block;
 }
 
 /* ══════════════════════════════════════════════
    RESPONSIVE
    ══════════════════════════════════════════════ */
-@media (max-width: 1200px) {
-  .pa-hero { padding: 60px 60px 60px 80px; }
-  .pa-hero-content h1 { font-size: 42px; }
-  .pa-hero-img { max-width: 360px; }
-  .pa-overview { padding: 60px 80px; }
-  .pa-features { padding: 0 60px 60px; }
-  .pa-expertise { padding: 60px 60px; }
+
+@media (min-width: 1025px) {
+  .pa-card p {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+  }
+
+  .pa-card h3 {
+    font-size: 22px;
+  }
 }
 
-@media (max-width: 960px) {
-  .pa-hero { flex-direction: column; text-align: center; padding: 60px 40px 80px; }
-  .pa-hero-img { max-width: 300px; margin-top: 30px; }
-  .pa-overview { padding: 50px 40px; }
-  .pa-features { padding: 0 40px 50px; }
-  .pa-features-grid { grid-template-columns: repeat(2, 1fr); }
-  .pa-expertise { padding: 50px 40px; }
+/* tablets */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .pa-hero-content {
+    margin-left: 80px;
+  }
+
+  .pa-hero-content h1 {
+    font-size: 42px;
+  }
+
+  .pa-overview {
+    padding: 60px 80px 40px;
+  }
+
+  .pa-features {
+    padding: 20px 60px 40px;
+  }
+
+  .pa-expertise {
+    padding: 60px 60px;
+  }
+
+  .pa-card h3 {
+    font-size: 22px;
+  }
+
+  .pa-card p {
+    font-size: 15px;
+  }
 }
 
-@media (max-width: 640px) {
-  .pa-hero-content h1 { font-size: 32px; }
-  .pa-overview { padding: 40px 20px; }
-  .pa-overview h2 { font-size: 26px; }
-  .pa-features { padding: 0 20px 40px; }
-  .pa-features-grid { grid-template-columns: 1fr; }
-  .pa-expertise { padding: 40px 20px; }
-  .pa-expertise h2 { font-size: 26px; }
-  .pa-exp-grid { flex-direction: column; gap: 30px; }
-  .pa-exp-col, .pa-exp-col--right { text-align: center; width: 100%; }
-  .pa-exp-center { flex: 0 0 auto; }
-  .pa-brain-outer { width: 200px; height: 200px; }
-  .pa-brain-inner { width: 140px; height: 140px; }
-  .pa-brain-inner img { width: 90px; height: 90px; }
+/* tablet */
+
+@media (min-width: 768px) and (max-width: 768px) {
+  .pa-hero-content {
+    margin-left: 40px;
+    padding-top: 60px;
+  }
+
+  .pa-hero-content h1 {
+    font-size: 38px;
+  }
+
+  .pa-overview {
+    padding: 50px 40px 30px;
+  }
+
+  .pa-features {
+    padding: 10px 30px 40px;
+  }
+
+  .pa-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pa-expertise {
+    padding: 50px 40px;
+  }
+
+  .pa-exp-grid {
+    flex-direction: column;
+  }
+
+  .pa-exp-col,
+  .pa-exp-col--right {
+    text-align: center;
+  }
+
+  .pa-exp-center {
+    flex: 0 0 auto;
+  }
+
+  .pa-exp-box {
+    padding: 30px 20px;
+  }
+}
+
+/* mobile */
+
+@media (min-width: 415px) and (max-width: 767px) {
+  .pa-hero {
+    height: 60vw;
+  }
+
+  .pa-hero-content {
+    margin-left: 30px;
+    padding-top: 50px;
+  }
+
+  .pa-hero-content h1 {
+    font-size: 36px;
+  }
+
+  .pa-overview {
+    padding: 40px 30px 30px;
+    border-top-left-radius: 30% 60px;
+    border-top-right-radius: 30% 60px;
+  }
+
+  .pa-features {
+    padding: 10px 20px 30px;
+  }
+
+  .pa-features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pa-card {
+    margin-bottom: 20px;
+    min-height: auto;
+  }
+
+  .pa-card h3 {
+    font-size: 25px;
+  }
+
+  .pa-card p {
+    font-size: 15px;
+  }
+
+  .pa-expertise {
+    padding: 40px 20px;
+  }
+
+  .pa-exp-box {
+    padding: 25px 15px;
+  }
+
+  .pa-exp-grid {
+    flex-direction: column;
+  }
+
+  .pa-exp-col,
+  .pa-exp-col--right {
+    text-align: center;
+    width: 100%;
+  }
+
+  .pa-exp-center {
+    flex: 0 0 auto;
+  }
+}
+
+/* small mobile */
+
+@media (max-width: 414px) {
+  .pa-hero {
+    height: 65vw;
+    min-height: 200px;
+  }
+
+  .pa-hero-content {
+    margin-left: 20px;
+    padding-top: 40px;
+  }
+
+  .pa-hero-content h1 {
+    font-size: 32px;
+  }
+
+  .pa-overview {
+    padding: 35px 20px 25px;
+    border-top-left-radius: 30% 50px;
+    border-top-right-radius: 30% 50px;
+  }
+
+  .pa-overview h2 {
+    font-size: 28px;
+  }
+
+  .pa-overview p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .pa-features {
+    padding: 10px 15px 25px;
+  }
+
+  .pa-features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pa-card {
+    min-height: auto;
+    margin-bottom: 20px;
+  }
+
+  .pa-card h3 {
+    font-size: 24px;
+  }
+
+  .pa-card p {
+    font-size: 15px;
+  }
+
+  .pa-expertise {
+    padding: 35px 15px;
+  }
+
+  .pa-expertise h2 {
+    font-size: 28px;
+  }
+
+  .pa-exp-box {
+    padding: 20px 15px;
+  }
+
+  .pa-exp-grid {
+    flex-direction: column;
+  }
+
+  .pa-exp-col,
+  .pa-exp-col--right {
+    text-align: center;
+    width: 100%;
+  }
+
+  .pa-exp-center {
+    flex: 0 0 auto;
+  }
+
+  .pa-brain-inner img {
+    width: 220px;
+  }
 }
