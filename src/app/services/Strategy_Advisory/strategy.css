@@ -55,12 +55,13 @@
   font-weight: 700;
   color: #1D448A;
   margin-bottom: 28px;
+  font-family: "Futura Md BT", sans-serif !important;  
 }
 
 .sa-overview p {
   font-size: 18px;
   color: #4E5764;
-  line-height: 1.85;
+  line-height: 1.5;
   margin-bottom: 20px;
   /* max-width: 1020px; */
   margin-left: auto;
@@ -82,6 +83,7 @@
   margin-bottom: 30px;
   text-align: center;
   padding-left: 10px;
+  font-family: "Futura Md BT", sans-serif !important;
 }
 
 .sa-services-grid {
@@ -104,7 +106,8 @@
   margin: 18px 0;
   font-size: 18px;
   color: #4E5764;
-  line-height: 1.55;
+  line-height: 1.5;
+  font-family: "Roboto Light", sans-serif !important;
 }
 
 /* Circular arrow icon — matches Elementor e-far-arrow-alt-circle-right */
@@ -113,9 +116,19 @@
   width: 22px;
   height: 22px;
   margin-top: 1px;
-  color: #1D448A;
+  color: #1D448A !important;
 }
+.svg {
+   position: absolute;
+  left: 0;
+  top: 6px;
 
+  width: 22px;
+  height: 22px;
+
+  flex-shrink: 0;
+  color: #013470;
+}
 /* ══════════════════════════════════════════════
    ORG TRANSFORMATION HEADING
    ══════════════════════════════════════════════ */
@@ -130,12 +143,13 @@
   color: #1D448A;
   margin-bottom: 16px;
   text-align: center;
+  font-family: "Futura Md BT", sans-serif !important;
 }
 
 .sa-org-heading p {
   font-size: 18px;
   color: #4E5764;
-  line-height: 1.8;
+  line-height: 1.5;
   /* max-width: 1300px; */
   text-align: center;
 }
@@ -210,14 +224,14 @@
   color: #013470;
   margin-bottom: 12px;
   line-height: 1.2;
-  font-family: "Futura PT Bold", "futuraptMedium", sans-serif;
+  font-family: "Futura PT Bold",  sans-serif !important;
   text-align: left;
 }
 
 .sa-card p {
-  font-size: 15px;
+  font-size: 18px;
   color: #4E5764;
-  line-height: 1.4;
+  line-height: 1.5;
   margin: 0;
   text-align: left;
 }
@@ -237,13 +251,14 @@
 }
 
 .sa-expertise h2 {
-  font-family: "Futura Md BT", sans-serif;
+  font-family: "Futura Md BT", sans-serif !important;
   font-size: 37px;
   font-weight: 600;
   line-height: 1.2;
   color: #013470;
   text-align: center;
   margin-bottom: 35px;
+  margin-top: -60px;
 }
 /* Light blue container */
 .sa-exp-box {
@@ -269,9 +284,9 @@
   margin: 0 0 38px;
   padding: 0;
   font-size: 18px;
-  line-height: 1.45;
+  line-height: 1.5;
   color: #4E5764;
-  font-family: "Roboto-Light", sans-serif;
+  font-family: "Roboto Light", sans-serif !important;
   font-weight: 400;
 }
 

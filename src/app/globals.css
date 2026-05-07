@@ -100,7 +100,18 @@ h4,
   font-family: "futuramdmedium", sans-serif !important;
   color: #013470;
 }
-
+h1 {
+  font-size: 55px !important;
+}
+h2 {
+  font-size: 37px !important;
+  font-family: "Futura Md BT", sans-serif !important;
+}
+p {
+  font-family: "Roboto-Light", sans-serif !important;
+  font-size: 18px !important;
+  line-height: 1.5 !important;
+}
 /* PARAGRAPHS + BODY */
 p,
 li,
@@ -189,6 +200,19 @@ body {
   overflow-x: hidden;
   font-family: "futuraptMedium", sans-serif;
 }
+
+/* Bootstrap-like utility classes used in the markup */
+
+
+.fw-bold {
+  font-weight: 700 !important;
+}
+
+.text-primary.fw-bold,
+.fw-bold.text-primary {
+  font-family: "Public Sans", sans-serif !important;
+}
+
 
 /* width */
 ::-webkit-scrollbar {
@@ -627,7 +651,7 @@ body {
   }
 
 .descripitioncustom {
-  text-align: center !important;
+  text-align: justify !important;
   color: white !important;
 
     /* width: 350px !important; */
@@ -980,14 +1004,15 @@ body {
   line-height: 48px;
   color: #013470;
   margin-bottom: 20px;
-  font-family: "futuraptbold";
+  font-family: "futuraptbold" !important;
 }
 
 .mainLineImg .AboutUsBox .para {
-  font-size: 22px;
+  font-size: 18px;
   margin-bottom: 50px;
   color: #4e5764;
   font-family: "Roboto-Light";
+  line-height: 1.5;
 }
 
 .mainLineImg .AboutUsBox .ContactBtn {
@@ -1069,6 +1094,7 @@ body {
   font-size: 18px;
   text-align: center;
   font-family: "Roboto-Light";
+  line-height: 1.5;
 }
 
 #Industries .cardInCase {
@@ -1138,12 +1164,14 @@ body {
   text-align: start !important;
   margin-bottom: 20px !important;
   font-family: "Roboto-Light" !important;
+  line-height: 1.5;;
 }
 
 .cardInCase .cardbody .caseStudy {
   color: #0f7eed !important;
   font-size: 18px !important;
   text-align: start !important;
+  font-family: "Public Sans","sans-serif" !important;
 }
 
 /* Responsive Industries Styles */

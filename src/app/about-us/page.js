@@ -202,13 +202,12 @@ export default function AboutUs() {
           <p className="know-text">
             At Taciti we offer unbiased and informed advisory services to
             empower businesses to adapt and grow in the ever-evolving digital
-            landscape. We have worked with some of the biggest brands across
-            the globe. Whether you&apos;re seeking strategic insights,
-            innovative solutions, or practical implementation strategies, our
-            mission is to support you in achieving your digital transformation
-            goals and staying ahead of the competition. We are committed to
-            delivering results and building long-term relationships with our
-            clients.
+            landscape. We have worked with some of the biggest brands across the
+            globe. Whether you&apos;re seeking strategic insights, innovative
+            solutions, or practical implementation strategies, our mission is to
+            support you in achieving your digital transformation goals and
+            staying ahead of the competition. We are committed to delivering
+            results and building long-term relationships with our clients.
           </p>
         </div>
       </section>
@@ -246,8 +245,8 @@ export default function AboutUs() {
               <div className="vmv-label">VALUES</div>
               <div className="vmv-divider"></div>
               <p className="vmv-text">
-                Customer centricity, Transparency, Innovative solutions,
-                On-Time Delivery
+                Customer centricity, Transparency, Innovative solutions, On-Time
+                Delivery
               </p>
             </div>
           </div>
@@ -314,6 +313,7 @@ export default function AboutUs() {
               <div className="modal-background"></div>
               <div className="popupContainer">
                 <div className="popup modal-body">
+                  <div className="popup-bg-arrow"></div>
                   <div className="closeButton" onClick={() => setPopup(null)}>
                     Close
                   </div>
@@ -335,7 +335,9 @@ export default function AboutUs() {
                           <strong>Professional Synopsis</strong>
                         </p>
                         {popup.synopsis?.map((paragraph, index) => (
-                          <p key={`${popup.id}-synopsis-${index}`}>{paragraph}</p>
+                          <p key={`${popup.id}-synopsis-${index}`}>
+                            {paragraph}
+                          </p>
                         ))}
                         <p>
                           <strong>Professional Journey</strong>
@@ -382,16 +384,16 @@ export default function AboutUs() {
           padding: 60px 0;
         }
         .section-heading {
-          font-size: 1.9rem;
+          font-size: 37px;
           font-weight: bold;
           margin-bottom: 24px;
           color: #013470;
         }
         .know-text {
-          font-size: 14.5px;
+          font-size: 16px;
           color: #4e5764;
-          line-height: 1.78;
-          text-align: left;
+          line-height: 1.5;
+          text-align: justify;
           margin-bottom: 16px;
           font-family: "Roboto", sans-serif;
         }
@@ -466,10 +468,10 @@ export default function AboutUs() {
           border-bottom: none;
         }
         .vmv-label {
-          font-size: 17px;
+          font-size: 37px;
           font-weight: 800;
           color: #013470;
-          font-family: "Futura PT Bold", sans-serif;
+          font-family: "Futuramdmedium", sans-serif;
           letter-spacing: 1px;
           padding-top: 2px;
           text-align: right;
@@ -482,9 +484,9 @@ export default function AboutUs() {
           border-radius: 2px;
         }
         .vmv-text {
-          font-size: 14.5px;
+          font-size: 16px;
           color: #4e5764;
-          line-height: 1.78;
+          line-height: 1.5;
           font-family: "Roboto", sans-serif;
           margin: 0;
           text-align: justify;
@@ -563,7 +565,7 @@ export default function AboutUs() {
         .team-summary {
           margin: 0 auto;
           max-width: 1240px;
-          font-size: 20px;
+          font-size: 18px;
           line-height: 1.5;
           color: #4e5764;
           font-family: "Roboto-Light", sans-serif;
@@ -678,7 +680,6 @@ export default function AboutUs() {
           right: auto;
           transform: none;
           background: #f7f8fa !important;
-          background-image: none !important;
           background-color: #f7f8fa !important;
           border-radius: 22px;
           max-height: 82vh;
@@ -686,18 +687,54 @@ export default function AboutUs() {
           overflow-x: hidden;
           padding: 26px 22px 24px;
           box-shadow: none;
+          z-index: 1;
+          /* REMOVE isolation: isolate — it was blocking stacking */
         }
+
+        /* REMOVE the ::before entirely — use a real div instead */
         .popup.modal-body::before {
+          display: none;
+        }
+
+        /* NEW: real div for the background arrow */
+        .popup-bg-arrow {
+          position: sticky; /* sticky so it stays in view as user scrolls */
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 0; /* zero height so it doesn't push content */
+          pointer-events: none;
+          z-index: 0;
+          overflow: visible;
+        }
+
+        .popup-bg-arrow::after {
           content: "";
           position: absolute;
-          width: 150%;
-          height: 56%;
-          left: -28%;
-          top: 40%;
-          background: rgba(207, 230, 245, 0.9);
-          transform: rotate(-12deg);
+          top: 50px; /* offset from top of modal */
+          left: 50%;
+          transform: translateX(-50%);
+          width: 85%;
+          height: 500px; /* fixed height for the image container */
+          background-image: url("/Taciti%20assets/Background_arrow.png");
+          /* Ensure it renders reliably in the modal popup */
+          background-repeat: no-repeat;
+          background-position: center top;
+          background-size: 85% auto;
+          /* default values overridden for reliability */
+          opacity: 0.09;
           pointer-events: none;
-          z-index: 1;
+          z-index: 0;
+        }
+
+        /* Make sure all content sits above the background */
+        .teamCard,
+        .closeButton,
+        .content-design,
+        .head,
+        .inner-design {
+          position: relative;
+          z-index: 5;
         }
         .closeButton {
           position: absolute;
@@ -728,7 +765,7 @@ export default function AboutUs() {
           text-align: center;
         }
         .inner-design p {
-          font-size: 20px;
+          font-size: 18px;
           line-height: 1.2;
           color: #4e5764;
           font-weight: 500;
@@ -748,6 +785,7 @@ export default function AboutUs() {
         }
         .content-design p {
           margin: 0 0 16px;
+          line-height: 1.5;
         }
         .content-design strong {
           color: #445061;
@@ -866,6 +904,23 @@ export default function AboutUs() {
           .popup.modal-body {
             max-height: 88vh;
             padding: 18px 14px 16px;
+          }
+          .popup.modal-body::before {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background-image: url("/Taciti%20assets/Background%20arrow.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 1200px;
+
+            opacity: 0.12;
+
+            pointer-events: none;
+
+            z-index: 1;
           }
           .head h2 {
             font-size: 32px;
