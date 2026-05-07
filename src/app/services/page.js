@@ -111,7 +111,7 @@ export default function OurServices() {
 
       {/* INTRO */}
       <section className="os-intro">
-        <h2>Empowering Digital Transformation &amp; Achieving Growth</h2>
+        <h2>Empowering Digital Transformation <br/> &amp;  Achieving Growth</h2>
         <p>
           Globally, companies operate in rapidly changing and complex
           environments that demand a robust and scalable ecosystem to compete

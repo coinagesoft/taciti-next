@@ -385,7 +385,7 @@ export default function AboutUs() {
         }
         .section-heading {
           font-size: 37px;
-          font-weight: bold;
+          font-weight: 600;
           margin-bottom: 24px;
           color: #013470;
         }
@@ -484,10 +484,10 @@ export default function AboutUs() {
           border-radius: 2px;
         }
         .vmv-text {
-          font-size: 16px;
+          font-size: 18px;
           color: #4e5764;
-          line-height: 1.5;
-          font-family: "Roboto", sans-serif;
+         
+          font-family: "Roboto Sans", sans-serif;
           margin: 0;
           text-align: justify;
         }
@@ -506,10 +506,10 @@ export default function AboutUs() {
           margin: 0 0 24px;
           text-align: center;
           color: #013470;
-          font-size: 40px;
+          font-size: 37px;
           line-height: 1.15;
           font-family: "futuraptbold", sans-serif;
-          font-weight: 700;
+          font-weight: 600;
           text-transform: uppercase;
           letter-spacing: 0.4px;
         }
@@ -528,10 +528,10 @@ export default function AboutUs() {
         .value-name {
           margin: 0 0 10px;
           color: #013470;
-          font-size: 24px;
+          font-size: 22px;
           line-height: 1.2;
           font-family: "futuraptbold", sans-serif;
-          font-weight: 700;
+          font-weight: bold;
         }
         .value-text {
           margin: 0;
@@ -556,11 +556,11 @@ export default function AboutUs() {
         }
         .team-title {
           color: #013470;
-          font-size: 54px;
+          font-size: 37x;
           line-height: 1.06;
           margin: 0 0 20px;
           font-family: "futuraptbold", sans-serif;
-          font-weight: 700;
+          font-weight: bold;
         }
         .team-summary {
           margin: 0 auto;

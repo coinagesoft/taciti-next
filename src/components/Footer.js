@@ -93,8 +93,8 @@ export default function Footer() {
 
           <div style={{ display: "flex", justifyContent: "space-between", marginInline: "5%", marginTop: "5%" }}>
             <div>
-              <span style={{ color: "#fff", fontSize: "15px", fontWeight: "200" }}>
-                © 2024 Taciti. All Rights Reserved
+              <span style={{ color: "#fff", fontSize: "15px", fontWeight: "200", fontFamily: "Public Sans" }}>
+                © 2023 Taciti. All Rights Reserved
               </span>
             </div>
           </div>

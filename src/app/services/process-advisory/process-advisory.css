@@ -1,80 +1,90 @@
 /* =============================================
    ERP LED TRANSFORMATION
-   SAME STYLE AS STRATEGY PAGE
+   EXACT TACITI MATCH
    ============================================= */
 
 .pa-page {
   font-family: "Poppins", sans-serif;
-  color: #4E5764;
+  color: #4e5764;
   overflow-x: hidden;
+  background: #fff;
 }
 
-/* ══════════════════════════════════════════════
+/* ═══════════════════════════════════════
    HERO
-   ══════════════════════════════════════════════ */
+   ═══════════════════════════════════════ */
 
 .pa-hero {
   background: url("/Taciti assets/Transformation through ERP-90.png")
     no-repeat center top;
+  background-size: cover;
+  width: 100%;
   height: 50vw;
   min-height: 380px;
-  width: 100%;
-  background-size: cover;
+
   display: flex;
   align-items: flex-start;
 }
 
 .pa-hero-content {
   margin-left: 150px;
-  padding-top: 70px;
+  padding-top: 72px;
 }
 
 .pa-hero-content h1 {
   color: #fff;
   font-size: 55px;
+  line-height: 1.1;
   font-family: "futuraptMedium", sans-serif;
-  margin: 0;
   font-weight: 600;
+  margin: 0;
 }
 
-/* ══════════════════════════════════════════════
+/* ═══════════════════════════════════════
    OVERVIEW
-   ══════════════════════════════════════════════ */
+   ═══════════════════════════════════════ */
 
 .pa-overview {
-  text-align: center;
-   padding: 70px 115px 55px;
-  margin-top: -80px;
-  background: #fff;
-  border-top-left-radius: 60% 100px;
-  border-top-right-radius: 60% 100px;
   position: relative;
   z-index: 2;
+
+  margin-top: -130px;
+
+  background: #fff;
+
+  border-top-left-radius: 60% 100px;
+  border-top-right-radius: 60% 100px;
+
+  padding: 70px 115px 55px;
+
+  text-align: center;
 }
 
 .pa-overview h2 {
   font-size: 37px;
   font-weight: 700;
-  color: #1D448A;
+  color: #013470;
   margin-bottom: 28px;
+  font-family: "Futura Md BT", sans-serif;
 }
 
 .pa-overview p {
   font-size: 18px;
-  color: #4E5764;
   line-height: 1.85;
-  margin-left: auto;
-  margin-right: auto;
+  color: #4e5764;
+  font-family: "Roboto-Light", sans-serif;
+
+  max-width: 100%;
+  margin: 0 auto;
 }
 
-/* ══════════════════════════════════════════════
-   FEATURE CARDS
-   SAME AS STRATEGY PAGE
-   ══════════════════════════════════════════════ */
+/* ═══════════════════════════════════════
+   FEATURES
+   ═══════════════════════════════════════ */
 
 .pa-features {
-  padding: 10px 115px 70px;
   background: #fff;
+  padding: 10px 115px 70px;
 }
 
 .pa-features-grid {
@@ -83,33 +93,46 @@
   gap: 34px;
   align-items: stretch;
 }
+
 /* CARD */
 
 .pa-card {
-  border: 5px solid #EBEBEB;
-  padding: 34px 26px 30px;
-  background: #fff;
-  border-radius: 5px;
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease;
+
+  border: 5px solid #ebebeb;
+  border-radius: 5px;
+
+  background: #fff;
+
+  padding: 34px 26px 30px;
+
   min-height: 320px;
-  box-sizing: border-box;
+
+  transition: all 0.3s ease;
 
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+
+  box-sizing: border-box;
 }
 
-/* hover overlay */
+/* HOVER BG */
 
 .pa-card::before {
   content: "";
+
   position: absolute;
   inset: 0;
-  background: url("/Taciti assets/card.png") no-repeat center/cover;
+
+  background: url("/Taciti assets/card.png")
+    no-repeat center center/cover;
+
   opacity: 0;
+
   transition: opacity 0.3s ease;
+
   z-index: 0;
 }
 
@@ -117,32 +140,38 @@
   opacity: 1;
 }
 
-/* content */
-
 .pa-card h3,
 .pa-card p {
   position: relative;
-  z-index: 1;
+  z-index: 2;
+
   transition: color 0.3s ease;
 }
 
 .pa-card h3 {
   font-size: 22px;
-  font-weight: 700;
-  color: #013470;
-  margin-bottom: 18px;
   line-height: 1.22;
-  font-family: "Futura PT Bold", "futuraptMedium", sans-serif;
+  color: #013470;
+
+  margin-bottom: 18px;
+
+  font-family: "Futura PT Bold", sans-serif;
+  font-weight: 700;
+
   text-align: left;
 }
 
 .pa-card p {
   font-size: 18px;
-  color: #4E5764;
-  line-height: 1.55;
+  line-height: 22px;
+  color: #4e5764;
+
   margin: 0;
-  text-align: left;
+
   font-family: "Roboto-Light", sans-serif;
+  font-weight: 400;
+
+  text-align: left;
 }
 
 .pa-card:hover h3,
@@ -154,38 +183,42 @@
   transform: translateY(-4px);
 }
 
-/* ══════════════════════════════════════════════
-   OUR EXPERTISE
-   SAME AS STRATEGY PAGE
-   ══════════════════════════════════════════════ */
+/* ═══════════════════════════════════════
+   EXPERTISE
+   ═══════════════════════════════════════ */
 
 .pa-expertise {
-  background: #ffffff;
-   padding: 60px 115px 90px;
+  background: #fff;
+
+  padding: 60px 115px 90px;
+
   text-align: center;
 }
 
 .pa-expertise h2 {
-  font-family: "Futura Md BT", sans-serif;
   font-size: 37px;
-  font-weight: 600;
   line-height: 1.2;
   color: #013470;
-  text-align: center;
+
   margin-bottom: 35px;
+
+  font-family: "Futura Md BT", sans-serif;
+  font-weight: 600;
 }
 
-/* light blue box */
+/* BOX */
 
 .pa-exp-box {
   background: #edf7fc;
-   padding: 55px 55px;
+
+  padding: 55px;
 }
 
 .pa-exp-grid {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   gap: 40px;
 }
 
@@ -197,9 +230,12 @@
 .pa-exp-col p {
   margin: 0 0 38px;
   padding: 0;
+
   font-size: 18px;
   line-height: 1.45;
-  color: #4E5764;
+
+  color: #4e5764;
+
   font-family: "Roboto-Light", sans-serif;
   font-weight: 400;
 }
@@ -216,34 +252,14 @@
 
 .pa-exp-center {
   flex: 0 0 320px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.pa-brain-outer {
-  width: auto;
-  height: auto;
-  background: transparent;
-  border-radius: 0;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.pa-brain-outer::before,
-.pa-brain-outer::after,
-.pa-brain-inner::before,
-.pa-brain-inner::after {
-  display: none;
-}
-
+.pa-brain-outer,
 .pa-brain-inner {
-  width: auto;
-  height: auto;
-  background: transparent;
-  border-radius: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -256,25 +272,27 @@
   display: block;
 }
 
-/* ══════════════════════════════════════════════
-   RESPONSIVE
-   ══════════════════════════════════════════════ */
+/* ═══════════════════════════════════════
+   LARGE DEVICES
+   ═══════════════════════════════════════ */
 
 @media (min-width: 1025px) {
-  .pa-card p {
-    font-size: 18px;
-    line-height: 22px;
-    font-weight: 400;
-  }
-
   .pa-card h3 {
     font-size: 22px;
   }
+
+  .pa-card p {
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 
-/* tablets */
+/* ═══════════════════════════════════════
+   TABLETS
+   ═══════════════════════════════════════ */
 
 @media (min-width: 769px) and (max-width: 1024px) {
+
   .pa-hero-content {
     margin-left: 80px;
   }
@@ -284,15 +302,83 @@
   }
 
   .pa-overview {
-    padding: 60px 80px 40px;
+    padding: 60px 80px 45px;
   }
 
   .pa-features {
-    padding: 20px 60px 50px;
+    padding: 20px 60px 55px;
   }
 
   .pa-expertise {
     padding: 60px 60px 70px;
+  }
+
+  .pa-features-grid {
+    gap: 24px;
+  }
+
+  .pa-card {
+    min-height: 340px;
+  }
+
+  .pa-card h3 {
+    font-size: 22px;
+  }
+
+  .pa-card p {
+    font-size: 16px;
+  }
+}
+
+/* ═══════════════════════════════════════
+   768
+   ═══════════════════════════════════════ */
+
+@media (max-width: 768px) {
+
+  .pa-hero {
+    height: 60vw;
+    min-height: 240px;
+  }
+
+  .pa-hero-content {
+    margin-left: 40px;
+    padding-top: 55px;
+  }
+
+  .pa-hero-content h1 {
+    font-size: 38px;
+  }
+
+  .pa-overview {
+    padding: 50px 40px 35px;
+
+    border-top-left-radius: 30% 60px;
+    border-top-right-radius: 30% 60px;
+
+    margin-top: -70px;
+  }
+
+  .pa-overview h2 {
+    font-size: 30px;
+  }
+
+  .pa-overview p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .pa-features {
+    padding: 10px 30px 45px;
+  }
+
+  .pa-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+
+  .pa-card {
+    min-height: auto;
   }
 
   .pa-card h3 {
@@ -301,31 +387,6 @@
 
   .pa-card p {
     font-size: 15px;
-  }
-}
-
-/* tablet */
-
-@media (min-width: 768px) and (max-width: 768px) {
-  .pa-hero-content {
-    margin-left: 40px;
-    padding-top: 60px;
-  }
-
-  .pa-hero-content h1 {
-    font-size: 38px;
-  }
-
-  .pa-overview {
-    padding: 50px 40px 30px;
-  }
-
-  .pa-features {
-    padding: 10px 30px 40px;
-  }
-
-  .pa-features-grid {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .pa-expertise {
@@ -338,11 +399,8 @@
 
   .pa-exp-col,
   .pa-exp-col--right {
+    width: 100%;
     text-align: center;
-  }
-
-  .pa-exp-center {
-    flex: 0 0 auto;
   }
 
   .pa-exp-box {
@@ -350,16 +408,19 @@
   }
 }
 
-/* mobile */
+/* ═══════════════════════════════════════
+   MOBILE
+   ═══════════════════════════════════════ */
 
 @media (min-width: 415px) and (max-width: 767px) {
+
   .pa-hero {
-    height: 60vw;
+    height: 65vw;
   }
 
   .pa-hero-content {
     margin-left: 30px;
-    padding-top: 50px;
+    padding-top: 45px;
   }
 
   .pa-hero-content h1 {
@@ -368,12 +429,10 @@
 
   .pa-overview {
     padding: 40px 30px 30px;
-    border-top-left-radius: 30% 60px;
-    border-top-right-radius: 30% 60px;
   }
 
   .pa-features {
-     padding: 10px 22px 35px;
+    padding: 10px 22px 35px;
   }
 
   .pa-features-grid {
@@ -381,8 +440,7 @@
   }
 
   .pa-card {
-    margin-bottom: 20px;
-    min-height: auto;
+    margin-bottom: 0;
   }
 
   .pa-card h3 {
@@ -407,26 +465,25 @@
 
   .pa-exp-col,
   .pa-exp-col--right {
-    text-align: center;
     width: 100%;
-  }
-
-  .pa-exp-center {
-    flex: 0 0 auto;
+    text-align: center;
   }
 }
 
-/* small mobile */
+/* ═══════════════════════════════════════
+   SMALL MOBILE
+   ═══════════════════════════════════════ */
 
 @media (max-width: 414px) {
+
   .pa-hero {
-    height: 65vw;
-    min-height: 200px;
+    height: 68vw;
+    min-height: 210px;
   }
 
   .pa-hero-content {
     margin-left: 20px;
-    padding-top: 40px;
+    padding-top: 38px;
   }
 
   .pa-hero-content h1 {
@@ -435,6 +492,7 @@
 
   .pa-overview {
     padding: 35px 20px 25px;
+
     border-top-left-radius: 30% 50px;
     border-top-right-radius: 30% 50px;
   }
@@ -458,7 +516,6 @@
 
   .pa-card {
     min-height: auto;
-    margin-bottom: 20px;
   }
 
   .pa-card h3 {
@@ -487,12 +544,8 @@
 
   .pa-exp-col,
   .pa-exp-col--right {
-    text-align: center;
     width: 100%;
-  }
-
-  .pa-exp-center {
-    flex: 0 0 auto;
+    text-align: center;
   }
 
   .pa-brain-inner img {

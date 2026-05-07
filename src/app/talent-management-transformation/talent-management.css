@@ -56,7 +56,7 @@
 
 .tm-overview h2 {
   font-size: 37px;
-  font-weight: 700;
+  font-weight: 600;
   color: #013470;
   margin-bottom: 28px;
   font-family: "Futura Md BT", sans-serif;
@@ -66,7 +66,7 @@
   font-size: 18px;
   line-height: 1.85;
   color: #4E5764;
-  max-width: 1080px;
+  /* max-width: 1080px; */
   margin: 0 auto;
   font-family: "Roboto-Light", sans-serif;
 }
@@ -82,7 +82,7 @@
 
 .tm-offerings h2 {
   font-size: 37px;
-  font-weight: 700;
+  font-weight: 600;
   color: #013470;
   text-align: center;
   margin-bottom: 40px;
@@ -151,7 +151,7 @@
 .tm-card h3 {
   font-size: 22px;
   line-height: 1.18;
-  font-weight: 700;
+  font-weight: 600;
   color: #013470;
   margin: 0 0 18px;
   font-family: "Futura PT Bold", "futuraptMedium", sans-serif;
@@ -209,7 +209,7 @@
 
 .tm-framework h2 {
   font-size: 37px;
-  font-weight: 700;
+  font-weight: 600;
   color: #013470;
   margin-bottom: 42px;
   font-family: "Futura Md BT", sans-serif;
@@ -241,7 +241,7 @@
 
 .tm-lms h2 {
   font-size: 37px;
-  font-weight: 700;
+  font-weight: 600;
   color: #013470;
   text-align: center;
   margin-bottom: 20px;
@@ -296,7 +296,7 @@
 .tm-lms-item h3 {
   font-size: 22px;
   line-height: 1.3;
-  font-weight: 700;
+  font-weight: 600;
   color: #013470;
   margin-bottom: 24px;
   font-family: "Futura PT Bold", "futuraptMedium", sans-serif;

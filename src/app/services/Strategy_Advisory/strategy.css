@@ -1,7 +1,7 @@
 /* =============================================
    STRATEGY & ADVISORY  ·  strategy.css
    Exact match to taciti.com/business-consulting
-   Colors: #013470 / #1D448A, #2D55AD, #EDEFF3, #4E5764
+   Colors: #013470 / #013470, #2D55AD, #EDEFF3, #4E5764
    ============================================= */
 
 .sa-page {
@@ -24,8 +24,8 @@
 }
 
 .sa-hero-content {
-  margin-left: 150px;
-  padding-top: 70px;
+   margin-left: 131px;
+  padding-top: 77px;
 }
 
 .sa-hero-content h1 {
@@ -33,7 +33,7 @@
   font-size: 55px;
   font-family: "futuraptMedium", sans-serif;
   margin: 0;
-  font-weight: 600;
+  /* font-weight: 600; */
 }
 
 /* ══════════════════════════════════════════════
@@ -53,7 +53,7 @@
 .sa-overview h2 {
   font-size: 37px;
   font-weight: 700;
-  color: #1D448A;
+  color: #013470;
   margin-bottom: 28px;
   font-family: "Futura Md BT", sans-serif !important;  
 }
@@ -79,7 +79,7 @@
 .sa-services-subtitle {
   font-size: 37px;
   font-weight: 700;
-  color: #1D448A;
+  color: #013470;
   margin-bottom: 30px;
   text-align: center;
   padding-left: 10px;
@@ -106,6 +106,7 @@
   margin: 18px 0;
   font-size: 18px;
   color: #4E5764;
+  font-weight: 300;
   line-height: 1.5;
   font-family: "Roboto Light", sans-serif !important;
 }
@@ -116,7 +117,7 @@
   width: 22px;
   height: 22px;
   margin-top: 1px;
-  color: #1D448A !important;
+  color: #013470 !important;
 }
 .svg {
    position: absolute;
@@ -140,7 +141,7 @@
 .sa-org-heading h2 {
   font-size: 37px;
   font-weight: 700;
-  color: #1D448A;
+  color: #013470;
   margin-bottom: 16px;
   text-align: center;
   font-family: "Futura Md BT", sans-serif !important;

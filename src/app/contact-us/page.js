@@ -155,9 +155,9 @@ export default function Contact() {
             </div>
           </div>
           <div className="contacttextc">
-            <text className="contactheadsub">
+            <p className="contactheadsub">
               We will respond within 2 business days of receiving your inquiry.
-            </text>
+            </p>
           </div>
 
           <form className="Contact-form" onSubmit={handleSubmit}>

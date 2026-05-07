@@ -42,8 +42,8 @@
 }
 
 .ind-intro h2.ind-sub {
-  font-size: 36px;
-  font-weight: 700;
+  font-size: 37px;
+  font-weight: 600;
   color: #013470;
   margin-bottom: 24px;
 }
@@ -57,10 +57,10 @@
 }
 
 .ind-intro h2.ind-know {
-  font-size: 28px;
-  font-weight: 700;
+  font-size: 37px;
+  font-weight: 600;
   color: #013470;
-  margin-top: 40px;
+  margin-top: 60px;
   margin-bottom: 40px;
 }
 
@@ -115,10 +115,11 @@
 
 .ind-card h4 {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: bold;
   color: #013470;
   line-height: 1.25;
   margin: 0;
+
   transition: color 0.3s;
 }
 
@@ -172,11 +173,12 @@
 }
 
 .ind-card a {
-  font-size: 14px;
-  font-weight: 600;
-  color: #013470;
+  font-size: 18px;
+  /* font-weight: 600; */
+  color: #0d6efd;
   text-decoration: none;
   transition: color 0.3s;
+  font-family: "Roboto-Light", sans-serif !important;
 }
 
 .ind-card:hover a {

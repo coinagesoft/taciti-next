@@ -147,7 +147,7 @@ export default function Industries() {
               <h4>Hi-Tech</h4>
               <span>
                 <img
-                  src="/Taciti assets/assests.png"
+                  src="/Taciti assets/assets-47.png"
                   alt=""
                   className="ind-card-icon ind-icon-default"
                 />

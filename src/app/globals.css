@@ -211,6 +211,8 @@ body {
 .text-primary.fw-bold,
 .fw-bold.text-primary {
   font-family: "Public Sans", sans-serif !important;
+  font-weight: 700 !important;
+
 }
 
 
@@ -862,8 +864,9 @@ body {
   color: #ffffff !important;
   font-size: 18px !important;
   font-family: "Roboto-Light" !important;
-  line-height: 1.6;
+  line-height: 1.5;
   max-width: 700px;
+  text-align: justify;
 }
 
 
@@ -1171,7 +1174,7 @@ body {
   color: #0f7eed !important;
   font-size: 18px !important;
   text-align: start !important;
-  font-family: "Public Sans","sans-serif" !important;
+  font-family: "Public Sans",sans-serif !important;
 }
 
 /* Responsive Industries Styles */
@@ -2359,6 +2362,9 @@ body .pops {
   padding-top: 30px;
   color: #fff;
   font-weight: 600;
+  font-size: 16px;
+  font-family: "public sans", sans-serif  !important;
+  
 }
 
 .innerCard-new p {
@@ -2374,6 +2380,7 @@ body .pops {
   padding-left: 20px;
   font-size: 20px;
   font-weight: 600;
+  font-family: "Public Sans", Sans-serif !important;
   
 }
 .footer-head_certificate {
@@ -2390,6 +2397,7 @@ body .pops {
   padding-left: 20px;
   font-size: 20px;
   font-weight: 600;
+  font-family: "Public Sans", Sans-serif !important;
 }
 
 .footer-logo:hover {
@@ -2409,12 +2417,15 @@ body .pops {
 .innerCard-new ul li a {
   color: #fff;
   text-decoration: none;
+  font-size: 16px;
+  font-family: "public sans", sans-serif  !important;
+   line-height: 1 !important;
 }
 
 .innerCard-new ul li {
   color: #fff;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  /* padding-top: 5px;
+  padding-bottom: 5px; */
 }
 
 .innerCard-new ul li :hover {
