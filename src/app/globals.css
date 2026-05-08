@@ -920,6 +920,13 @@ body {
     margin: 50px 20px;
   }
 
+  .textBox h1 {
+    font-size: 32px !important;
+    font-family: "futuramdmedium" !important;
+    text-align: left;
+    margin-top: 20vh !important;
+  }
+
   .landingBox {
     background: url("/images/backgroundLayer.svg") no-repeat scroll;
     background-size: cover;
@@ -1304,9 +1311,21 @@ body {
     border-radius: 20px;
   }
 
+  .innerBox {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    flex-direction: column;
+  }
+
   .xaxisSlide .borderROundedRec .innerBox {
     margin-right: 0;
     margin-bottom: 20px;
+  }
+
+  .para {
+    text-align: justify;
   }
 
   .xaxisSlide .borderROundedRec .innerBox:last-child {
@@ -2801,7 +2820,7 @@ body .pops {
     max-width: 100% !important;
     font-size: 16px !important;
     line-height: 1.8 !important;
-    text-align: left !important;
+    text-align: justify !important;
     padding-right: 10px;
   }
 }
