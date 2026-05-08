@@ -10,10 +10,11 @@
 
 /* ── HERO ─────────────────────────────────── */
 .utility-hero {
-  background: url("/Taciti assets/assets-01.png") no-repeat center top / cover;
-  height: 50vw;
-  min-height: 380px;
+  background: url("/Taciti assets/assets-01.png") no-repeat center top 90%;
+  height: 40vw;
   width: 100%;
+  background-size: cover;
+  overflow-x: hidden;
 }
 
 .utility-hero-box {
@@ -33,7 +34,7 @@
 .utility-overview {
   text-align: center;
   padding: 70px 140px;
-  margin-top: -130px;
+  margin-top: -110px;
   background: #fff;
   border-top-left-radius: 60% 100px;
   border-top-right-radius: 60% 100px;

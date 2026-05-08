@@ -13,11 +13,11 @@
 
 .hitech-hero {
   background: url("/Taciti assets/Hi tech-14.png")
-    no-repeat center top / cover;
+    no-repeat center top 90%;
+  height: 40vw;
   width: 100%;
-  height: 50vw;
-  min-height: 380px;
-  position: relative;
+  background-size: cover;
+  overflow-x: hidden;
 }
 
 .hitech-hero-box {
@@ -38,7 +38,7 @@
 
 .hitech-overview {
   position: relative;
-  margin-top: -130px;
+  margin-top: -110px;
   background: #fff;
   border-top-left-radius: 60% 100px;
   border-top-right-radius: 60% 100px;

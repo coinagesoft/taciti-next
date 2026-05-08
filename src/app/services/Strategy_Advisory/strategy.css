@@ -14,13 +14,11 @@
    HERO
    ══════════════════════════════════════════════ */
 .sa-hero {
-  background: url("/Taciti assets/assets-18.png") no-repeat center top;
-  height: 50vw;
-  min-height: 380px;
+  background: url("/Taciti assets/assets-18.png") no-repeat center 90%;
+  height: 40vw;
   width: 100%;
   background-size: cover;
-  display: flex;
-  align-items: flex-start;
+  overflow-x: hidden;
 }
 
 .sa-hero-content {

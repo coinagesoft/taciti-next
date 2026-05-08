@@ -15,13 +15,11 @@
 
 .bt-hero {
   background: url("/Taciti assets/assets-10.png")
-    no-repeat center top;
-  background-size: cover;
+    no-repeat center 90%;
+  height: 40vw;
   width: 100%;
-  height: 50vw;
-  min-height: 380px;
-  display: flex;
-  align-items: flex-start;
+  background-size: cover;
+  overflow-x: hidden;
 }
 
 .bt-hero-content {

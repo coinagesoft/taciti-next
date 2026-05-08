@@ -360,15 +360,15 @@ export default function AboutUs() {
       <style jsx>{`
         /* HERO */
         .intro-section {
-          background: url("/images/about-us-hero.png") no-repeat;
-          height: 100vh;
-          width: 100vw;
+          background: url("/images/about-us-hero.png") no-repeat center 90%;
+          height: 40vw;
+          width: 100%;
           background-size: cover;
-          background-position: top;
+          overflow-x: hidden;
         }
         .intro-box {
           margin-left: 150px;
-          padding-top: 100px;
+          padding-top: 150px;
         }
         .main-title {
           color: #fff;
@@ -381,7 +381,8 @@ export default function AboutUs() {
           background: #fff;
         }
         .life-section {
-          padding: 60px 0;
+          padding-bottom: 70px;
+          padding-top: 0px;
         }
         .section-heading {
           font-size: 37px;
@@ -393,7 +394,7 @@ export default function AboutUs() {
           font-size: 16px;
           color: #4e5764;
           line-height: 1.5;
-          text-align: justify;
+          text-align: center;
           margin-bottom: 16px;
           font-family: "Roboto", sans-serif;
         }
@@ -836,6 +837,10 @@ export default function AboutUs() {
           .life-section {
             padding-left: 30px;
             padding-right: 30px;
+          }
+
+          .know-text{
+          text-align: justify;
           }
           .vmv-item {
             grid-template-columns: 1fr;

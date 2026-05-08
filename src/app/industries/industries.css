@@ -10,12 +10,11 @@
 
 /* ── HERO ─────────────────────────────────── */
 .ind-hero {
-  background: url("/Taciti assets/assets-23.png") no-repeat;
-  height: 50vw;
-  min-height: 380px;
+  background: url("/Taciti assets/assets-23.png") no-repeat center 90%;
+  height: 40vw;
   width: 100%;
   background-size: cover;
-  background-position: center top;
+  overflow-x: hidden;
 }
 
 .ind-hero-content {
@@ -34,7 +33,7 @@
 /* ── INTRO ────────────────────────────────── */
 .ind-intro {
   background: #fff;
-  margin-top: -130px;
+  margin-top: -110px;
   border-top-left-radius: 60% 100px;
   border-top-right-radius: 60% 100px;
   padding: 70px 140px 50px;
