@@ -1,6 +1,8 @@
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PageLoader from "@/components/PageLoader";
+import { Suspense } from "react";
 
 export const metadata = {
   title: "Taciti Consulting",
@@ -11,6 +13,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        {/* Page transition loader — wraps useSearchParams safe */}
+        <Suspense fallback={null}>
+          <PageLoader />
+        </Suspense>
         <Header />
         <main id="main-layout">{children}</main>
         <Footer />
