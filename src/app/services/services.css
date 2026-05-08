@@ -220,7 +220,7 @@
     padding-top: 50px;
   }
   .os-hero h1 {
-    font-size: 32px;
+    font-size: 32px !important;
   }
   .os-intro {
     padding: 40px 20px;
@@ -228,6 +228,9 @@
   }
   .os-intro h2 {
     font-size: 22px;
+  }
+  .os-intro p {
+    text-align: justify !important;
   }
   .os-tabs-section {
     padding: 0 20px 50px;

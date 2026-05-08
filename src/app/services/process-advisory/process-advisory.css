@@ -347,7 +347,7 @@
   }
 
   .pa-hero-content h1 {
-    font-size: 38px;
+    font-size: 32px;
   }
 
   .pa-overview {
@@ -366,6 +366,7 @@
   .pa-overview p {
     font-size: 16px;
     line-height: 1.7;
+    text-align: justify;
   }
 
   .pa-features {
@@ -424,7 +425,7 @@
   }
 
   .pa-hero-content h1 {
-    font-size: 36px;
+    font-size: 32px !important;
   }
 
   .pa-overview {
@@ -487,7 +488,7 @@
   }
 
   .pa-hero-content h1 {
-    font-size: 32px;
+    font-size: 32px !important;
   }
 
   .pa-overview {

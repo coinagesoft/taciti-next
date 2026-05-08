@@ -378,10 +378,11 @@
 /* Tablet 768px */
 @media (min-width: 768px) and (max-width: 768px) {
   .sa-hero-content { margin-left: 40px; padding-top: 60px; }
-  .sa-hero-content h1 { font-size: 38px; }
+  .sa-hero-content h1 { font-size: 32px !important;}
   .sa-overview { padding: 50px 40px 30px; }
   .sa-services { padding: 20px 40px 30px; }
   .sa-services-grid { flex-direction: column; gap: 0; }
+  .sa-overview p { text-align: justify !important; }
   .sa-org-heading { padding: 20px 40px 10px; }
   .sa-cards-section { padding: 10px 30px 40px; }
   .sa-cards-row--top { grid-template-columns: repeat(2, 1fr); }
@@ -399,7 +400,8 @@
 @media (min-width: 415px) and (max-width: 767px) {
   .sa-hero { height: 60vw; }
   .sa-hero-content { margin-left: 30px; padding-top: 50px; }
-  .sa-hero-content h1 { font-size: 36px; }
+  .sa-hero-content h1 { font-size: 32px !important; }
+  .sa-overview p { text-align: justify !important; }
   .sa-overview { padding: 40px 30px 30px; border-top-left-radius: 30% 60px; border-top-right-radius: 30% 60px; }
   .sa-services { padding: 20px 30px 30px; }
   .sa-services-grid { flex-direction: column; gap: 0; }
@@ -431,12 +433,14 @@
 @media (max-width: 414px) {
   .sa-hero { height: 65vw; min-height: 200px; }
   .sa-hero-content { margin-left: 20px; padding-top: 40px; }
-  .sa-hero-content h1 { font-size: 32px; }
+  .sa-hero-content h1 { font-size: 32px !important; }
+  .sa-overview p { text-align: justify !important; }
+  .sa-org-heading p { text-align: justify !important; }
   .sa-overview { padding: 35px 20px 25px; border-top-left-radius: 25% 50px; border-top-right-radius: 25% 50px; margin-top: -50px; }
   .sa-overview h2 { font-size: 26px; }
   .sa-services { padding: 15px 20px 25px; }
   .sa-services-grid { flex-direction: column; gap: 0; }
-  .sa-services-subtitle { font-size: 18px; }
+  /* .sa-services-subtitle { font-size: 18px; } */
   .sa-org-heading { padding: 15px 20px 10px; }
   .sa-org-heading h2 { font-size: 22px; }
   .sa-cards-section { padding: 5px 15px 25px; }
@@ -452,8 +456,8 @@
   .sa-exp-col, .sa-exp-col--right { text-align: center; width: 100%; }
   .sa-exp-center { flex: 0 0 auto; }
   .sa-brain-outer { width: 200px; height: 200px; }
-  .sa-brain-inner { width: 140px; height: 140px; }
-  .sa-brain-inner img { width: 90px; height: 90px; }
+  .sa-brain-inner { width: 180px; height: 180px; }
+  .sa-brain-inner img { width: 180px; height: 180px; }
 }
 
 /* Tiny 280px */

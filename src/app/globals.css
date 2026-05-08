@@ -672,7 +672,23 @@ body {
   }
 
   .headhero {
-    text-align: center;
+    margin-top: 20vh;
+    text-align: left;
+  }
+
+  .descripitioncustom {
+    text-align: justify !important;
+  }
+
+  .para {
+    text-align: justify !important;
+  }
+
+  .innerbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center ;
   }
 
   .mainLineImg .AboutUsBox .headTxt {
@@ -866,7 +882,7 @@ body {
   font-family: "Roboto-Light" !important;
   line-height: 1.5;
   max-width: 700px;
-  text-align: justify;
+  text-align: justify !important;
 }
 
 
@@ -1290,38 +1306,59 @@ body {
 }
 
 @media (max-width: 768px) {
+
   .xaxisSlide {
-    /* margin-bottom: 100px; */
-    height: 80vh;
+    height: auto;
+    padding-bottom: 40px;
   }
 
   .xaxisSlide .borderROundedRec {
     height: auto;
-    width: 80%;
-    padding: 20px;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 20px;
+    width: 85%;
+    padding: 25px 15px;
+    border-radius: 22px;
   }
 
   .xaxisSlide .borderROundedRec .innerBox {
-    margin-right: 0;
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 120px;
+    text-align: center;
+    margin-bottom: 25px;
   }
 
-  .xaxisSlide .borderROundedRec .innerBox:last-child {
-    margin-bottom: 0;
+  .xaxisSlide .borderROundedRec .innerBox img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
   }
 
   .xaxisSlide .borderROundedRec .innerBox .contentCard {
-    margin-left: 20px;
-    width: 100px;
-    text-align: start;
+    margin-left: 0 !important;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .xaxisSlide .borderROundedRec .innerBox .contentCard .num {
+    font-size: 28px !important;
+    line-height: 32px !important;
+    margin-bottom: 6px;
+  }
+
+  .xaxisSlide .borderROundedRec .innerBox .contentCard .text {
+    font-size: 18px !important;
+    line-height: 24px !important;
+    margin: 0;
   }
 
   .xaxisSlide .incremanetalHeadTxt {
     font-family: "futuraptbold" !important;
-    margin: 50px 0px 50px 0px !important;
+    margin: 40px 0 !important;
+    text-align: center;
+    line-height: 1.3;
   }
 }
 
@@ -2801,7 +2838,7 @@ body .pops {
     max-width: 100% !important;
     font-size: 16px !important;
     line-height: 1.8 !important;
-    text-align: left !important;
+    text-align: justify !important;
     padding-right: 10px;
   }
 }
@@ -2823,7 +2860,7 @@ body .pops {
     line-height: 1.2 !important;
   }
 
-  .landingBox .textBox .descripitioncustom {
+  .landingBox .textBox {
     font-size: 15px !important;
     line-height: 1.75 !important;
   }
@@ -2858,7 +2895,7 @@ body .pops {
     margin-bottom: 28px !important;
   }
 
-  .landingBox .textBox .descripitioncustom {
+  .landingBox .textBox {
     width: 100% !important;
     max-width: 620px !important;
     font-size: 18px !important;

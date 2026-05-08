@@ -637,168 +637,153 @@ export default function AboutUs() {
           text-align: center;
         }
 
-        /* MODAL */
-        .fade.modal.show {
-          position: fixed;
-          inset: 0;
-          z-index: 9999;
-          background: rgba(6, 57, 114, 0.62);
-          padding: 24px;
-          overflow-y: auto;
-          overflow-x: hidden;
-        }
-        .modal-dialog {
-          max-width: 1540px;
-          width: 100%;
-          margin: 0 auto;
-          overflow-x: hidden;
-        }
-        .modal-content {
-          border: none;
-          border-radius: 22px;
-          background: transparent;
-          position: relative;
-          overflow: hidden;
-          box-shadow: 0 18px 56px rgba(1, 52, 112, 0.38);
-        }
-        .modal-background {
-          position: absolute;
-          inset: 0;
-          background: #063972;
-          opacity: 0.5;
-          z-index: 1;
-        }
-        .popupContainer {
-          position: relative;
-          width: 100%;
-          z-index: 2;
-        }
-        .popup.modal-body {
-          position: relative;
-          top: auto;
-          left: auto;
-          right: auto;
-          transform: none;
-          background: #f7f8fa !important;
-          background-color: #f7f8fa !important;
-          border-radius: 22px;
-          max-height: 82vh;
-          overflow-y: auto;
-          overflow-x: hidden;
-          padding: 26px 22px 24px;
-          box-shadow: none;
-          z-index: 1;
-          /* REMOVE isolation: isolate — it was blocking stacking */
-        }
+        /* =========================
+              FULL SCREEN MODAL FIX
+            ========================= */
 
-        /* REMOVE the ::before entirely — use a real div instead */
-        .popup.modal-body::before {
-          display: none;
-        }
+            .fade.modal.show {
+              position: fixed;
+              inset: 0;
+              z-index: 999999;
 
-        /* NEW: real div for the background arrow */
-        .popup-bg-arrow {
-          position: sticky; /* sticky so it stays in view as user scrolls */
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 0; /* zero height so it doesn't push content */
-          pointer-events: none;
-          z-index: 0;
-          overflow: visible;
-        }
+              background: rgba(6, 57, 114, 0.62);
 
-        .popup-bg-arrow::after {
-          content: "";
-          position: absolute;
-          top: 50px; /* offset from top of modal */
-          left: 50%;
-          transform: translateX(-50%);
-          width: 85%;
-          height: 500px; /* fixed height for the image container */
-          background-image: url("/Taciti%20assets/Background_arrow.png");
-          /* Ensure it renders reliably in the modal popup */
-          background-repeat: no-repeat;
-          background-position: center top;
-          background-size: 85% auto;
-          /* default values overridden for reliability */
-          opacity: 0.09;
-          pointer-events: none;
-          z-index: 0;
-        }
+              display: flex !important;
+              justify-content: center !important;
+              align-items: center !important;
 
-        /* Make sure all content sits above the background */
-        .teamCard,
-        .closeButton,
-        .content-design,
-        .head,
-        .inner-design {
-          position: relative;
-          z-index: 5;
-        }
-        .closeButton {
-          position: absolute;
-          right: 16px;
-          top: 10px;
-          z-index: 3;
-          cursor: pointer;
-          font-size: 18px;
-          color: #2f3a4b;
-          font-family: "Roboto", sans-serif;
-          font-weight: 400;
-        }
-        .closeButton:hover {
-          color: #013470;
-        }
-        .teamCard {
-          position: relative;
-          z-index: 2;
-          margin-top: 8px;
-        }
-        .head h2 {
-          font-size: 54px;
-          line-height: 1.05;
-          font-weight: 500;
-          color: #013470;
-          font-family: "futuraptMedium", sans-serif;
-          margin: 14px 0 8px;
-          text-align: center;
-        }
-        .inner-design p {
-          font-size: 18px;
-          line-height: 1.2;
-          color: #4e5764;
-          font-weight: 500;
-          font-family: "Roboto", sans-serif;
-          margin: 0 0 26px;
-          text-align: center;
-        }
-        .content-design {
-          position: relative;
-          z-index: 2;
-          color: #4e5764;
-          font-size: 18px;
-          line-height: 1.56;
-          font-family: "Roboto-Light", sans-serif;
-          overflow-x: hidden;
-          word-break: break-word;
-        }
-        .content-design p {
-          margin: 0 0 16px;
-          line-height: 1.5;
-        }
-        .content-design strong {
-          color: #445061;
-          font-family: "Roboto", sans-serif;
-          font-weight: 600;
-        }
-        .content-design ul {
-          margin: 0;
-          padding-left: 34px;
-        }
-        .content-design li {
-          margin-bottom: 10px;
-        }
+              overflow: hidden;
+
+              padding: 0;
+            }
+
+            .modal-dialog {
+              width: 80vw !important;
+              max-width: 80vw !important;
+
+              height: 80vh !important;
+              max-height: 80vh !important;
+
+              min-height: 80vh !important;
+
+              margin: 0 !important;
+
+              display: flex !important;
+              align-items: center !important;
+              justify-content: center !important;
+            }
+
+            .modal-content {
+                width: 100%;
+                height: 100% !important;
+
+                min-height: 80vh !important;
+
+                display: flex;
+                flex-direction: column;
+
+                background: transparent;
+                border: none;
+                border-radius: 24px;
+
+                overflow: hidden;
+
+                position: relative;
+              }
+
+            .modal-background {
+              position: absolute;
+              inset: 0;
+
+              background: #063972;
+              opacity: 0.45;
+
+              border-radius: 24px;
+            }
+
+            .popupContainer {
+
+              width: 100%;
+              height: 100%;
+            }
+
+            .popup.modal-body {
+
+              width: 100%;
+              height: 100% !important;
+
+              min-height: 80vh !important;
+
+              flex: 1;
+
+              background: #f7f8fa !important;
+
+              border-radius: 24px;
+
+              padding: 30px;
+
+              overflow-y: auto;
+              overflow-x: hidden;
+
+              position: relative;
+            }
+
+            /* REMOVE OLD BG */
+            .popup.modal-body::before {
+              display: none !important;
+            }
+
+            .popup-bg-arrow {
+              display: none;
+            }
+
+            .closeButton {
+              position: absolute;
+
+              top: 18px;
+              right: 22px;
+
+              z-index: 20;
+
+              cursor: pointer;
+
+              font-size: 18px;
+              color: #2f3a4b;
+            }
+
+            .head h2 {
+              font-size: 52px;
+              line-height: 1.1;
+
+              text-align: center;
+
+              color: #013470;
+
+              margin-bottom: 10px;
+            }
+
+            .inner-design p {
+              text-align: center;
+
+              font-size: 18px;
+
+              margin-bottom: 24px;
+            }
+
+            .content-design {
+              font-size: 17px;
+              line-height: 1.8;
+
+              color: #4e5764;
+            }
+
+            .content-design p {
+              margin-bottom: 18px;
+            }
+
+            .content-design ul {
+              padding-left: 24px;
+            }
 
         /* RESPONSIVE */
         @media (max-width: 1024px) {
@@ -837,16 +822,16 @@ export default function AboutUs() {
           }
         }
 
-        @media (max-width: 767px) {
+        @media (max-width: 768px) {
           .intro-section {
             height: 50vw;
           }
           .intro-box {
             margin-left: 20px;
-            padding-top: 50px;
+            padding-top: 30px;
           }
           .main-title {
-            font-size: 40px;
+            font-size: 32px !important;
           }
           .life-section {
             padding-left: 30px;
@@ -897,13 +882,31 @@ export default function AboutUs() {
           .team-summary {
             font-size: 16px;
             max-width: 95%;
+            text-align: justify;
           }
           .fade.modal.show {
-            padding: 10px;
+            padding: 14px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .modal-dialog {
+
+            width: 92vw !important;
+            max-width: 92vw !important;
+
+            height: 88vh !important;
+            max-height: 88vh !important;
+          }
+          .modal-content {
+            width: 100%;
+            background: transparent;
+            box-shadow: none;
           }
           .popup.modal-body {
-            max-height: 88vh;
-            padding: 18px 14px 16px;
+            padding: 22px 18px;
+            border-radius: 18px;
           }
           .popup.modal-body::before {
             content: "";
@@ -923,16 +926,33 @@ export default function AboutUs() {
             z-index: 1;
           }
           .head h2 {
-            font-size: 32px;
-            margin-top: 16px;
+            font-size: 34px;
+            line-height: 1.2;
           }
           .inner-design p {
             font-size: 16px;
             margin-bottom: 18px;
           }
+
           .content-design {
-            font-size: 14px;
-            line-height: 1.5;
+            font-size: 15px !important;
+            line-height: 1.7;
+          }
+
+          .content-design p {
+              // margin-bottom: 18px;
+              text-align: justify;
+            }
+
+          .content-design li {
+              text-align: justify;
+          }
+
+          .closeButton {
+            top: 14px;
+            right: 16px;
+
+            font-size: 16px;
           }
           .content-design ul {
             padding-left: 22px;
