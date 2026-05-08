@@ -308,10 +308,18 @@
   }
 
 
+
   .os-intro p {
     text-align: justify !important;
   }
-/* >>>>>>> df14ede5432e013535638ec689dfd00043f4002a */
+
+
+  .os-intro p {
+    text-align: justify !important;
+    line-height: 1.7;
+  }
+
+
   .os-tabs-section {
     padding: 0 20px 50px;
   }
@@ -337,7 +345,27 @@
     gap: 32px;
   }
 
+  .os-panel-left h3 {
+    font-size: 26px;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .os-panel-left ul li {
+    font-size: 15px;
+    line-height: 1.7;
+    text-align: justify;
+  }
+
   .os-panel-right {
     width: 100%;
+  }
+
+  .os-panel-right img {
+    max-width: 240px;
+  }
+
+  .os-panel-learn {
+    font-size: 14px;
   }
 }
