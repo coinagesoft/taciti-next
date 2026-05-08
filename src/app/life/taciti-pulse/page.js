@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import "./taciti-pulse.css";
 
 export default function TacitiPulse() {
   const testimonials = [
@@ -43,187 +44,110 @@ export default function TacitiPulse() {
   };
 
   return (
-    <div>
+    <div className="taciti-pulse-page">
+
       <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
       />
 
-      {/* Hero Section */}
+      {/* HERO */}
       <section className="intro-section">
+
         <div className="intro-box">
           <h1 className="main-title">Taciti Pulse</h1>
         </div>
+
       </section>
 
-      {/* <div className="row text-center my-5">
-                <h2 className='life-heading'>Life @ Taciti - Taciti Pulse</h2>
-            </div> */}
+      {/* EMPLOYEE JOURNEY */}
+      <section
+        className="life-sections employee-journey-section"
+        id="employee"
+      >
 
-      <section className="life-sections employee-journey-section" id="employee">
-        <div
-          className="row text-center"
-          style={{ marginLeft: "auto", marginRight: "auto" }}
-        >
+        <div className="row text-center title-row">
           <h2 className="life-heading">Employee's Journey</h2>
         </div>
 
         <div className="container">
-          <div
-            className="row d-flex justify-content-center align-items-center my-4"
-            style={{ marginLeft: "auto", marginRight: "auto" }}
-          >
+
+          <div className="row d-flex justify-content-center align-items-center my-4 content-row">
+
             <div className="col-md-12 col-12 mb-4">
+
               <p className="workforce-text">
                 Hear directly from our team as they share their journeys,
-                experiences, and growth at Taciti. These stories reflect the
-                heart of our culture—where every voice is valued, and every
-                milestone is celebrated.
+                experiences, and growth at Taciti. These stories reflect
+                the heart of our culture—where every voice is valued,
+                and every milestone is celebrated.
               </p>
+
             </div>
 
             <div className="masonry-grid">
+
               {testimonials.map((item, i) => (
+
                 <div className="masonry-item" key={i}>
+
                   <div className="card testimonial-card">
+
                     <div className="card-body">
+
                       <h5 className="card-title card-title-life">
+
                         {item.name}
+
                         <br />
-                        <span style={{ fontSize: "12px", fontWeight: 300 }}>
+
+                        <span className="card-position">
                           {item.position}
                         </span>
+
                       </h5>
 
                       <div
-                        className="card-text-wrapper"
-                        style={{
-                          maxHeight: expandedIndex === i ? "1000px" : "150px",
-                        }}
+                        className={`card-text-wrapper ${
+                          expandedIndex === i ? "expanded" : ""
+                        }`}
                       >
+
                         <p className="card-text card-body-life">
                           {item.description}
                         </p>
+
                       </div>
 
                       {item.description.length > 250 && (
+
                         <button
-                          className="btn btn-link p-0 mt-2"
+                          className="expand-btn"
                           onClick={() => toggleExpand(i)}
-                          style={{
-                            fontSize: "14px",
-                            textDecoration: "none",
-                            color: "#013470",
-                            fontWeight: "bold",
-                          }}
                         >
-                          {expandedIndex === i ? "See Less" : "See More"}
+                          {expandedIndex === i
+                            ? "See Less"
+                            : "See More"}
                         </button>
+
                       )}
+
                     </div>
+
                   </div>
+
                 </div>
+
               ))}
+
             </div>
+
           </div>
+
         </div>
+
       </section>
 
-      {/* ✅ Styles */}
-      <style jsx>{`
-        /* Hero Section */
-        .intro-section {
-          background: url("/images/taciti-pulse.png") no-repeat;
-          height: 40vw;
-          width: 100vw;
-          background-size: cover;
-          background-position: top;
-        }
-        .intro-box {
-          margin-left: 150px;
-          padding-top: 100px;
-        }
-        .main-title {
-          color: #fff;
-          font-size: 55px;
-          font-family: "futuraptMedium";
-        }
-        .workforce-text {
-          padding-left: 100px;
-          padding-right: 100px;
-        }
-        .employee-journey-section {
-          padding-top: 0;
-          padding-bottom: 40px;
-        }
-
-        .testimonial-card {
-          width: 100%;
-          height: 100%;
-          border: 1px solid #e9ecef;
-          border-radius: 8px;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .testimonial-card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        .card-text-wrapper {
-          overflow: hidden;
-          transition: max-height 0.5s ease-in-out;
-          position: relative;
-        }
-
-        .card-title-life {
-          font-family: "futuraptMedium";
-          font-size: 20px;
-        }
-
-        .card-body-life {
-          font-family: "Roboto-light";
-          font-size: 18px;
-          color: #4e5764;
-          text-align: justify;
-        }
-
-        .masonry-grid {
-          column-count: 3;
-          column-gap: 1rem;
-        }
-        .masonry-item {
-          break-inside: avoid;
-          margin-bottom: 1rem;
-          display: inline-block;
-          width: 100%;
-        }
-
-        @media (max-width: 992px) {
-          .masonry-grid {
-            column-count: 2;
-          }
-        }
-
-        @media (max-width: 767px) {
-          .intro-box {
-            margin-left: 20px;
-            padding-top: 60px;
-          }
-          .main-title {
-            font-size: 40px;
-          }
-          .masonry-grid {
-            column-count: 1;
-          }
-          .workforce-text {
-            padding-left: 15px;
-            padding-right: 15px;
-            text-align: center;
-          }
-            
-        }
-      `}</style>
     </div>
   );
 }

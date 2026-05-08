@@ -1,10 +1,14 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { PiDotsThreeOutline } from "react-icons/pi";
-import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
+import {
+  RiArrowDropDownLine,
+  RiArrowDropUpLine,
+} from "react-icons/ri";
 
 export default function Header() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -13,6 +17,8 @@ export default function Header() {
   const [isSearchVisible, setIsSearchVisible] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
   const [isCaseStudiesOpen, setIsCaseStudiesOpen] = useState(false);
+  const [isLifeOpen, setIsLifeOpen] = useState(false);
+
   const searchInputRef = useRef(null);
 
   /* ── helpers ── */
@@ -20,6 +26,7 @@ export default function Header() {
     setIsServicesOpen(false);
     setIsServicesOpenInd(false);
     setIsCaseStudiesOpen(false);
+    setIsLifeOpen(false);
     setOpenDropdown(null);
   }
 
@@ -29,6 +36,7 @@ export default function Header() {
 
   const toggleServices = (e) => {
     e.stopPropagation();
+
     if (isServicesOpen) {
       closeAll();
     } else {
@@ -40,6 +48,7 @@ export default function Header() {
 
   const toggleServicesInd = (e) => {
     e.stopPropagation();
+
     if (isServicesOpenInd) {
       closeAll();
     } else {
@@ -51,6 +60,7 @@ export default function Header() {
 
   const toggleCaseStudies = (e) => {
     e.stopPropagation();
+
     if (isCaseStudiesOpen) {
       closeAll();
     } else {
@@ -60,7 +70,20 @@ export default function Header() {
     }
   };
 
-  const toggleSearch = () => setIsSearchVisible((prev) => !prev);
+  const toggleLife = (e) => {
+    e.stopPropagation();
+
+    if (isLifeOpen) {
+      closeAll();
+    } else {
+      closeAll();
+      setIsLifeOpen(true);
+      setOpenDropdown("life");
+    }
+  };
+
+  const toggleSearch = () =>
+    setIsSearchVisible((prev) => !prev);
 
   const handleClickOutside = (event) => {
     if (
@@ -72,8 +95,16 @@ export default function Header() {
   };
 
   useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    document.addEventListener(
+      "mousedown",
+      handleClickOutside
+    );
+
+    return () =>
+      document.removeEventListener(
+        "mousedown",
+        handleClickOutside
+      );
   }, []);
 
   /* close drawer & all dropdowns on nav */
@@ -85,8 +116,10 @@ export default function Header() {
   return (
     <>
       <div className="headermain">
+
         {/* ── LOGO ── */}
         <div className="brandLogo">
+
           <Link href="/" onClick={handleNav}>
             <img
               src="/images/tactiti.svg"
@@ -95,79 +128,170 @@ export default function Header() {
               width="160"
             />
           </Link>
+
         </div>
+
         {/* ── DESKTOP NAV ── */}
         <div className="LinkBox">
-          <Link href="/about-us/">About Us</Link>
+
+          <Link href="/about-us/">
+            About Us
+          </Link>
 
           {/* Our Services */}
           <div className="pb-4 dropdown pt-4">
+
             <div className="dropdown">
+
               <Link href="/services/">
                 Our Services <RiArrowDropDownLine />
               </Link>
+
               <div className="dropdown-content">
+
                 <Link href="/services/Strategy_Advisory/">
                   Strategy &amp; Advisory
                 </Link>
+
                 <Link href="/services/process-advisory/">
                   ERP Led Transformation
                 </Link>
+
                 <Link href="/services/business-transformation/">
                   Transformation Management &amp; Governance
                 </Link>
+
                 <Link href="/talent-management-transformation/">
                   Human Capital Management
                 </Link>
-                <Link href="/technology-services/">Technology Services</Link>
-                <Link href="/cyber-security/">Cyber Security</Link>
+
+                <Link href="/technology-services/">
+                  Technology Services
+                </Link>
+
+                <Link href="/cyber-security/">
+                  Cyber Security
+                </Link>
+
               </div>
+
             </div>
+
           </div>
 
           {/* Industries */}
           <div className="pb-4 dropdown pt-4">
+
             <div className="dropdown">
+
               <Link href="/industries/">
-                Industries <RiArrowDropDownLine className="arrowiconsx" />
+                Industries{" "}
+                <RiArrowDropDownLine className="arrowiconsx" />
               </Link>
+
               <div className="dropdown-content">
-                <Link href="/industries/manufacturing/">Manufacturing</Link>
-                <Link href="/industries/life-science/">Life Sciences</Link>
+
+                <Link href="/industries/manufacturing/">
+                  Manufacturing
+                </Link>
+
+                <Link href="/industries/life-science/">
+                  Life Sciences
+                </Link>
+
                 <Link href="/industries/consumer-packaged-goods/">
                   Consumer Packaged Goods
                 </Link>
-                <Link href="/industries/hi-tech/">Hi-Tech</Link>
-                <Link href="/industries/utility/">Utilities</Link>
+
+                <Link href="/industries/hi-tech/">
+                  Hi-Tech
+                </Link>
+
+                <Link href="/industries/utility/">
+                  Utilities
+                </Link>
+
               </div>
+
             </div>
+
           </div>
 
           {/* Case Studies */}
           <div className="pb-4 dropdown pt-4">
+
             <div className="dropdown">
+
               <Link href="/case-studies/">
                 Case Studies <RiArrowDropDownLine />
               </Link>
+
               <div className="dropdown-content">
+
                 <Link href="/case-studies/erp-transformation">
                   ERP Transformation
                 </Link>
+
                 <Link href="/case-studies/strategy-advisory/">
                   Strategy &amp; Advisory
                 </Link>
+
                 <Link href="/case-studies/technology-services">
                   Technology Services
                 </Link>
+
               </div>
+
             </div>
+
           </div>
 
-          <Link href="/life/">Life @ taciti</Link>
-          <Link href="/contact-us/">Contact Us</Link>
+          {/* LIFE */}
+          <div className="pb-4 dropdown pt-4">
+
+            <div className="dropdown">
+
+              <Link href="/life/">
+                Life @ taciti <RiArrowDropDownLine />
+              </Link>
+
+              <div className="dropdown-content">
+
+                <Link href="/life/next-horizon/">
+                  Next Horizon
+                </Link>
+
+                <Link href="/life/culture-connect/">
+                  Culture Connect
+                </Link>
+
+                <Link href="/life/taciti-cares/">
+                  Taciti Cares
+                </Link>
+
+                <Link href="/life/taciti-pulse/">
+                  Taciti Pulse
+                </Link>
+
+                <Link href="/life/taciti-empower/">
+                  Taciti Empower
+                </Link>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <Link href="/contact-us/">
+            Contact Us
+          </Link>
+
         </div>
+
         {/* ── HAMBURGER BUTTON ── */}
         <div className="drawerToggle">
+
           <img
             src="/images/bars.svg"
             height="25"
@@ -177,26 +301,41 @@ export default function Header() {
             onClick={toggleDrawer}
             style={{ cursor: "pointer" }}
           />
+
           <PiDotsThreeOutline
             className="searchbtn d-none"
             onClick={toggleSearch}
           />
+
         </div>
+
         {/* Search popup */}
         {isSearchVisible && (
-          <div ref={searchInputRef} className="searchInputContainer">
-            <input className="inputd" type="text" />
+          <div
+            ref={searchInputRef}
+            className="searchInputContainer"
+          >
+
+            <input
+              className="inputd"
+              type="text"
+            />
+
             <div className="searchIconContainer">
               <FaSearch className="searchiconPopup" />
             </div>
+
           </div>
         )}
+
         {/* ── MOBILE DRAWER ── */}
-       
         <div className={`drawer ${isDrawerOpen ? "open" : ""}`}>
+
           <div className="drawerContent">
+
             {/* Drawer header */}
             <div className="crossBtnRight">
+
               <img
                 src="/images/tactiti.svg"
                 height="60"
@@ -216,9 +355,11 @@ export default function Header() {
                 onClick={toggleDrawer}
                 style={{ cursor: "pointer" }}
               />
+
             </div>
 
             <div className="Rahil">
+
               {/* About */}
               <Link
                 href="/about-us/"
@@ -230,7 +371,12 @@ export default function Header() {
 
               {/* SERVICES */}
               <div className="dropdown">
-                <div className="drawerLinkRow" onClick={toggleServices}>
+
+                <div
+                  className="drawerLinkRow"
+                  onClick={toggleServices}
+                >
+
                   <Link
                     href="/services/"
                     className="drawerLink"
@@ -240,16 +386,21 @@ export default function Header() {
                   </Link>
 
                   <span className="toggle-sub-menu">
+
                     {openDropdown === "services" ? (
                       <RiArrowDropUpLine className="RiArrowDropUpLineSx" />
                     ) : (
                       <RiArrowDropDownLine className="RiArrowDropDownLineSx" />
                     )}
+
                   </span>
+
                 </div>
 
                 {isServicesOpen && (
+
                   <div className="innerDropdownContent">
+
                     <Link
                       href="/services/Strategy_Advisory/"
                       onClick={handleNav}
@@ -278,20 +429,34 @@ export default function Header() {
                       Human Capital Management
                     </Link>
 
-                    <Link href="/technology-services/" onClick={handleNav}>
+                    <Link
+                      href="/technology-services/"
+                      onClick={handleNav}
+                    >
                       Technology Services
                     </Link>
 
-                    <Link href="/cyber-security/" onClick={handleNav}>
+                    <Link
+                      href="/cyber-security/"
+                      onClick={handleNav}
+                    >
                       Cyber Security
                     </Link>
+
                   </div>
+
                 )}
+
               </div>
 
               {/* INDUSTRIES */}
               <div className="dropdown">
-                <div className="drawerLinkRow" onClick={toggleServicesInd}>
+
+                <div
+                  className="drawerLinkRow"
+                  onClick={toggleServicesInd}
+                >
+
                   <Link
                     href="/industries/"
                     className="drawerLink"
@@ -301,21 +466,32 @@ export default function Header() {
                   </Link>
 
                   <span className="toggle-sub-menu">
+
                     {openDropdown === "servicesInd" ? (
                       <RiArrowDropUpLine className="RiArrowDropUpLineSx" />
                     ) : (
                       <RiArrowDropDownLine className="RiArrowDropDownLineSx" />
                     )}
+
                   </span>
+
                 </div>
 
                 {isServicesOpenInd && (
+
                   <div className="innerDropdownContent">
-                    <Link href="/industries/manufacturing/" onClick={handleNav}>
+
+                    <Link
+                      href="/industries/manufacturing/"
+                      onClick={handleNav}
+                    >
                       Manufacturing
                     </Link>
 
-                    <Link href="/industries/life-science/" onClick={handleNav}>
+                    <Link
+                      href="/industries/life-science/"
+                      onClick={handleNav}
+                    >
                       Life Sciences
                     </Link>
 
@@ -326,20 +502,34 @@ export default function Header() {
                       Consumer Packaged Goods
                     </Link>
 
-                    <Link href="/industries/hi-tech/" onClick={handleNav}>
+                    <Link
+                      href="/industries/hi-tech/"
+                      onClick={handleNav}
+                    >
                       Hi-Tech
                     </Link>
 
-                    <Link href="/industries/utility/" onClick={handleNav}>
+                    <Link
+                      href="/industries/utility/"
+                      onClick={handleNav}
+                    >
                       Utilities
                     </Link>
+
                   </div>
+
                 )}
+
               </div>
 
               {/* CASE STUDIES */}
               <div className="dropdown">
-                <div className="drawerLinkRow" onClick={toggleCaseStudies}>
+
+                <div
+                  className="drawerLinkRow"
+                  onClick={toggleCaseStudies}
+                >
+
                   <Link
                     href="/case-studies/"
                     className="drawerLink"
@@ -349,16 +539,21 @@ export default function Header() {
                   </Link>
 
                   <span className="toggle-sub-menu">
+
                     {openDropdown === "caseStudies" ? (
                       <RiArrowDropUpLine className="RiArrowDropUpLineSx" />
                     ) : (
                       <RiArrowDropDownLine className="RiArrowDropDownLineSx" />
                     )}
+
                   </span>
+
                 </div>
 
                 {isCaseStudiesOpen && (
+
                   <div className="innerDropdownContent">
+
                     <Link
                       href="/case-studies/erp-transformation"
                       onClick={handleNav}
@@ -379,14 +574,85 @@ export default function Header() {
                     >
                       Technology Services
                     </Link>
+
                   </div>
+
                 )}
+
               </div>
 
               {/* LIFE */}
-              <Link href="/life/" className="drawerLink" onClick={handleNav}>
-                Life @ taciti
-              </Link>
+              <div className="dropdown">
+
+                <div
+                  className="drawerLinkRow"
+                  onClick={toggleLife}
+                >
+
+                  <Link
+                    href="/life/"
+                    className="drawerLink"
+                    onClick={handleNav}
+                  >
+                    Life @ taciti
+                  </Link>
+
+                  <span className="toggle-sub-menu">
+
+                    {openDropdown === "life" ? (
+                      <RiArrowDropUpLine className="RiArrowDropUpLineSx" />
+                    ) : (
+                      <RiArrowDropDownLine className="RiArrowDropDownLineSx" />
+                    )}
+
+                  </span>
+
+                </div>
+
+                {isLifeOpen && (
+
+                  <div className="innerDropdownContent">
+
+                    <Link
+                      href="/life/next-horizon/"
+                      onClick={handleNav}
+                    >
+                      Next Horizon
+                    </Link>
+
+                    <Link
+                      href="/life/culture-connect/"
+                      onClick={handleNav}
+                    >
+                      Culture Connect
+                    </Link>
+
+                    <Link
+                      href="/life/taciti-cares/"
+                      onClick={handleNav}
+                    >
+                      Taciti Cares
+                    </Link>
+
+                    <Link
+                      href="/life/taciti-pulse/"
+                      onClick={handleNav}
+                    >
+                      Taciti Pulse
+                    </Link>
+
+                    <Link
+                      href="/life/taciti-empower/"
+                      onClick={handleNav}
+                    >
+                      Taciti Empower
+                    </Link>
+
+                  </div>
+
+                )}
+
+              </div>
 
               {/* CONTACT */}
               <Link
@@ -396,9 +662,13 @@ export default function Header() {
               >
                 Contact Us
               </Link>
+
             </div>
+
           </div>
+
         </div>
+
       </div>
     </>
   );

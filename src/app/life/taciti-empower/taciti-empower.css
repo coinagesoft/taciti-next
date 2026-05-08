@@ -1,0 +1,158 @@
+.taciti-empower-page {
+  width: 100%;
+  overflow-x: hidden;
+  background: #ffffff;
+}
+
+/* HERO */
+
+.intro-section {
+  background:
+    url("/images/learning-ladder.png")
+    no-repeat center top;
+
+  height: 40vw;
+  width: 100%;
+
+  background-size: cover;
+
+  position: relative;
+}
+
+.intro-box {
+  margin-left: 150px;
+  padding-top: 100px;
+}
+
+.main-title {
+  color: #ffffff;
+
+  font-size: 55px;
+  line-height: 1.2;
+
+  font-family: "futuraptMedium", sans-serif;
+
+  margin: 0;
+}
+
+/* COMMON */
+
+.life-sections {
+  padding: 70px 0;
+}
+
+.first-section {
+  padding-top: 0;
+}
+
+.life-heading {
+  font-size: 42px;
+  line-height: 1.2;
+  font-weight: 700;
+
+  color: #013470;
+
+  margin-bottom: 30px;
+
+  font-family: "futuraptMedium", sans-serif;
+}
+
+.column-with-padding-for-text p,
+.dmc-section p {
+  font-size: 18px;
+  line-height: 1.8;
+
+  color: #5f646d;
+
+  font-family: "Roboto-Light", sans-serif;
+
+  margin-bottom: 18px;
+}
+
+/* IMAGE */
+
+.life-image {
+  width: 100%;
+  border-radius: 18px;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.life-image:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* DMC SECTION */
+
+.dmc-section {
+  background-color: #1e4489;
+
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.text-white {
+  color: #ffffff !important;
+}
+
+.dmc-section p {
+  color: #ffffff !important;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1024px) {
+
+  .intro-box {
+    margin-left: 80px;
+    padding-top: 80px;
+  }
+
+  .main-title {
+    font-size: 48px;
+  }
+
+  .life-heading {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .intro-section {
+    height: 42vh;
+  }
+
+  .intro-box {
+    margin-left: 20px;
+    padding-top: 60px;
+  }
+
+  .main-title {
+    font-size: 40px;
+  }
+
+  .life-sections {
+    padding-left: 30px;
+    padding-right: 20px;
+  }
+
+  .column-with-padding-for-text {
+    padding: 0 15px;
+  }
+
+  .life-heading {
+    font-size: 28px;
+  }
+
+  .column-with-padding-for-text p,
+  .dmc-section p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+}

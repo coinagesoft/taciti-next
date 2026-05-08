@@ -1,0 +1,193 @@
+.next-horizon-page {
+  width: 100%;
+  overflow-x: hidden;
+  background: #ffffff;
+}
+
+/* HERO */
+
+.intro-section {
+  background:
+    url("/images/next-horizon.png")
+    no-repeat center top;
+
+  background-size: cover;
+
+  width: 100%;
+  height: 40vw;
+
+  position: relative;
+}
+
+.intro-box {
+  margin-left: 150px;
+  padding-top: 100px;
+}
+
+.main-title {
+  color: #fff;
+
+  font-size: 55px;
+  line-height: 1.2;
+
+  font-family: "futuraptMedium", sans-serif;
+
+  margin: 0;
+}
+
+/* COMMON SECTION */
+
+.life-section {
+  padding: 70px 0;
+}
+
+.first-section {
+  padding-top: 50px;
+}
+
+.section-heading {
+  font-size: 42px;
+  line-height: 1.2;
+  font-weight: 700;
+
+  color: #013470;
+
+  margin-bottom: 34px;
+
+  font-family: "futuraptMedium", sans-serif;
+}
+
+.text-content p,
+.workforce-text {
+  font-size: 18px;
+  line-height: 1.8;
+
+  color: #5f646d;
+
+  font-family: "Roboto-Light", sans-serif;
+}
+
+.text-content p {
+  margin-bottom: 18px;
+}
+
+.workforce-text {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+/* IMAGES */
+
+.life-image {
+  width: 100%;
+  border-radius: 18px;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.life-image:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.life-image-equal {
+  width: 100%;
+  height: 350px;
+
+  object-fit: cover;
+
+  border-radius: 18px;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.life-image-equal:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* BLUE SECTION */
+
+.blue-bg-section {
+  background: #013470;
+}
+
+.text-white {
+  color: #ffffff !important;
+}
+
+.blue-bg-section p {
+  color: #ffffff !important;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1024px) {
+
+  .intro-box {
+    margin-left: 80px;
+    padding-top: 80px;
+  }
+
+  .main-title {
+    font-size: 48px;
+  }
+
+  .section-heading {
+    font-size: 34px;
+  }
+
+  .workforce-text {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .intro-section {
+    height: 42vh;
+  }
+
+  .intro-box {
+    margin-left: 20px;
+    padding-top: 50px;
+  }
+
+  .main-title {
+    font-size: 38px;
+  }
+
+  .life-section {
+    padding: 50px 20px;
+  }
+
+  .section-heading {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .text-content p,
+  .workforce-text {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .workforce-text {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .life-image-equal {
+    height: auto;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,207 @@
+.culture-connect-page {
+  width: 100%;
+  overflow-x: hidden;
+  background: #ffffff;
+}
+
+/* HERO */
+
+.intro-section {
+  background:
+    url("/images/culture-connect.png")
+    no-repeat center top;
+
+  height: 90vh;
+  width: 100%;
+
+  background-size: cover;
+
+  position: relative;
+}
+
+.intro-box {
+  margin-left: 150px;
+  padding-top: 100px;
+}
+
+.main-title {
+  color: #ffffff;
+
+  font-size: 55px;
+
+  font-family: "futuraptMedium", sans-serif;
+
+  margin: 0;
+}
+
+/* COMMON */
+
+.life-sections {
+  padding: 70px 0;
+}
+
+.first-section {
+  padding-top: 0;
+}
+
+.title-row,
+.content-row {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.life-heading {
+  font-size: 42px;
+  line-height: 1.2;
+  font-weight: 700;
+
+  color: #013470;
+
+  margin-bottom: 30px;
+
+  font-family: "futuraptMedium", sans-serif;
+}
+
+.workforce-text {
+  padding-left: 100px;
+  padding-right: 100px;
+
+  font-size: 18px;
+  line-height: 1.8;
+
+  color: #5f646d;
+
+  font-family: "Roboto-Light", sans-serif;
+}
+
+/* WOMEN SECTION */
+
+.women-icon {
+  background-color: #013470;
+
+  padding-top: 7%;
+  padding-bottom: 7%;
+}
+
+.text-white {
+  color: #ffffff !important;
+}
+
+.women-content-wrap {
+  width: 80%;
+}
+
+.women-content-text {
+  color: #ffffff;
+
+  font-size: 18px;
+  line-height: 1.8;
+
+  font-family: "Roboto-Light", sans-serif;
+}
+
+/* IMAGES */
+
+.life-image-three,
+.life-image-three-women {
+  width: 100%;
+
+  border-radius: 18px;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.life-image-three:hover,
+.life-image-three-women:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1024px) {
+
+  .intro-box {
+    margin-left: 80px;
+    padding-top: 80px;
+  }
+
+  .main-title {
+    font-size: 48px;
+  }
+
+  .life-heading {
+    font-size: 36px;
+  }
+
+  .workforce-text {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .intro-section {
+    height: 40vh;
+  }
+
+  .intro-box {
+    margin-left: 20px;
+    padding-top: 50px;
+  }
+
+  .main-title {
+    font-size: 40px;
+  }
+
+  .life-sections {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .women-icon .row {
+    text-align: center;
+  }
+
+  .women-icon .col-md-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .women-icon img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .women-icon .col-md-6 > div {
+    width: 90%;
+  }
+
+  .life-image-three {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .workforce-text {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .women-content-text {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .life-heading {
+    font-size: 28px;
+  }
+}

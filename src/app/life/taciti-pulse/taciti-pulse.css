@@ -1,0 +1,256 @@
+.taciti-pulse-page {
+  width: 100%;
+  overflow-x: hidden;
+  background: #ffffff;
+}
+
+/* HERO */
+
+.intro-section {
+  background:
+    url("/images/taciti-pulse.png")
+    no-repeat center top;
+
+  height: 40vw;
+  width: 100%;
+
+  background-size: cover;
+
+  position: relative;
+}
+
+.intro-box {
+  margin-left: 150px;
+  padding-top: 100px;
+}
+
+.main-title {
+  color: #ffffff;
+
+  font-size: 55px;
+  line-height: 1.2;
+
+  font-family: "futuraptMedium", sans-serif;
+
+  margin: 0;
+}
+
+/* SECTIONS */
+
+.life-sections {
+  padding: 70px 0;
+}
+
+.employee-journey-section {
+  padding-top: 0;
+  padding-bottom: 40px;
+}
+
+.title-row,
+.content-row {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.life-heading {
+  font-size: 42px;
+  line-height: 1.2;
+  font-weight: 700;
+
+  color: #013470;
+
+  margin-bottom: 30px;
+
+  font-family: "futuraptMedium", sans-serif;
+}
+
+.workforce-text {
+  padding-left: 100px;
+  padding-right: 100px;
+
+  font-size: 18px;
+  line-height: 1.8;
+
+  color: #5f646d;
+
+  text-align: center;
+
+  font-family: "Roboto-Light", sans-serif;
+}
+
+/* TESTIMONIAL CARD */
+
+.testimonial-card {
+  width: 100%;
+  height: 100%;
+
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  overflow: hidden;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.10);
+}
+
+.card-title-life {
+  font-family: "futuraptMedium", sans-serif;
+  font-size: 20px;
+
+  color: #013470;
+
+  margin-bottom: 15px;
+}
+
+.card-position {
+  font-size: 12px;
+  font-weight: 300;
+
+  color: #6c757d;
+}
+
+.card-text-wrapper {
+  overflow: hidden;
+
+  max-height: 150px;
+
+  transition: max-height 0.5s ease-in-out;
+
+  position: relative;
+}
+
+.card-text-wrapper.expanded {
+  max-height: 1000px;
+}
+
+.card-body-life {
+  font-family: "Roboto-Light", sans-serif;
+
+  font-size: 18px;
+  line-height: 1.8;
+
+  color: #4e5764;
+
+  text-align: justify;
+}
+
+/* BUTTON */
+
+.expand-btn {
+  background: transparent;
+  border: none;
+
+  padding: 0;
+  margin-top: 12px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  color: #013470;
+
+  cursor: pointer;
+
+  transition: opacity 0.3s ease;
+}
+
+.expand-btn:hover {
+  opacity: 0.7;
+}
+
+/* MASONRY */
+
+.masonry-grid {
+  column-count: 3;
+  column-gap: 1rem;
+}
+
+.masonry-item {
+  break-inside: avoid;
+
+  margin-bottom: 1rem;
+
+  display: inline-block;
+
+  width: 100%;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+
+  .masonry-grid {
+    column-count: 2;
+  }
+
+  .workforce-text {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .intro-box {
+    margin-left: 80px;
+    padding-top: 80px;
+  }
+
+  .main-title {
+    font-size: 48px;
+  }
+
+  .life-heading {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .intro-section {
+    height: 42vh;
+  }
+
+  .intro-box {
+    margin-left: 20px;
+    padding-top: 60px;
+  }
+
+  .main-title {
+    font-size: 40px;
+  }
+
+  .masonry-grid {
+    column-count: 1;
+  }
+
+  .workforce-text {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .life-heading {
+    font-size: 28px;
+  }
+
+  .card-body-life {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .card-title-life {
+    font-size: 18px;
+  }
+
+  .life-sections {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
