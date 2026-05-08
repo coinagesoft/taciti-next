@@ -1,83 +1,128 @@
 .life-container {
   font-family: "Poppins", sans-serif;
-  padding: 40px;
+  padding: 40px 80px;
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
 }
 
+/* =========================================
+   HEADER
+========================================= */
+
 .life-headerRow {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .life-heading {
-  font-size: 28px;
+  font-size: 42px;
   font-weight: 700;
-  color: #333;
+  color: #013470;
+  font-family: "futuraptMedium", sans-serif;
+  margin: 0;
 }
+
+/* =========================================
+   MAIN LAYOUT
+========================================= */
 
 .life-mainRow {
   display: flex;
-  gap: 0;
   align-items: flex-start;
+  justify-content: space-between;
+  gap: 48px;
+  width: 100%;
 }
+
+/* =========================================
+   LEFT SECTION
+========================================= */
 
 .life-leftSection {
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
+  flex: 0 0 48%;
+  max-width: 48%;
 
-.life-rightSection {
-  flex: 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .life-image {
-  max-width: 800px;
-  height: auto;
   width: 100%;
+  max-width: 760px;
+  height: auto;
   display: block;
+  object-fit: contain;
+}
+
+/* =========================================
+   RIGHT SECTION
+========================================= */
+
+.life-rightSection {
+  flex: 0 0 52%;
+  max-width: 52%;
 }
 
 .life-topSection {
-  margin-bottom: 40px;
+  width: 100%;
 }
 
 .life-topContainer {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
   width: 100%;
 }
 
 .life-topCardWrap {
   display: flex;
+  width: 100%;
 }
+
+/* =========================================
+   CARD
+========================================= */
 
 .life-topCard {
   background: #fff;
-  border: 5px solid #EBEBEB;
+
+  border: 5px solid #ebebeb;
   border-radius: 5px;
-  padding: 20px;
+
+  padding: 22px 24px;
+
+  min-height: 145px;
+  width: 100%;
 
   display: flex;
   flex-direction: column;
-  height: 100%;
+  justify-content: center;
 
   position: relative;
   overflow: hidden;
 
   transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
     color 0.3s ease;
 }
 
+/* HOVER BG IMAGE */
+
 .life-topCard::before {
   content: "";
+
   position: absolute;
   inset: 0;
-  background: url("/Taciti assets/card.png") no-repeat center/cover;
+
+  background: url("/Taciti assets/card.png") no-repeat center center;
+  background-size: cover;
+
   opacity: 0;
+
   transition: opacity 0.3s ease;
+
   z-index: 0;
 }
 
@@ -85,15 +130,22 @@
   opacity: 1;
 }
 
+/* CONTENT ABOVE BG */
+
 .life-topCard > * {
   position: relative;
   z-index: 1;
 }
 
+/* HOVER EFFECT */
+
 .life-topCard:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
 }
+
+/* HOVER TEXT */
 
 .life-topCard:hover .life-topCardTitle,
 .life-topCard:hover .life-topCardText,
@@ -101,40 +153,156 @@
   color: #fff;
 }
 
-.life-topCard p {
-  margin-bottom: auto;
-}
+/* =========================================
+   TITLE
+========================================= */
 
 .life-topCardTitle {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
-  margin-bottom: 8px;
+
+  margin-bottom: 10px;
+
   color: #013470;
+
   font-family: "futuraptMedium", sans-serif;
 }
 
+/* =========================================
+   TEXT
+========================================= */
+
 .life-topCardText {
-  font-size: 13px;
+  font-size: 17px;
+  line-height: 1.6;
+
   color: #666;
-  line-height: 1.5;
+
+  margin: 0;
 }
 
+/* =========================================
+   LINK
+========================================= */
+
 .life-topCardLink {
-  font-size: 13px;
+  margin-top: 16px;
+
+  font-size: 15px;
   font-weight: 600;
 
   color: #013470;
 
   text-decoration: none;
 
-  margin-top: 12px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .life-linkArrow {
   margin-left: 5px;
+  transition: transform 0.3s ease;
 }
 
-/* MOBILE */
+.life-topCard:hover .life-linkArrow {
+  transform: translateX(4px);
+}
+
+/* =========================================
+   LARGE LAPTOPS
+========================================= */
+
+@media screen and (min-width: 1441px) {
+
+  .life-container {
+    max-width: 1700px;
+    margin: 0 auto;
+  }
+
+  .life-image {
+    max-width: 820px;
+  }
+}
+
+/* =========================================
+   LAPTOP FIX
+========================================= */
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+
+  .life-container {
+    padding: 40px 60px;
+  }
+
+  .life-mainRow {
+    gap: 36px;
+  }
+
+  .life-leftSection {
+    flex: 0 0 46%;
+    max-width: 46%;
+  }
+
+  .life-rightSection {
+    flex: 0 0 54%;
+    max-width: 54%;
+  }
+
+  .life-image {
+    max-width: 620px;
+  }
+
+  .life-topCard {
+    min-height: 128px;
+    padding: 20px 22px;
+  }
+
+  .life-topCardTitle {
+    font-size: 18px;
+  }
+
+  .life-topCardText {
+    font-size: 15px;
+  }
+
+  .life-topCardLink {
+    font-size: 14px;
+  }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+  .life-container {
+    padding: 30px;
+  }
+
+  .life-mainRow {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .life-leftSection,
+  .life-rightSection {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .life-image {
+    max-width: 100%;
+  }
+
+  .life-heading {
+    font-size: 34px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
 
 @media (max-width: 768px) {
 
@@ -142,40 +310,29 @@
     padding: 20px !important;
   }
 
+  .life-headerRow {
+    margin-bottom: 18px;
+  }
+
   .life-heading {
-    font-size: 24px !important;
+    font-size: 28px !important;
   }
 
   .life-mainRow {
     flex-direction: column !important;
-    align-items: flex-start !important;
     gap: 20px !important;
   }
 
-  .life-leftSection {
-    flex-direction: row !important;
-    justify-content: center;
-    align-items: center;
-
-    gap: 10px !important;
-
-    width: 100%;
+  .life-leftSection,
+  .life-rightSection {
+    max-width: 100%;
+    flex: 100%;
   }
 
   .life-image {
     width: 100% !important;
+    max-width: 100%;
     height: auto !important;
-
-    object-fit: cover;
-  }
-
-  .life-rightSection {
-    width: 100%;
-    padding-bottom: 20px !important;
-  }
-
-  .life-topSection {
-    margin-bottom: 20px !important;
   }
 
   .life-topContainer {
@@ -184,5 +341,20 @@
 
   .life-topCard {
     padding: 16px !important;
+    min-height: auto;
+  }
+
+  .life-topCardTitle {
+    font-size: 18px;
+  }
+
+  .life-topCardText {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .life-topCardLink {
+    font-size: 14px;
+    margin-top: 12px;
   }
 }

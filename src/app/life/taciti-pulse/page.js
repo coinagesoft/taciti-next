@@ -45,7 +45,6 @@ export default function TacitiPulse() {
 
   return (
     <div className="taciti-pulse-page">
-
       <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
@@ -53,58 +52,39 @@ export default function TacitiPulse() {
 
       {/* HERO */}
       <section className="intro-section">
-
         <div className="intro-box">
           <h1 className="main-title">Taciti Pulse</h1>
         </div>
-
       </section>
 
       {/* EMPLOYEE JOURNEY */}
-      <section
-        className="life-sections employee-journey-section"
-        id="employee"
-      >
-
+      <section className="life-sections employee-journey-section" id="employee">
         <div className="row text-center title-row">
           <h2 className="life-heading">Employee's Journey</h2>
         </div>
 
         <div className="container">
-
           <div className="row d-flex justify-content-center align-items-center my-4 content-row">
-
             <div className="col-md-12 col-12 mb-4">
-
               <p className="workforce-text">
                 Hear directly from our team as they share their journeys,
-                experiences, and growth at Taciti. These stories reflect
-                the heart of our culture—where every voice is valued,
-                and every milestone is celebrated.
+                experiences, and growth at Taciti. These stories reflect the
+                heart of our culture—where every voice is valued, and every
+                milestone is celebrated.
               </p>
-
             </div>
 
             <div className="masonry-grid">
-
               {testimonials.map((item, i) => (
-
                 <div className="masonry-item" key={i}>
-
                   <div className="card testimonial-card">
-
                     <div className="card-body">
-
                       <h5 className="card-title card-title-life">
-
                         {item.name}
 
                         <br />
 
-                        <span className="card-position">
-                          {item.position}
-                        </span>
-
+                        <span className="card-position">{item.position}</span>
                       </h5>
 
                       <div
@@ -112,42 +92,27 @@ export default function TacitiPulse() {
                           expandedIndex === i ? "expanded" : ""
                         }`}
                       >
-
                         <p className="card-text card-body-life">
                           {item.description}
                         </p>
-
                       </div>
 
                       {item.description.length > 250 && (
-
                         <button
                           className="expand-btn"
                           onClick={() => toggleExpand(i)}
                         >
-                          {expandedIndex === i
-                            ? "See Less"
-                            : "See More"}
+                          {expandedIndex === i ? "See Less" : "See More"}
                         </button>
-
                       )}
-
                     </div>
-
                   </div>
-
                 </div>
-
               ))}
-
             </div>
-
           </div>
-
         </div>
-
       </section>
-
     </div>
   );
 }
