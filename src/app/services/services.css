@@ -203,6 +203,11 @@
   font-family: "Roboto-Light", sans-serif !important;
 }
 
+.os-panel {
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
 .os-panel-left ul li::before {
   content: "";
 

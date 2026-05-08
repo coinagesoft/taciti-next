@@ -32,7 +32,7 @@ const TABS = [
       "Data Migration & Integration",
     ],
     learnMore: "/services/process-advisory",
-    image: "/Taciti assets/assets-22.png",
+    // image: "/Taciti assets/assets-22.png",
   },
   {
     id: "transformation",
@@ -47,7 +47,7 @@ const TABS = [
       "Transformation Reporting & Dashboard",
     ],
     learnMore: "/services/business-transformation",
-    image: "/Taciti assets/assets-23.png",
+    // image: "/Taciti assets/assets-23.png",
   },
   {
     id: "technology",
@@ -92,7 +92,7 @@ const TABS = [
       "Security Operations & Incident Response",
     ],
     learnMore: "/cyber-security",
-    image: "/Taciti assets/assets-29.png",
+    // image: "/Taciti assets/assets-29.png",
   },
 ];
 
@@ -152,7 +152,7 @@ export default function OurServices() {
               </Link>
             </div>
             <div className="os-panel-right">
-              <img src={panel.image} alt={panel.heading} />
+              <img src={panel.image}/>
             </div>
           </div>
         )}

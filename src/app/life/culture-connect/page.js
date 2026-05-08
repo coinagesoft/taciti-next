@@ -99,9 +99,9 @@ export default function CultureConnect() {
       {/* WOMEN SECTION */}
       <section className="life-sections women-icon">
 
-        <div className="container">
+        <div className="container second-section">
 
-          <div className="row d-flex justify-content-center align-items-center">
+          <div className="row d-flex justify-content-center align-items-center inner-section ">
 
             <div className="col-md-6 col-12 d-flex justify-content-center align-items-center">
 

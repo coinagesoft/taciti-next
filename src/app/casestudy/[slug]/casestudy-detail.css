@@ -10,12 +10,11 @@
 /* ── HERO ─────────────────────────────────── */
 
 .csd-hero {
-  background: url("/Taciti assets/assets-02.png") no-repeat center top;
-  height: 50vw;
-  min-height: 380px;
+  background: url("/Taciti assets/assets-02.png") no-repeat center 90%;
+  height: 40vw;
   width: 100%;
   background-size: cover;
-  position: relative;
+  overflow-x: hidden;
 }
 
 .csd-hero-content {
@@ -35,7 +34,7 @@
 
 .csd-body {
   background: #fff;
-  margin-top: -130px;
+  margin-top: -110px;
 
   border-top-left-radius: 60% 100px;
   border-top-right-radius: 60% 100px;
