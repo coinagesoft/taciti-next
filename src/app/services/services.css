@@ -1,114 +1,161 @@
 /* =============================================
    OUR SERVICES PAGE
-   services.css  — matches live taciti.com
    ============================================= */
 
-/* ── FONTS ─────────────────────────────────── */
-/* futuraptMedium, futuraptbold are defined in globals.css */
-
-/* ── HERO ─────────────────────────────────── */
 .os-page {
   font-family: "futuraptMedium", sans-serif;
   color: #333;
+  overflow-x: hidden;
 }
+
+/* ── HERO ─────────────────────────────────── */
 
 .os-hero {
   background: url("/Taciti assets/assets-02.png") no-repeat center top;
+  background-size: cover;
+  width: 100%;
   height: 50vw;
   min-height: 380px;
-  width: 100%;
-  background-size: cover;
   position: relative;
 }
 
 .os-hero-content {
   margin-left: 131px;
   padding-top: 77px;
-  
 }
 
 .os-hero h1 {
   color: #fff;
   font-size: 50px;
+  line-height: 1.2;
   font-family: "futuraptMedium", sans-serif;
   max-width: 600px;
-  line-height: 1.2;
+  margin: 0;
 }
 
-/* ── INTRO (white curved section) ─────────── */
+/* ── INTRO SECTION ───────────────────────── */
+
 .os-intro {
   background: #fff;
-  margin-top: -130px;
+
+  margin-top: -138px;
+
   border-top-left-radius: 60% 100px;
   border-top-right-radius: 60% 100px;
-  padding: 70px 140px 50px;
+
+  padding: 95px 140px 20px;
+
   text-align: center;
+
+  position: relative;
+  z-index: 2;
 }
 
 .os-intro h2 {
   font-size: 37px;
   font-weight: 700;
-  font-family: "futura Md BT", sans-serif !important;
-  color: #013470;
-  margin-bottom: 24px;
   line-height: 1.35;
+
+  color: #013470;
+
+  margin-bottom: 24px;
+
+  font-family: "futura Md BT", sans-serif !important;
 }
 
 .os-intro p {
   font-size: 18px;
-  /* font-family: "futuraptMedium", sans-serif; */
-  color: #4E5764;
   line-height: 1.5;
-  /* max-width: 1000px; */
-  /* margin: 0 auto; */
+
+  color: #4E5764;
+
+  font-family: "Roboto-Light", sans-serif;
 }
 
-/* ── SERVICE TABS SECTION ─────────────────── */
+/* ── TABS SECTION ────────────────────────── */
+
 .os-tabs-section {
   background: #fff;
-  padding: 0 140px 70px;
-}
 
-/* ── TABS BAR — pill boxes with border-radius, active = blue fill ── */
+  padding: 10px 30px 70px;
+
+  overflow-x: hidden;
+}
+/* ─────────────────────────────────────────
+   EXACT SAME TABS AS LIVE WEBSITE
+───────────────────────────────────────── */
+
 .os-tabs-bar {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  gap: 14px;
-  padding: 30px 0 40px;
+
+  gap: 4px;
+
+  width: 100%;
+
+  margin-top: 10px;
+  margin-bottom: 55px;
 }
 
-/* Each tab is a pill/box */
 .os-tab {
-  position: relative;
-  padding: 10px 22px;
-  font-size: 18px;
-  font-family: "Roboto-light", sans-serif;
-  /* font-weight: 500; */
-  color: #013470;
-  cursor: pointer;
-  background: #f0f4fb;
-  border: 1.5px solid #cdd9ef;
-  border-radius: 8px;
-  transition: all 0.25s ease;
+  background: #c4e2f7;
+
+  border: none;
+  border-radius: 10px;
+
+  height: 44px;
+
+  padding: 0 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   white-space: nowrap;
+
+  color: #4E5764;
+
+  font-family: "Roboto-Light", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+
+  cursor: pointer;
+
+  position: relative;
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
 }
+
+/* HOVER */
 
 .os-tab:hover {
-  background: #013470;
-  color: #fff;
-  border-color: #013470;
+  transform: translateY(-2px);
+
+  background: #d5ebfb;
+  color: #013470;
+
+  box-shadow:
+    0 8px 18px rgba(1, 52, 112, 0.12),
+    0 2px 6px rgba(1, 52, 112, 0.08);
 }
 
-/* ACTIVE TAB — solid blue background */
+/* ACTIVE */
+
 .os-tab.active {
-  background: #013470;
-  color: #fff;
-  border-color: #013470;
-  font-family: "Roboto-light", sans-serif;
+  background: #c4e2f7;
+
+  color: #4E5764;
+
+  box-shadow: inset 0 -4px 0 #2f5ea8;
 }
 
-/* ── TAB CONTENT PANEL ────────────────────── */
+/* ── PANEL ───────────────────────────────── */
+
 .os-panel {
   display: none;
 }
@@ -117,7 +164,7 @@
   display: flex;
   gap: 60px;
   align-items: flex-start;
-  padding: 10px 0 0;
+  padding-top: 10px;
 }
 
 .os-panel-left {
@@ -126,10 +173,13 @@
 
 .os-panel-left h3 {
   font-size: 32px;
-  font-family: "futura Md BT", sans-serif !important;
-  color: #013470;
-  margin-bottom: 28px;
   font-weight: bold;
+
+  color: #013470;
+
+  margin-bottom: 28px;
+
+  font-family: "futura Md BT", sans-serif !important;
 }
 
 .os-panel-left ul {
@@ -141,21 +191,29 @@
 .os-panel-left ul li {
   display: flex;
   align-items: flex-start;
+
   gap: 14px;
+
   padding: 5px 0;
+
   font-size: 18px;
-  font-family: "roboto light", sans-serif !important;
-  color: #4E5764;
   line-height: 1.5;
-  /* font-weight: bold; */
+
+  color: #4E5764;
+
+  font-family: "Roboto-Light", sans-serif !important;
 }
 
 .os-panel-left ul li::before {
   content: "";
+
   width: 5px;
   height: 6px;
+
   min-width: 10px;
+
   margin-top: 8px;
+
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -165,13 +223,19 @@
 
 .os-panel-learn {
   display: inline-block;
+
   margin-top: 8px;
+
   font-size: 15px;
-  font-family: "roboto light", sans-serif !important;
   font-weight: 500;
+
   color: #013470;
+
   text-decoration: none;
-  transition: opacity 0.2s;
+
+  font-family: "Roboto-Light", sans-serif !important;
+
+  transition: opacity 0.2s ease;
 }
 
 .os-panel-learn:hover {
@@ -180,11 +244,14 @@
 }
 
 .os-panel-right {
-  flex-shrink: 0;
   width: 320px;
+
+  flex-shrink: 0;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   padding: 10px 0;
 }
 
@@ -192,21 +259,27 @@
   width: 100%;
   max-width: 300px;
   height: auto;
+
   object-fit: contain;
 }
 
 /* ════════════════════════════════════════════
    RESPONSIVE
-   ════════════════════════════════════════════ */
+════════════════════════════════════════════ */
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .os-intro {
     padding-left: 60px;
     padding-right: 60px;
   }
+
   .os-tabs-section {
     padding-left: 60px;
     padding-right: 60px;
+  }
+
+  .os-tabs-bar {
+    flex-wrap: wrap;
   }
 }
 
@@ -215,35 +288,50 @@
     height: 60vw;
     min-height: 260px;
   }
+
   .os-hero-content {
     margin-left: 20px;
     padding-top: 50px;
   }
+
   .os-hero h1 {
     font-size: 32px;
   }
+
   .os-intro {
     padding: 40px 20px;
     margin-top: -80px;
   }
+
   .os-intro h2 {
     font-size: 22px;
   }
+
   .os-tabs-section {
     padding: 0 20px 50px;
   }
+
   .os-tabs-bar {
+    flex-direction: column;
     gap: 10px;
-    padding: 20px 0 30px;
+    margin-bottom: 35px;
   }
+
   .os-tab {
-    font-size: 12px;
-    padding: 8px 14px;
+    width: 100%;
+
+    height: 44px;
+
+    font-size: 14px;
+
+    padding: 0 18px;
   }
+
   .os-panel.active {
     flex-direction: column;
     gap: 32px;
   }
+
   .os-panel-right {
     width: 100%;
   }

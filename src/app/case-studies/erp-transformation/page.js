@@ -78,16 +78,49 @@ export default function ERPTransformationCaseStudies() {
       {/* MAIN CONTENT */}
       <section className="cs-main">
         {/* Category Tabs */}
-        <div className="cs-tabs-bar">
-          {TABS.map((tab) => (
-            <Link
-              key={tab.label}
-              href={tab.href}
-              className={`cs-tab${tab.active ? " active" : ""}`}
-            >
-              {tab.label}
-            </Link>
-          ))}
+        <div className="cs-tabs-wrapper">
+          <div className="cs-tabs-container">
+            <div className="cs-tab-column">
+              <div className="cs-tab-wrap">
+                <Link href="/case-studies/#all" className="cs-tab-link">
+                  All
+                </Link>
+              </div>
+            </div>
+
+            <div className="cs-tab-column activeTab">
+              <div className="cs-tab-wrap">
+                <Link
+                  href="/case-studies/erp-transformation"
+                  className="cs-tab-link"
+                >
+                  ERP Transformation
+                </Link>
+              </div>
+            </div>
+
+            <div className="cs-tab-column">
+              <div className="cs-tab-wrap">
+                <Link
+                  href="/case-studies/strategy-advisory/"
+                  className="cs-tab-link"
+                >
+                  Strategy & Advisory
+                </Link>
+              </div>
+            </div>
+
+            <div className="cs-tab-column">
+              <div className="cs-tab-wrap">
+                <Link
+                  href="/case-studies/technology-services"
+                  className="cs-tab-link"
+                >
+                  Technology Services
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Case Study Cards Grid */}
@@ -95,7 +128,11 @@ export default function ERPTransformationCaseStudies() {
           {CASE_STUDIES.map((cs) => (
             <Link key={cs.id} href={cs.href} className="cs-card">
               <div className="cs-card-img-wrap">
-                <img src={cs.image} alt={cs.title} />
+                <div className="cs-card-bg-shape"></div>
+
+                <div className="cs-card-main-image">
+                  <img src={cs.image} alt={cs.title} />
+                </div>
               </div>
               <div className="cs-card-body">
                 <p>{cs.title}</p>
