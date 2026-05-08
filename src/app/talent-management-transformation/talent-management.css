@@ -462,7 +462,7 @@
   }
 
   .tm-hero-content h1 {
-    font-size: 32px;
+    font-size: 32px !important;
     line-height: 1.12;
   }
 
@@ -484,6 +484,14 @@
   .tm-lms-intro {
     font-size: 15px;
     line-height: 1.8;
+  }
+
+  .tm-lms p{
+    text-align: justify;
+  }
+
+  .tm-overview p {
+    text-align: justify;
   }
 
   .tm-offerings {

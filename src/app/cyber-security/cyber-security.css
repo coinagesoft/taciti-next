@@ -506,6 +506,28 @@
     padding: 36px 22px;
   }
 
+  .cs-overview p{
+    text-align: justify;
+  }
+
+  .cs-services p{
+    text-align: justify;
+  }
+
+  .cs-principles p{
+    text-align: justify;
+  }
+
+  .cs-intro-box{
+    margin-left: 0;
+    margin-top: 40px;
+  }
+
+  .cs-intro-box h1 {
+    font-size: 32px !important;
+    text-align: left !important;
+  }
+
   .cs-overview h2,
   .cs-services > h2,
   .cs-principles > h2,

@@ -295,7 +295,7 @@
   }
 
   .os-hero h1 {
-    font-size: 32px;
+    font-size: 32px !important;
   }
 
   .os-intro {
@@ -307,6 +307,11 @@
     font-size: 22px;
   }
 
+
+  .os-intro p {
+    text-align: justify !important;
+  }
+/* >>>>>>> df14ede5432e013535638ec689dfd00043f4002a */
   .os-tabs-section {
     padding: 0 20px 50px;
   }

@@ -427,7 +427,7 @@
   }
 
   .ts-main-title {
-    font-size: 32px;
+    font-size: 32px !important;
     line-height: 1.1;
   }
 
@@ -449,6 +449,14 @@
   .ts-expertise-intro {
     font-size: 15px;
     line-height: 1.8;
+  }
+
+  .ts-overview p {
+    text-align: justify;
+  }
+
+  .ts-expertise p{
+    text-align: justify;
   }
 
   .ts-services,
