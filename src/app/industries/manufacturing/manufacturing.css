@@ -276,7 +276,15 @@
     font-size: 32px !important;
   }
   .mfg-hero-title {
-    margin-top: 14vh;
+    margin-top: 5px !important;
+  }
+
+  .mfg-hero-title h1 {
+    font-size: 32px !important;
+  }
+
+  .mfg-overview {
+    margin-top: 0px;
   }
 
   .mfg-overview {

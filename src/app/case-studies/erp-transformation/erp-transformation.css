@@ -407,6 +407,10 @@
     padding-top: 50px;
   }
 
+  .cs-hero-content h1 {
+    font-size: 32px !important;
+  }
+
   .cs-hero h1 {
     font-size: 32px;
   }

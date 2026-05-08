@@ -162,6 +162,10 @@
     padding-top: 50px;
   }
 
+  .intro-box h1{
+    font-size: 32px !important;
+  }
+
   .main-title {
     font-size: 38px;
   }
