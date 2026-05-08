@@ -317,6 +317,14 @@
     padding-top: 45px;
   }
 
+  .cpg-hero-box h1 {
+    font-size: 32px !important;
+  }
+
+  .cpg-overview p{
+    text-align: justify;
+  }
+
   .cpg-hero-title {
     font-size: 32px;
     line-height: 1.15;

@@ -273,11 +273,24 @@
     margin-left: 20px;
     padding-top: 50px;
   }
-  .mfg-hero-title {
-    font-size: 32px;
+  .mfg-hero-box h1{
+    font-size: 32px !important;
   }
+  .mfg-hero-title {
+    margin-top: 14vh;
+  }
+
   .mfg-overview {
     padding: 40px 20px;
+  }
+  .mfg-overview p{
+    text-align: justify;
+  }
+  .mfg-overview-quote{
+    text-align: center !important;
+  }
+  .mfg-solutions-intro{
+    text-align: justify;
   }
   .mfg-overview h2 {
     font-size: 26px;

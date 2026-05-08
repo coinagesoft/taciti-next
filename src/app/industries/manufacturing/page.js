@@ -168,7 +168,7 @@ export default function Manufacturing() {
             <p>(Ex: Adopt persona-based roles to minimize excess privilege, enhance cybersecurity, etc.)</p>
           </div>
 
-          <div className="mfg-solution-item mfg-solution-item--empty" />
+          {/* <div className="mfg-solution-item mfg-solution-item--empty" /> */}
 
         </div>
       </section>

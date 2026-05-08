@@ -366,6 +366,14 @@
     padding-top: 45px;
   }
 
+  .ls-overview p{
+    text-align: justify;
+  }
+
+  .ls-hero-box h1{
+    font-size: 32px !important;
+  }
+
   .ls-hero-title {
     font-size: 32px;
     line-height: 1.15;

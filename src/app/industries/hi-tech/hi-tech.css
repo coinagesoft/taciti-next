@@ -53,7 +53,7 @@
   color: #013470;
   text-align: center;
   margin-bottom: 30px;
-  font-width: 600;
+  font-width: 600 !important;
 }
 
 .hitech-overview > p {
@@ -141,12 +141,27 @@
 
   .hitech-hero-box {
     padding-left: 20px;
-    padding-top: 50px;
+    padding-top: 30px;
   }
 
-  .hitech-hero-title {
-    font-size: 34px;
+  .hitech-hero-box h1 {
+    font-size: 32px !important;
+  }
+
+  .hitech-overview h2{
+    font-size: 37px;
     line-height: 1.2;
+
+    color: #013470;
+
+    margin-bottom: 28px;
+
+    font-weight: 600;
+    font-family: "futuraptbold", sans-serif;
+  }
+
+  .hitech-overview p{
+    text-align: justify !important;
   }
 
   .hitech-overview {

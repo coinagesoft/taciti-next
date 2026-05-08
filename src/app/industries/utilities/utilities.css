@@ -142,11 +142,12 @@
   .util-overview, .util-cards-section { padding-left: 60px; padding-right: 60px; }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .util-hero { height: 60vw; min-height: 240px; }
   .util-hero-box { margin-left: 20px; padding-top: 40px; }
-  .util-hero-title { font-size: 32px; }
+  .util-hero-box h1 { font-size: 32px !important; }
   .util-overview { padding: 40px 20px; margin-top: -80px; }
+  .util-overview p {text-align: justify !important; }
   .util-overview h2 { font-size: 24px; }
   .util-cards-section { padding: 0 20px 50px; }
   .util-cards-row, .util-cards-row-center { grid-template-columns: 1fr; }

@@ -242,6 +242,10 @@
 @media (max-width: 768px) {
   .utility-hero { height: 60vw; min-height: 240px; }
   .utility-hero-box { margin-left: 20px; padding-top: 40px; }
+  .utility-hero-box h1 {font-size: 37px !important;}
+  .utility-overview p {
+    text-align: justify !important;
+  }
   .utility-hero-title { font-size: 30px; }
 
   .utility-overview { padding: 40px 20px; margin-top: -80px; }
