@@ -127,7 +127,16 @@
 @media (max-width: 767px) {
 
   .intro-section {
-    height: 42vh;
+    height: 30vh !important;
+  }
+
+  .mobile-center{
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+  }
+
+  .column-with-padding-for-text {
+    margin-top: 0px !important;
   }
 
   .intro-box {

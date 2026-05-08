@@ -151,7 +151,7 @@
 @media (max-width: 767px) {
 
   .intro-section {
-    height: 40vh;
+    height: 30vh !important;
   }
 
   .intro-box {
@@ -163,11 +163,22 @@
     font-size: 40px;
   }
 
+  .life-image-three-women {
+    width: 100% !important;
+    height: auto;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
   .life-sections {
     padding-left: 30px;
     padding-right: 30px;
+    padding-top: 0px !important;
   }
 
+  .workforce-text {
+    text-align: justify !important;
+  }
   .women-icon .row {
     text-align: center;
   }
