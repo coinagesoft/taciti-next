@@ -21,7 +21,7 @@
 
 .intro-box {
   margin-left: 150px;
-  padding-top: 100px;
+  padding-top: 150px;
 }
 
 .main-title {
@@ -37,11 +37,11 @@
 /* COMMON */
 
 .life-sections {
-  padding: 70px 0;
+  padding: 50px 0;
 }
 
 .first-section {
-  padding-top: 0;
+  padding-top: 20px;
 }
 
 .title-row,
@@ -51,9 +51,9 @@
 }
 
 .life-heading {
-  font-size: 42px;
+  font-size: 37px;
   line-height: 1.2;
-  font-weight: 700;
+  font-weight: 600;
 
   color: #013470;
 
@@ -72,6 +72,8 @@
   color: #5f646d;
 
   font-family: "Roboto-Light", sans-serif;
+
+  text-align: justify;
 }
 
 /* WOMEN SECTION */
@@ -98,6 +100,8 @@
   line-height: 1.8;
 
   font-family: "Roboto-Light", sans-serif;
+
+  text-align: justify;
 }
 
 /* IMAGES */

@@ -21,7 +21,7 @@
 
 .intro-box {
   margin-left: 150px;
-  padding-top: 100px;
+  padding-top: 150px;
 }
 
 .main-title {
@@ -38,17 +38,17 @@
 /* COMMON */
 
 .life-sections {
-  padding: 80px 0;
+  padding: 50px 0;
 }
 
 .first-section {
-  padding-top: 60px;
+  padding-top: 30px;
 }
 
 .life-heading {
-  font-size: 42px;
+  font-size: 37px;
   line-height: 1.2;
-  font-weight: 700;
+  font-weight: 600;
 
   color: #013470;
 
@@ -65,6 +65,8 @@
   color: #5f646d;
 
   font-family: "Roboto-Light", sans-serif;
+
+  text-align: justify;
 }
 
 .section-text {

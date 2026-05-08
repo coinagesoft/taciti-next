@@ -54,24 +54,51 @@
 
 .life-topCard {
   background: #fff;
-  border: 1px solid #eaeaea;
-  border-radius: 12px;
-  padding: 16px;
+  border: 5px solid #EBEBEB;
+  border-radius: 5px;
+  padding: 20px;
 
   display: flex;
   flex-direction: column;
   height: 100%;
 
+  position: relative;
+  overflow: hidden;
+
   transition:
     transform 0.2s ease,
-    box-shadow 0.2s ease;
+    box-shadow 0.2s ease,
+    color 0.3s ease;
+}
+
+.life-topCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/Taciti assets/card.png") no-repeat center/cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.life-topCard:hover::before {
+  opacity: 1;
+}
+
+.life-topCard > * {
+  position: relative;
+  z-index: 1;
 }
 
 .life-topCard:hover {
   transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
 
-  box-shadow:
-    0 6px 18px rgba(0, 0, 0, 0.08);
+.life-topCard:hover .life-topCardTitle,
+.life-topCard:hover .life-topCardText,
+.life-topCard:hover .life-topCardLink {
+  color: #fff;
 }
 
 .life-topCard p {
@@ -79,9 +106,11 @@
 }
 
 .life-topCardTitle {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 700;
   margin-bottom: 8px;
+  color: #013470;
+  font-family: "futuraptMedium", sans-serif;
 }
 
 .life-topCardText {
@@ -92,9 +121,9 @@
 
 .life-topCardLink {
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 600;
 
-  color: #0070f3;
+  color: #013470;
 
   text-decoration: none;
 
