@@ -300,7 +300,7 @@ export default function Home() {
             <div className="borderROundedRec pcNone">
               <div>
                 <div style={{ display: "flex", justifyContent: "space-around" }}>
-                  <div className="innerBox" style={{ flexDirection: "column", justifyContent: "center" }}>
+                  <div className="innerBox" style={{ flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
                     <img src="/images/client.png" height="70" width="70" alt="Clients" />
                     <div className="contentCard">
                       <h1 className="num" style={{ textAlign: "center" }}>11</h1>
