@@ -3,6 +3,7 @@
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import { MdArrowDropDown, MdArrowDropUp } from "react-icons/md";
+import "./contact.css";
 
 export default function Contact() {
   const [firstName, setFirstName] = useState("");
@@ -315,12 +316,19 @@ export default function Contact() {
                   onChange={(e) => setIsAgreed(e.target.checked)}
                   style={{
                     marginRight: "8px",
+                    marginLeft: "8px",
                     marginTop: "6px",
                   }}
                 />
+
                 <span
                   className="contactheadsec"
-                  style={{ fontSize: "16px", color: "#000", lineHeight: "1.5" }}
+                  style={{
+                    fontSize: "16px",
+                    color: "#000",
+                    lineHeight: "1.5",
+                    flex: 1,
+                  }}
                 >
                   By submitting, I agree to Taciti Consulting's
                   <Link

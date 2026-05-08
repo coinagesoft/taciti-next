@@ -1,0 +1,27 @@
+        @media (max-width: 768px) {
+
+          .privacy-policy-label {
+            width: 100% !important;
+            box-sizing: border-box;
+            margin-left: 8px !important;
+            margin-right: 3px !important;
+          }
+
+          .privacy-policy-label input[type="checkbox"] {
+            margin-left: 0 !important;
+            margin-right: 12px !important;
+            margin-top: 5px !important;
+            flex-shrink: 0;
+          }
+
+          .privacy-policy-label .contactheadsec {
+            flex: 1;
+            text-align: left;
+            line-height: 1.6 !important;
+          }
+
+          .contacttext {
+            font-size: 24px !important;
+            line-height: 1.2 !important;
+          }
+        }
