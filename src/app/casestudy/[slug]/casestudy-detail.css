@@ -1,300 +1,194 @@
 /* =============================================
-   CASE STUDY DETAIL PAGE
+   CASE STUDY DETAIL (LIVE PAGE STYLE)
    ============================================= */
 
 .csd-page {
-  font-family: "futuraptMedium", sans-serif;
-  color: #333;
+  background: #fff;
+  color: #4e5764;
+  font-family: "Roboto-Light", sans-serif;
 }
-
-/* ── HERO ─────────────────────────────────── */
-
-.csd-hero {
-  background: url("/Taciti assets/assets-02.png") no-repeat center 90%;
-  height: 40vw;
-  width: 100%;
-  background-size: cover;
-  overflow-x: hidden;
-}
-
-.csd-hero-content {
-  margin-left: 150px;
-  padding-top: 70px;
-}
-
-.csd-hero h1 {
-  color: #fff;
-  font-size: 40px;
-  font-family: "futuraptMedium", sans-serif;
-  max-width: 700px;
-  line-height: 1.25;
-}
-
-/* ── WHITE CURVED WRAPPER ─────────────────── */
 
 .csd-body {
-  background: #fff;
-  margin-top: -110px;
-
-  border-top-left-radius: 60% 100px;
-  border-top-right-radius: 60% 100px;
-
-  padding: 60px 140px 80px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 72px 40px 90px;
 }
 
-/* ── ABOUT CLIENT ─────────────────────────── */
+.csd-section {
+  margin-bottom: 64px;
+}
 
-.csd-about {
-  margin-bottom: 50px;
+.csd-section:last-child {
+  margin-bottom: 0;
 }
 
 .csd-section-title {
-  font-size: 22px;
-  font-family: "futuraptbold", sans-serif;
+  margin: 0 0 22px;
   color: #013470;
-  margin-bottom: 14px;
+  font-family: "Futura Md BT", sans-serif !important;
+  font-size: 37px !important;
+  line-height: 1.2;
+  font-weight: 600;
 }
 
-.csd-about p {
-  font-size: 15px;
-  line-height: 1.7;
-  color: #444;
-  max-width: 800px;
-  font-family: "Roboto-Light", sans-serif;
+.csd-text {
+  margin: 0;
+  max-width: 1080px;
+  color: #4e5764;
+  font-family: "Roboto-Light", sans-serif !important;
+  font-size: 18px !important;
+  line-height: 1.8 !important;
 }
-
-/* ── TWO COLUMN SECTION ───────────────────── */
 
 .csd-two-col {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  margin-bottom: 50px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 56px;
 }
 
-/* ── BULLET LIST ──────────────────────────── */
+.csd-col {
+  min-width: 0;
+}
 
 .csd-list {
   list-style: none;
-  padding: 0;
   margin: 0;
-
+  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
 }
 
 .csd-list li {
+  margin: 0;
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-
-  font-size: 15px;
-  line-height: 1.65;
-  color: #444;
-
-  font-family: "Roboto-Light", sans-serif;
+  gap: 14px;
+  color: #4e5764;
+  font-family: "Roboto-Light", sans-serif !important;
+  font-size: 18px !important;
+  line-height: 1.7 !important;
 }
 
 .csd-list li::before {
   content: "";
-
-  display: block;
-  flex-shrink: 0;
-
-  width: 10px;
-  height: 10px;
-
+  width: 11px;
+  height: 11px;
+  margin-top: 9px;
   border-radius: 50%;
-
-  border: 2.5px solid #013470;
+  flex: 0 0 11px;
   background: #013470;
-
-  margin-top: 5px;
 }
-
-/* ── DIVIDER ──────────────────────────────── */
-
-.csd-divider {
-  border: none;
-  border-top: 1px solid #e2e8f3;
-  margin: 50px 0;
-}
-
-/* ── BACK LINK ────────────────────────────── */
-
-.csd-back {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-
-  color: #013470;
-
-  font-size: 14px;
-  font-family: "futuraptMedium", sans-serif;
-
-  text-decoration: none;
-
-  margin-bottom: 40px;
-
-  transition: opacity 0.2s ease;
-}
-
-.csd-back:hover {
-  opacity: 0.7;
-}
-
-.csd-back svg {
-  width: 18px;
-  height: 18px;
-}
-
-/* ── RELATED CASE STUDIES ─────────────────── */
 
 .csd-related {
-  margin-top: 50px;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: minmax(170px, 1fr) minmax(0, 3fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.csd-related-heading {
+  margin: 0;
+}
+
+.csd-related-heading span {
+  display: block;
+}
+
+.csd-related-content {
+  min-width: 0;
 }
 
 .csd-related-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 34px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
 }
 
 .csd-related-card {
+  display: block;
   text-decoration: none;
-
-  display: flex;
-  flex-direction: column;
-
   transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease;
+    transform 0.25s ease,
+    opacity 0.25s ease;
 }
 
 .csd-related-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
+  opacity: 0.95;
 }
-
-/* IMAGE */
 
 .csd-related-image-wrap {
   width: 100%;
   overflow: hidden;
-
-  border-radius: 12px;
-
-  position: relative;
+  border-radius: 4px;
 }
 
 .csd-related-image-wrap img {
   width: 100%;
   height: auto;
-
   display: block;
-
   object-fit: cover;
-
-  transition:
-    transform 0.4s ease,
-    filter 0.4s ease;
 }
 
-.csd-related-card:hover .csd-related-image-wrap img {
-  transform: scale(1.03);
-
-  filter:
-    drop-shadow(0 18px 24px rgba(1, 52, 112, 0.12));
-}
-
-/* CONTENT */
-
-.csd-related-content {
-  padding-top: 18px;
-  padding-left: 12px;
-  padding-right: 12px;
-
-  text-align: center;
-}
-
-.csd-related-card-title {
-  margin: 0;
-
-  font-size: 18px;
-  line-height: 1.55;
-
-  color: #5f646d;
-
-  font-family: "Roboto-Light", sans-serif;
-  font-weight: 400;
-
-  transition: color 0.3s ease;
-}
-
-.csd-related-card:hover .csd-related-card-title {
-  color: #013470;
-}
-
-/* ════════════════════════════════════════════
-   RESPONSIVE
-   ════════════════════════════════════════════ */
-
-@media (max-width: 1100px) {
-
+@media (max-width: 1200px) {
   .csd-body {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 28px;
+    padding-right: 28px;
   }
 }
 
-@media (max-width: 900px) {
-
+@media (max-width: 991px) {
   .csd-two-col {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 38px;
+  }
+
+  .csd-related {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 
   .csd-related-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 768px) {
-
-  .csd-hero {
-    height: 60vw;
-    min-height: 260px;
-  }
-
-  .csd-hero-content {
-    margin-left: 20px;
-    padding-top: 20px;
-  }
-
-  .csd-hero-content h1 {
-    font-size: 26px !important;
-  }
-
-  .csd-hero h1 {
-    font-size: 26px;
-  }
-
   .csd-body {
-    margin-top: -80px;
-    padding: 40px 20px 60px;
+    padding: 44px 22px 62px;
+  }
+
+  .csd-section {
+    margin-bottom: 44px;
+  }
+
+  .csd-section-title {
+    font-size: 28px !important;
+    margin-bottom: 16px;
+  }
+
+  .csd-text {
+    font-size: 16px !important;
+    line-height: 1.75 !important;
+  }
+
+  .csd-list {
+    gap: 14px;
+  }
+
+  .csd-list li {
+    font-size: 16px !important;
+    line-height: 1.75 !important;
+  }
+
+  .csd-list li::before {
+    margin-top: 8px;
   }
 
   .csd-related-grid {
     grid-template-columns: 1fr;
-    gap: 28px;
-  }
-
-  .csd-related-content {
-    padding-top: 14px;
-  }
-
-  .csd-related-card-title {
-    font-size: 15px;
-    line-height: 1.5;
+    gap: 18px;
   }
 }
