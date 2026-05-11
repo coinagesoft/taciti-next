@@ -3,6 +3,20 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CASE_STUDIES_DATA } from "../caseStudiesData";
 
+function BulletPointIcon() {
+  return (
+    <svg
+      aria-hidden="true"
+      className="e-font-icon-svg e-fas-dot-circle"
+      viewBox="0 0 512 512"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="currentColor"
+    >
+      <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm80 248c0 44.112-35.888 80-80 80s-80-35.888-80-80 35.888-80 80-80 80 35.888 80 80z"></path>
+    </svg>
+  );
+}
+
 function getCaseStudyTitleFromHref(href) {
   if (!href) return "Case study";
 
@@ -58,7 +72,12 @@ export default async function CaseStudyDetail({ params }) {
 
             <ul className="csd-list">
               {cs.caseContext.map((item, i) => (
-                <li key={i}>{item}</li>
+                <li key={i}>
+                  <span className="csd-list-icon" aria-hidden="true">
+                    <BulletPointIcon />
+                  </span>
+                  <span className="csd-list-text">{item}</span>
+                </li>
               ))}
             </ul>
           </div>
@@ -68,7 +87,12 @@ export default async function CaseStudyDetail({ params }) {
 
             <ul className="csd-list">
               {cs.keySolutionElements.map((item, i) => (
-                <li key={i}>{item}</li>
+                <li key={i}>
+                  <span className="csd-list-icon" aria-hidden="true">
+                    <BulletPointIcon />
+                  </span>
+                  <span className="csd-list-text">{item}</span>
+                </li>
               ))}
             </ul>
           </div>
@@ -80,7 +104,12 @@ export default async function CaseStudyDetail({ params }) {
 
             <ul className="csd-list">
               {cs.scopeOfServices.map((item, i) => (
-                <li key={i}>{item}</li>
+                <li key={i}>
+                  <span className="csd-list-icon" aria-hidden="true">
+                    <BulletPointIcon />
+                  </span>
+                  <span className="csd-list-text">{item}</span>
+                </li>
               ))}
             </ul>
           </div>
@@ -90,7 +119,12 @@ export default async function CaseStudyDetail({ params }) {
 
             <ul className="csd-list">
               {cs.benefits.map((item, i) => (
-                <li key={i}>{item}</li>
+                <li key={i}>
+                  <span className="csd-list-icon" aria-hidden="true">
+                    <BulletPointIcon />
+                  </span>
+                  <span className="csd-list-text">{item}</span>
+                </li>
               ))}
             </ul>
           </div>
