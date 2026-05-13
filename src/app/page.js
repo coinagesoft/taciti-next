@@ -1,7 +1,23 @@
+"use client";
 import "./page.module.css";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [showCookie, setShowCookie] = useState(false);
+
+  useEffect(() => {
+    const cookieAccepted = localStorage.getItem("cookieAccepted");
+
+    if (!cookieAccepted) {
+      setShowCookie(true);
+    }
+  }, []);
+
+  const handleCookieClose = () => {
+    localStorage.setItem("cookieAccepted", "true");
+    setShowCookie(false);
+  };
   return (
     <div id="Home">
       {/* HERO */}
@@ -11,7 +27,11 @@ export default function Home() {
             Empowering <br /> Digital <br /> Transformations
           </h1>
           <div className="descripitioncustom">
-           Our expertise lies in providing end-to-end digital transformation services for businesses. Our unbiased advisory approach helps our clients grow and succeed in their industries. Our services include Strategy and Advisory, Process Re-engineering and Optimization and Technology Implementations.
+            Our expertise lies in providing end-to-end digital transformation
+            services for businesses. Our unbiased advisory approach helps our
+            clients grow and succeed in their industries. Our services include
+            Strategy and Advisory, Process Re-engineering and Optimization and
+            Technology Implementations.
           </div>
         </div>
       </div>
@@ -27,8 +47,7 @@ export default function Home() {
             </h2>
             <p className="para">
               Founded in 2019 as DPCon Solutions by enterprise professionals
-              with over 25 years of experience,{" "}
-              <br className="block" />
+              with over 25 years of experience, <br className="block" />
               we have recently undertaken a rebranding exercise and changed the
               firm&apos;s name to Taciti Consulting. <br className="block" />
               We offer unbiased advisory services and comprehensive end-to-end
@@ -267,28 +286,48 @@ export default function Home() {
             {/* Desktop */}
             <div className="borderROundedRec mobileNone">
               <div className="innerBox">
-                <img src="/images/client.png" height="70" width="70" alt="Clients" />
+                <img
+                  src="/images/client.png"
+                  height="70"
+                  width="70"
+                  alt="Clients"
+                />
                 <div className="contentCard">
                   <h1 className="num">11</h1>
                   <h1 className="text">Clients</h1>
                 </div>
               </div>
               <div className="innerBox">
-                <img src="/images/completed.png" height="70" width="70" alt="Completed" />
+                <img
+                  src="/images/completed.png"
+                  height="70"
+                  width="70"
+                  alt="Completed"
+                />
                 <div className="contentCard">
                   <h1 className="num">24</h1>
                   <h1 className="text">Completed Projects</h1>
                 </div>
               </div>
               <div className="innerBox">
-                <img src="/images/ongoing.png" height="70" width="70" alt="Ongoing" />
+                <img
+                  src="/images/ongoing.png"
+                  height="70"
+                  width="70"
+                  alt="Ongoing"
+                />
                 <div className="contentCard">
                   <h1 className="num">36</h1>
                   <h1 className="text">Ongoing Projects</h1>
                 </div>
               </div>
               <div className="innerBox">
-                <img src="/images/expert.png" height="70" width="70" alt="Experts" />
+                <img
+                  src="/images/expert.png"
+                  height="70"
+                  width="70"
+                  alt="Experts"
+                />
                 <div className="contentCard">
                   <h1 className="num">220+</h1>
                   <h1 className="text">Experts at work</h1>
@@ -299,35 +338,86 @@ export default function Home() {
             {/* Mobile */}
             <div className="borderROundedRec pcNone">
               <div>
-                <div style={{ display: "flex", justifyContent: "space-around" }}>
-                  <div className="innerBox" style={{ flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
-                    <img src="/images/client.png" height="70" width="70" alt="Clients" />
+                <div
+                  style={{ display: "flex", justifyContent: "space-around" }}
+                >
+                  <div
+                    className="innerBox"
+                    style={{
+                      flexDirection: "column",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    <img
+                      src="/images/client.png"
+                      height="70"
+                      width="70"
+                      alt="Clients"
+                    />
                     <div className="contentCard">
-                      <h1 className="num" style={{ textAlign: "center" }}>11</h1>
-                      <h1 className="text" style={{ textAlign: "center" }}>Clients</h1>
+                      <h1 className="num" style={{ textAlign: "center" }}>
+                        11
+                      </h1>
+                      <h1 className="text" style={{ textAlign: "center" }}>
+                        Clients
+                      </h1>
                     </div>
                   </div>
                   <div className="innerBox" style={{ flexDirection: "column" }}>
-                    <img src="/images/completed.png" height="70" width="70" alt="Completed" />
+                    <img
+                      src="/images/completed.png"
+                      height="70"
+                      width="70"
+                      alt="Completed"
+                    />
                     <div className="contentCard">
-                      <h1 className="num" style={{ textAlign: "center" }}>24</h1>
-                      <h1 className="text" style={{ textAlign: "center" }}>Completed Projects</h1>
+                      <h1 className="num" style={{ textAlign: "center" }}>
+                        24
+                      </h1>
+                      <h1 className="text" style={{ textAlign: "center" }}>
+                        Completed Projects
+                      </h1>
                     </div>
                   </div>
                 </div>
-                <div style={{ display: "flex", justifyContent: "space-around", marginTop: "20px" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-around",
+                    marginTop: "20px",
+                  }}
+                >
                   <div className="innerBox" style={{ flexDirection: "column" }}>
-                    <img src="/images/ongoing.png" height="70" width="70" alt="Ongoing" />
+                    <img
+                      src="/images/ongoing.png"
+                      height="70"
+                      width="70"
+                      alt="Ongoing"
+                    />
                     <div className="contentCard">
-                      <h1 className="num" style={{ textAlign: "center" }}>36</h1>
-                      <h1 className="text" style={{ textAlign: "center" }}>Ongoing Projects</h1>
+                      <h1 className="num" style={{ textAlign: "center" }}>
+                        36
+                      </h1>
+                      <h1 className="text" style={{ textAlign: "center" }}>
+                        Ongoing Projects
+                      </h1>
                     </div>
                   </div>
                   <div className="innerBox" style={{ flexDirection: "column" }}>
-                    <img src="/images/expert.png" height="70" width="70" alt="Experts" />
+                    <img
+                      src="/images/expert.png"
+                      height="70"
+                      width="70"
+                      alt="Experts"
+                    />
                     <div className="contentCard">
-                      <h1 className="num" style={{ textAlign: "center" }}>220+</h1>
-                      <h1 className="text" style={{ textAlign: "center" }}>Experts at work</h1>
+                      <h1 className="num" style={{ textAlign: "center" }}>
+                        220+
+                      </h1>
+                      <h1 className="text" style={{ textAlign: "center" }}>
+                        Experts at work
+                      </h1>
                     </div>
                   </div>
                 </div>
@@ -372,7 +462,8 @@ export default function Home() {
             <div className="col-lg-6 col-md-6 col-12 text-center pt-5 pt-md-5">
               <div className="d-flex flex-column align-items-center">
                 <h2 className="fw-bold mb-4">
-                  Our <span className="text-primary fw-bold">Certifications</span>
+                  Our{" "}
+                  <span className="text-primary fw-bold">Certifications</span>
                 </h2>
                 <div className="d-flex flex-column flex-md-row align-items-center justify-content-center gap-4 gap-md-5">
                   <img
@@ -393,6 +484,17 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {showCookie && (
+        <div className="cookie-tooltip">
+          <span className="cookie-text">
+            We do not use cookies to store your data
+          </span>
+
+          <button className="cookie-btn" onClick={handleCookieClose}>
+            Got it
+          </button>
+        </div>
+      )}
     </div>
   );
 }
