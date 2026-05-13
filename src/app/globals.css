@@ -1594,7 +1594,8 @@ body {
 }
 
 .contactheadsub {
-  font-size: 18px;
+  font-size: 16px !important;
+  /* color: #4e5764 !important` */
   font-family: "Roboto-Light";
   color: #4e5764;
   text-align: center;
@@ -2742,8 +2743,10 @@ body .pops {
   margin-top: 100px !important;  /* spacing before: Cyber Security Partners */
 }
 .our-offices-section {
-  padding: 60px 40px;
+  padding: 80px 80px;
   background: transparent; /* no bg like original */
+  align-items:center; 
+  justify-content: center;
 }
 
 .offices-title {

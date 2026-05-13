@@ -104,7 +104,7 @@ export default function Industries() {
               provide specialized solutions that enable you to navigate complex
               regulatory landscapes and innovate in drug development.
             </p>
-            <Link href="/industries/life-sciences">Learn more</Link>
+            <Link href="/industries/life-science">Learn more</Link>
           </div>
 
           {/* CPG */}

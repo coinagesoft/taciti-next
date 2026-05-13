@@ -10,7 +10,7 @@
 
 /* ── HERO ─────────────────────────────────── */
 .mfg-hero {
-  background: url("/Taciti assets/manufacturing solutions-91.png") no-repeat center 90%;
+  background: url("/Taciti assets/manufacturing solutions-91.png") no-repeat center 82%;
   height: 40vw;
   width: 100%;
   background-size: cover;
@@ -59,8 +59,8 @@
 
 .mfg-overview p {
   font-size: 18px;
-  color: #555;
-  line-height: 1.85;
+  color: #4e5764;
+  line-height: 1.5;
   margin-bottom: 20px;
   /* max-width: 1020px; */
   margin-left: auto;
@@ -82,7 +82,7 @@
 }
 
 .mfg-challenge-card {
-  background: #f3f7fc;   /* 👈 light blue card bg */
+  background: #effbff;   /* 👈 light blue card bg */
   border: none;
   border-radius: 6px;
   padding: 32px 30px;
@@ -91,11 +91,13 @@
 }
 
 .mfg-challenge-card h3 {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 22px;
+  font-weight: 500;
   color: #013470;
   margin-bottom: 20px;
-  text-align: center;
+  text-align: left;
+  font-family: "Futura Md BT", sans-serif !important;
+  line-height: 1.2;
 }
 
 .mfg-challenge-card ul {
@@ -109,12 +111,14 @@
   align-items: flex-start;
   gap: 10px;
   font-size: 18px;
-  color: #555;
-  line-height: 1.65;
+  color: #4e5764;
+  /* line-height: 1.65; */
   margin-bottom: 14px;
   padding-bottom: 14px;
   border-bottom: none;
   text-align: left;
+  font-weight: 400;
+  font-family: "roboto light", sans-serif !important;
 }
 
 .mfg-challenge-card ul li:last-child {
@@ -148,10 +152,10 @@
 
 .mfg-solutions-intro {
   font-size: 18px;
-  color: #555;
-  line-height: 1.8;
+  color: #4e5764;
+  line-height: 1.5;
   text-align: center;
-  max-width: 900px;
+  /* max-width: 900px; */
   margin: 0 auto 50px;
 }
 
@@ -198,7 +202,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
-  border: 1px solid #dde4f0;
+  /* border: 1px solid #dde4f0; */
   border-radius: 6px;
   overflow: hidden;
 }
@@ -206,8 +210,8 @@
 /* CARD BASE */
 .mfg-solution-item {
   padding: 28px 26px;
-  border-right: 1px solid #dde4f0;
-  border-bottom: 1px solid #dde4f0;
+  /* border-right: 1px solid #dde4f0; */
+  /* border-bottom: 1px solid #dde4f0; */
   position: relative;
   transition: all 0.3s ease;
   background: #fff;
@@ -238,8 +242,10 @@
 }
 .mfg-solution-item h4 {
   color: #013470;   /* 👈 exact color from your screenshot */
-  font-weight: 600;
+  font-weight: 700;
   font-size: 22px;
+  font-family: "Futura Md BT", sans-serif !important;
+  line-height: 1.2;
 }
 .mfg-solution-item p {
   font-size: 18px;

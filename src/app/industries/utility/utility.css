@@ -64,10 +64,12 @@
 }
 
 .utility-cards-row {
-  max-width: 1100px;
+  /* max-width: 1100px; */
   margin: 0 auto 28px;
   display: grid;
   gap: 28px;
+   margin-left: auto;
+  margin-right: auto;
 }
 
 .utility-cards-row--3 {
@@ -124,9 +126,9 @@
   font-weight: bold;
   color: #013470;
   line-height: 1.2;
-  margin: 0;
+  margin-bottom: 10px;
   transition: color 0.3s;
-  font-family: "futuraptbold", sans-serif;
+  font-family: "Futura Md BT", sans-serif !important;
 }
 
 .utility-card:hover h4 { color: #fff; }
@@ -158,7 +160,7 @@
 /* ── WHY US ───────────────────────────────── */
 .utility-whyus {
   padding: 70px 100px 60px;
-  background: #f8fbff;
+  /* background: #f8fbff; */
 }
 
 .utility-whyus h2 {
@@ -191,7 +193,7 @@
   padding: 32px 36px;
   text-align: left;
   background: #fff;
-  border: 1px solid #dde4f0;
+  /* border: 1px solid #dde4f0; */
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -213,14 +215,17 @@
 
 .utility-whyus-item:hover {
   transform: translateY(-4px);
+    border: 1px solid #dde4f0;
+
   box-shadow: 0 8px 24px rgba(1, 52, 112, 0.08);
 }
 
 .utility-whyus-item h3 {
-  font-size: 19px;
+  font-size: 22px;
   font-weight: bold;
   color: #013470;
   margin-bottom: 14px;
+  font-family: "Futura Pt Bold", sans-serif !important;
 }
 
 .utility-whyus-item p {
