@@ -708,26 +708,31 @@ export default function AboutUs() {
               height: 100%;
             }
 
-            .popup.modal-body {
+           .popup.modal-body {
+  width: 100%;
+  height: 100% !important;
 
-              width: 100%;
-              height: 100% !important;
+  min-height: 80vh !important;
 
-              min-height: 80vh !important;
+  flex: 1;
 
-              flex: 1;
 
-              background: #f7f8fa !important;
 
-              border-radius: 24px;
+  border-radius: 24px;
 
-              padding: 30px;
+  padding: 30px;
 
-              overflow-y: auto;
-              overflow-x: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
 
-              position: relative;
-            }
+  position: relative;
+
+  /* BACKGROUND IMAGE */
+  background-image: url("/Taciti assets/case study thumbnial background-02.png") ;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
 
             /* REMOVE OLD BG */
             .popup.modal-body::before {
